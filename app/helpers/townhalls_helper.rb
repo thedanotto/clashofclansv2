@@ -1,0 +1,2 @@
+module TownhallsHelper
+end

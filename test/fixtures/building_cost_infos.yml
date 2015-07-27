@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  level: 1
+  upgrade_resource: MyString
+  cost: 1
+  time: 1
+
+two:
+  name: MyString
+  level: 1
+  upgrade_resource: MyString
+  cost: 1
+  time: 1

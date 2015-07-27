@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  default_level: 1
+  display_name: MyString
+  building_type: MyString
+  category: MyString
+
+two:
+  name: MyString
+  default_level: 1
+  display_name: MyString
+  building_type: MyString
+  category: MyString

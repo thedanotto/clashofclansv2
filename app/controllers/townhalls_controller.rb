@@ -1,0 +1,2 @@
+class TownhallsController < ApplicationController
+end
