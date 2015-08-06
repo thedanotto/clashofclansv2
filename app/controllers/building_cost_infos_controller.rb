@@ -1,0 +1,3 @@
+class BuildingCostInfosController < ApplicationController
+
+end

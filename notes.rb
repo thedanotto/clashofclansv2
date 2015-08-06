@@ -1,8 +1,36 @@
+# look up -> active record match array with n number of possibilities
+  # this is for if I want to allow people to seach upgrades by certain types
+
 # what about ...
 
 # setup seeds.rb -> fill in information
-# 
-# 
+# basic_info
+# building_availability
+# building_cost_info
+# building_max_level
+
+# crud out the admin interface.
+  # it can update basic_info
+  # building_availability
+  # building_cost_info
+  # building_max_level
+
+# for upgrade costs, contemplate the benefits of doing it by resource instead of one generic category
+  # dark_elixir_upgrade_cost
+  # gold_upgrade_cost
+  # elixir_upgrade_cost
+  # this might make it easier to do calculations, but maybe not.
+
+# also contemplate how I would create the "upgrade history ability with the slider"
+  # update 1, what buildings were available.
+  # update 2, what buildings were added.
+  # when more levels are added.
+  # does each level need an update # on it?
+  # does each unique building need an update # on it?
+  # I think the answer is yes.
+
+# contemplate walls... how do they fit in to calculations?
+
 
 # Facebook login only
 # sign up with facebook -> select townhall

@@ -1,0 +1,3 @@
+class BuildingAvailabilitiesController < ApplicationController
+
+end
