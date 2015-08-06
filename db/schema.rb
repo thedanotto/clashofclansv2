@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150727063048) do
+ActiveRecord::Schema.define(version: 20150806224132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,8 +22,11 @@ ActiveRecord::Schema.define(version: 20150727063048) do
     t.string   "display_name"
     t.string   "building_type"
     t.string   "category"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "upgrade_resource"
+    t.string   "production_resource"
+    t.string   "upgrader"
   end
 
   create_table "building_availabilities", force: :cascade do |t|
@@ -31,7 +34,7 @@ ActiveRecord::Schema.define(version: 20150727063048) do
     t.integer  "active_on"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
-    t.string   "resource"
+    t.string   "name"
   end
 
   create_table "building_cost_infos", force: :cascade do |t|
