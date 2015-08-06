@@ -1,23 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
 user = User.new
 user.email = "test@test.com"
 user.password = "12345678"
 user.password_confirmation = "12345678"
 user.save
 
-# building_type: building or unit
-# category: defensive, army, other, etc
+@townhall = Townhall.create(user_id: 1, name:"townhall", level:5, unique_building_code:"townhall1")
 
-# BuildingAvailability
-# BasicInfo
 
-# ready
 basic_info = 
   {   
     name:"cannon",
@@ -26,7 +15,8 @@ basic_info =
     building_type:"building",
     category:"defensive",
     upgrade_resource:"gold",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"archer_tower",
     default_level:0,
@@ -34,7 +24,8 @@ basic_info =
     building_type:"building",
     category: "defensive",
     upgrade_resource:"gold",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"mortar",
     default_level:0,
@@ -42,7 +33,8 @@ basic_info =
     building_type:"building",
     category:"defensive",
     upgrade_resource:"gold",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"bomb",
     default_level:0,
@@ -50,7 +42,8 @@ basic_info =
     building_type:"building",
     category:"trap",
     upgrade_resource:"gold",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"air_defense",
     default_level:0,
@@ -58,7 +51,8 @@ basic_info =
     building_type:"building",
     category:"defensive",
     upgrade_resource:"gold",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"air_sweeper",
     default_level:0,
@@ -66,7 +60,8 @@ basic_info =
     building_type:"building",
     category:"defensive",
     upgrade_resource:"gold",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"spring_trap",
     default_level:0,
@@ -74,7 +69,8 @@ basic_info =
     building_type:"building",
     category:"trap",
     upgrade_resource:"gold",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"wizard_tower",
     default_level:0,
@@ -82,7 +78,8 @@ basic_info =
     building_type:"building",
     category:"defensive",
     upgrade_resource:"gold",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"giant_bomb",
     default_level:0,
@@ -90,7 +87,8 @@ basic_info =
     building_type:"building",
     category:"trap",
     upgrade_resource:"gold",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"air_bomb",
     default_level:0,
@@ -98,7 +96,8 @@ basic_info =
     building_type:"building",
     category:"trap",
     upgrade_resource:"gold",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"seeking_air_mine",
     default_level:0,
@@ -106,7 +105,8 @@ basic_info =
     building_type:"building",
     category:"trap",
     upgrade_resource:"gold",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"skeleton_trap",
     default_level:0,
@@ -114,7 +114,8 @@ basic_info =
     building_type:"building",
     category:"trap",
     upgrade_resource:"gold",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"hidden_tesla",
     default_level:0,
@@ -122,7 +123,8 @@ basic_info =
     building_type:"building",
     category:"defensive",
     upgrade_resource:"gold",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"xbow",
     default_level:0,
@@ -130,7 +132,8 @@ basic_info =
     building_type:"building",
     category:"defensive",
     upgrade_resource:"gold",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"inferno_tower",
     default_level:0,
@@ -138,7 +141,8 @@ basic_info =
     building_type:"building",
     category:"defensive",
     upgrade_resource:"gold",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"gold_mine",
     default_level:0,
@@ -146,7 +150,8 @@ basic_info =
     building_type:"building",
     category:"resource",
     upgrade_resource:"elixir",
-    production_resource: "gold"
+    production_resource: "gold",
+    upgrader:"builders"
   }, {
     name:"elixir_collector",
     default_level:0,
@@ -154,7 +159,8 @@ basic_info =
     building_type:"building",
     category:"resource",
     upgrade_resource:"gold",
-    production_resource: "elixir"
+    production_resource: "elixir",
+    upgrader:"builders"
   }, {
     name:"dark_elixir_drill",
     default_level:0,
@@ -162,7 +168,8 @@ basic_info =
     building_type:"building",
     category:"resource",
     upgrade_resource:"elixir",
-    production_resource: "dark_elixir"
+    production_resource: "dark_elixir",
+    upgrader:"builders"
   }, {
     name:"gold_storage",
     default_level:0,
@@ -170,7 +177,8 @@ basic_info =
     building_type:"building",
     category:"resource",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"elixir_storage",
     default_level:0,
@@ -178,7 +186,8 @@ basic_info =
     building_type:"building",
     category:"resource",
     upgrade_resource:"gold",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"dark_elixir_storage",
     default_level:0,
@@ -186,7 +195,8 @@ basic_info =
     building_type:"building",
     category:"resource",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"dark_barracks",
     default_level:0,
@@ -194,7 +204,8 @@ basic_info =
     building_type:"building",
     category:"army",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"barracks",
     default_level:0,
@@ -202,15 +213,17 @@ basic_info =
     building_type:"building",
     category:"army",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
-    name:"army_camps",
+    name:"army_camp",
     default_level:0,
     display_name:"Army Camps",
     building_type:"building",
     category:"army",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"lab",
     default_level:0,
@@ -218,7 +231,8 @@ basic_info =
     building_type:"building",
     category:"army",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"spell_factory",
     default_level:0,
@@ -226,7 +240,8 @@ basic_info =
     building_type:"building",
     category:"army",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"dark_spell_factory",
     default_level:0,
@@ -234,7 +249,8 @@ basic_info =
     building_type:"building",
     category:"army",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"barbarian_king",
     default_level:0,
@@ -242,7 +258,8 @@ basic_info =
     building_type:"building",
     category:"Hero",
     upgrade_resource:"dark elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, {
     name:"archer_queen",
     default_level:0,
@@ -250,7 +267,8 @@ basic_info =
     building_type:"building",
     category:"Hero",
     upgrade_resource:"dark elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"builders"
   }, { ## need to input all units
     name:"clan_castle",
     default_level:0,
@@ -258,15 +276,26 @@ basic_info =
     building_type:"building",
     category:"Other",
     upgrade_resource:"gold",
-    production_resource: nil
-  }, {
+    production_resource: nil,
+    upgrader:"builders"
+  },{
+    name:"townhhall",
+    default_level:1,
+    display_name:"Townhall",
+    building_type:"building",
+    category:"Other",
+    upgrade_resource:"gold",
+    production_resource: nil,
+    upgrader:"builders"
+    }, {
     name:"barbarian",
     default_level:1,
     display_name:"Barbarian",
     building_type:"unit",
     category:"Unit",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"archer",
     default_level:1,
@@ -274,7 +303,8 @@ basic_info =
     building_type:"unit",
     category:"Unit",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"goblin",
     default_level:1,
@@ -282,7 +312,8 @@ basic_info =
     building_type:"unit",
     category:"Unit",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"giant",
     default_level:1,
@@ -290,7 +321,8 @@ basic_info =
     building_type:"unit",
     category:"Unit",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"wall_breaker",
     default_level:1,
@@ -298,7 +330,8 @@ basic_info =
     building_type:"unit",
     category:"Unit",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"balloon",
     default_level:1,
@@ -306,7 +339,8 @@ basic_info =
     building_type:"unit",
     category:"Unit",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"wizard",
     default_level:1,
@@ -314,7 +348,8 @@ basic_info =
     building_type:"unit",
     category:"Unit",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"healer",
     default_level:1,
@@ -322,7 +357,8 @@ basic_info =
     building_type:"unit",
     category:"Unit",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"dragon",
     default_level:1,
@@ -330,7 +366,8 @@ basic_info =
     building_type:"unit",
     category:"Unit",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"pekka",
     default_level:1,
@@ -338,7 +375,8 @@ basic_info =
     building_type:"unit",
     category:"Unit",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"minion",
     default_level:1,
@@ -346,7 +384,8 @@ basic_info =
     building_type:"unit",
     category:"Dark Unit",
     upgrade_resource:"dark elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"hog_rider",
     default_level:1,
@@ -354,7 +393,8 @@ basic_info =
     building_type:"unit",
     category:"Dark Unit",
     upgrade_resource:"dark elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"valkyrie",
     default_level:1,
@@ -362,7 +402,8 @@ basic_info =
     building_type:"unit",
     category:"Dark Unit",
     upgrade_resource:"dark elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"golem",
     default_level:1,
@@ -370,7 +411,8 @@ basic_info =
     building_type:"unit",
     category:"Dark Unit",
     upgrade_resource:"dark elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"witch",
     default_level:1,
@@ -378,7 +420,8 @@ basic_info =
     building_type:"unit",
     category:"Dark Unit",
     upgrade_resource:"dark elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"lava_hound",
     default_level:1,
@@ -386,7 +429,8 @@ basic_info =
     building_type:"unit",
     category:"Dark Unit",
     upgrade_resource:"dark elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"lightning_spell",
     default_level:1,
@@ -394,7 +438,8 @@ basic_info =
     building_type:"unit",
     category:"Spell",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"healing_spell",
     default_level:1,
@@ -402,7 +447,8 @@ basic_info =
     building_type:"unit",
     category:"Spell",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"rage_spell",
     default_level:1,
@@ -410,7 +456,8 @@ basic_info =
     building_type:"unit",
     category:"Spell",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"jump_spell",
     default_level:1,
@@ -418,7 +465,8 @@ basic_info =
     building_type:"unit",
     category:"Spell",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"freeze_spell",
     default_level:1,
@@ -426,7 +474,8 @@ basic_info =
     building_type:"unit",
     category:"Spell",
     upgrade_resource:"elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"poison_spell",
     default_level:1,
@@ -434,7 +483,8 @@ basic_info =
     building_type:"unit",
     category:"Dark Spell",
     upgrade_resource:"dark elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"earthquake_spell",
     default_level:1,
@@ -442,7 +492,8 @@ basic_info =
     building_type:"unit",
     category:"Dark Spell",
     upgrade_resource:"dark elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }, {
     name:"haste_spell",
     default_level:1,
@@ -450,7 +501,8 @@ basic_info =
     building_type:"unit",
     category:"Dark Spell",
     upgrade_resource:"dark elixir",
-    production_resource: nil
+    production_resource: nil,
+    upgrader:"lab"
   }
   # , {
   #   name:"",
@@ -458,408 +510,540 @@ basic_info =
   #   display_name:"",
   #   building_type:"unit",
   #   category:"",
-  #   upgrade_resource:"",
+  #   upgrade_resource:"elixir"
   #   production_resource: nil
   # }
 
-# ready
+
 building_availability = 
   {
     unique_building_code:"cannon1",
     active_on:1,
+    name:"cannon"
   }, {
     unique_building_code:"cannon2",
     active_on:1,
+    name:"cannon"
   }, {
     unique_building_code:"cannon3",
     active_on:5,
+    name:"cannon"
   }, {
     unique_building_code:"cannon4",
-    active_on:7
+    active_on:7,
+    name:"cannon"
   }, {
     unique_building_code:"cannon5",
-    active_on:7
+    active_on:7,
+    name:"cannon"
   }, {
     unique_building_code:"cannon6",
-    active_on:10
+    active_on:10,
+    name:"cannon"
   }, {
     unique_building_code:"archer_tower1",
-    active_on:2
+    active_on:2,
+    name:"archer_tower"
   }, {
     unique_building_code:"archer_tower2",
-    active_on:4
+    active_on:4,
+    name:"archer_tower"
   }, {
     unique_building_code:"archer_tower3",
-    active_on:5
+    active_on:5,
+    name:"archer_tower"
   }, {
     unique_building_code:"archer_tower4",
-    active_on:7
+    active_on:7,
+    name:"archer_tower"
   }, {
     unique_building_code:"archer_tower5",
-    active_on:8
+    active_on:8,
+    name:"archer_tower"
   }, {
     unique_building_code:"archer_tower6",
-    active_on:9
+    active_on:9,
+    name:"archer_tower"
   }, {
     unique_building_code:"archer_tower7",
-    active_on:10
+    active_on:10,
+    name:"archer_tower"
   }, {
     unique_building_code:"mortar1",
-    active_on:3
+    active_on:3,
+    name:"mortar"
   }, {
     unique_building_code:"mortar2",
-    active_on:6
+    active_on:6,
+    name:"mortar"
   }, {
     unique_building_code:"mortar3",
-    active_on:7
+    active_on:7,
+    name:"mortar"
   }, {
     unique_building_code:"mortar4",
-    active_on:8
+    active_on:8,
+    name:"mortar"
   }, {
     unique_building_code:"bomb1",
-    active_on:3
+    active_on:3,
+    name:"bomb"
   }, {
     unique_building_code:"bomb2",
-    active_on:3
+    active_on:3,
+    name:"bomb"
   }, {
     unique_building_code:"bomb3",
-    active_on:5
+    active_on:5,
+    name:"bomb"
   }, {
     unique_building_code:"bomb4",
-    active_on:5
+    active_on:5,
+    name:"bomb"
   }, {
     unique_building_code:"bomb5",
-    active_on:7
+    active_on:7,
+    name:"bomb"
   }, {
     unique_building_code:"bomb6",
-    active_on:7
+    active_on:7,
+    name:"bomb"
   }, {
     unique_building_code:"air_defense1",
-    active_on:4
+    active_on:4,
+    name:"air_defense"
   }, {
     unique_building_code:"air_defense2",
-    active_on:7
+    active_on:7,
+    name:"air_defense"
   }, {
     unique_building_code:"air_defense3",
-    active_on:8
+    active_on:8,
+    name:"air_defense"
   }, {
     unique_building_code:"air_defense4",
-    active_on:9
+    active_on:9,
+    name:"air_defense"
   }, {
     unique_building_code:"air_sweeper1",
-    active_on:6
+    active_on:6,
+    name:"air_sweeper"
   }, {
     unique_building_code:"air_sweeper2",
-    active_on:9
+    active_on:9,
+    name:"air_sweeper"
   }, {
     unique_building_code:"spring_trap1",
-    active_on:4
+    active_on:4,
+    name:"spring_trap"
   }, {
     unique_building_code:"spring_trap2",
-    active_on:4
+    active_on:4,
+    name:"spring_trap"
   }, {
     unique_building_code:"spring_trap3",
-    active_on:6
+    active_on:6,
+    name:"spring_trap"
   }, {
     unique_building_code:"spring_trap4",
-    active_on:6
+    active_on:6,
+    name:"spring_trap"
   }, {
     unique_building_code:"spring_trap5",
-    active_on:8
+    active_on:8,
+    name:"spring_trap"
   }, {
     unique_building_code:"spring_trap6",
-    active_on:8
+    active_on:8,
+    name:"spring_trap"
   }, {
     unique_building_code:"wizard_tower1",
-    active_on:5
+    active_on:5,
+    name:"wizard_tower"
   }, {
     unique_building_code:"wizard_tower2",
-    active_on:6
+    active_on:6,
+    name:"wizard_tower"
   }, {
     unique_building_code:"wizard_tower3",
-    active_on:8
+    active_on:8,
+    name:"wizard_tower"
   }, {
     unique_building_code:"wizard_tower4",
-    active_on:9
+    active_on:9,
+    name:"wizard_tower"
   }, {
     unique_building_code:"giant_bomb1",
-    active_on:6
+    active_on:6,
+    name:"giant_bomb"
   }, {
     unique_building_code:"giant_bomb2",
-    active_on:7
+    active_on:7,
+    name:"giant_bomb"
   }, {
     unique_building_code:"giant_bomb3",
-    active_on:8
+    active_on:8,
+    name:"giant_bomb"
   }, {
     unique_building_code:"giant_bomb4",
-    active_on:9
+    active_on:9,
+    name:"giant_bomb"
   }, {
     unique_building_code:"giant_bomb5",
-    active_on:10
+    active_on:10,
+    name:"giant_bomb"
   }, {
     unique_building_code:"air_bomb1",
-    active_on:5
+    active_on:5,
+    name:"air_bomb"
   }, {
     unique_building_code:"air_bomb2",
-    active_on:5
+    active_on:5,
+    name:"air_bomb"
   }, {
     unique_building_code:"air_bomb3",
-    active_on:8
+    active_on:8,
+    name:"air_bomb"
   }, {
     unique_building_code:"air_bomb4",
-    active_on:8
+    active_on:8,
+    name:"air_bomb"
   }, {
     unique_building_code:"air_bomb5",
-    active_on:10
+    active_on:10,
+    name:"air_bomb"
   }, {
     unique_building_code:"seeking_air_mine1",
-    active_on:7
+    active_on:7,
+    name:"seeking_air_mine"
   }, {
     unique_building_code:"seeking_air_mine2",
-    active_on:8
+    active_on:8,
+    name:"seeking_air_mine"
   }, {
     unique_building_code:"seeking_air_mine3",
-    active_on:9
+    active_on:9,
+    name:"seeking_air_mine"
   }, {
     unique_building_code:"seeking_air_mine4",
-    active_on:9
+    active_on:9,
+    name:"seeking_air_mine"
   }, {
     unique_building_code:"seeking_air_mine5",
-    active_on:10
+    active_on:10,
+    name:"seeking_air_mine"
   }, {
     unique_building_code:"skeleton_trap1",
-    active_on:8
+    active_on:8,
+    name:"skeleton_trap"
   }, {
     unique_building_code:"skeleton_trap2",
-    active_on:8
+    active_on:8,
+    name:"skeleton_trap"
   }, {
     unique_building_code:"skeleton_trap3",
-    active_on:10
+    active_on:10,
+    name:"skeleton_trap"
   }, {
     unique_building_code:"hidden_tesla1",
-    active_on:7
+    active_on:7,
+    name:"hidden_tesla"
   }, {
     unique_building_code:"hidden_tesla2",
-    active_on:7
+    active_on:7,
+    name:"hidden_tesla"
   }, {
     unique_building_code:"hidden_tesla3",
-    active_on:8
+    active_on:8,
+    name:"hidden_tesla"
   }, {
     unique_building_code:"hidden_tesla4",
-    active_on:9
+    active_on:9,
+    name:"hidden_tesla"
   }, {
     unique_building_code:"xbow1",
-    active_on:9
+    active_on:9,
+    name:"xbow"
   }, {
     unique_building_code:"xbow2",
-    active_on:9
+    active_on:9,
+    name:"xbow"
   }, {
     unique_building_code:"xbow3",
-    active_on:10
+    active_on:10,
+    name:"xbow"
   }, {
     unique_building_code:"inferno_tower1",
-    active_on:10
+    active_on:10,
+    name:"inferno_tower"
   }, {
     unique_building_code:"inferno_tower2",
-    active_on:10
+    active_on:10,
+    name:"inferno_tower"
   }, {
     unique_building_code:"gold_mine1",
-    active_on:1
+    active_on:1,
+    name:"gold_mine"
   }, {
     unique_building_code:"gold_mine2",
-    active_on:2
+    active_on:2,
+    name:"gold_mine"
   }, {
     unique_building_code:"gold_mine3",
-    active_on:3
+    active_on:3,
+    name:"gold_mine"
   }, {
     unique_building_code:"gold_mine4",
-    active_on:4
+    active_on:4,
+    name:"gold_mine"
   }, {
     unique_building_code:"gold_mine5",
-    active_on:5
+    active_on:5,
+    name:"gold_mine"
   }, {
     unique_building_code:"gold_mine6",
-    active_on:6
+    active_on:6,
+    name:"gold_mine"
   }, {
     unique_building_code:"gold_mine7",
-    active_on:10
+    active_on:10,
+    name:"gold_mine"
   }, {
     unique_building_code:"elixir_collector1",
-    active_on:1
+    active_on:1,
+    name:"elixir_collector"
   }, {
     unique_building_code:"elixir_collector2",
-    active_on:2
+    active_on:2,
+    name:"elixir_collector"
   }, {
     unique_building_code:"elixir_collector3",
-    active_on:3
+    active_on:3,
+    name:"elixir_collector"
   }, {
     unique_building_code:"elixir_collector4",
-    active_on:4
+    active_on:4,
+    name:"elixir_collector"
   }, {
     unique_building_code:"elixir_collector5",
-    active_on:5
+    active_on:5,
+    name:"elixir_collector"
   }, {
     unique_building_code:"elixir_collector6",
-    active_on:6
+    active_on:6,
+    name:"elixir_collector"
   }, {
     unique_building_code:"elixir_collector7",
-    active_on:10
+    active_on:10,
+    name:"elixir_collector"
   }, {
     unique_building_code:"gold_storage1",
-    active_on:1
+    active_on:1,
+    name:"gold_storage"
   }, {
     unique_building_code:"gold_storage2",
-    active_on:3
+    active_on:3,
+    name:"gold_storage"
   }, {
     unique_building_code:"gold_storage3",
-    active_on:8
+    active_on:8,
+    name:"gold_storage"
   }, {
     unique_building_code:"gold_storage4",
-    active_on:10
+    active_on:10,
+    name:"gold_storage"
   }, {
     unique_building_code:"elixir_storage1",
-    active_on:1
+    active_on:1,
+    name:"elixir_storage"
   }, {
     unique_building_code:"elixir_storage2",
-    active_on:3
+    active_on:3,
+    name:"elixir_storage"
   }, {
     unique_building_code:"elixir_storage3",
-    active_on:8
+    active_on:8,
+    name:"elixir_storage"
   }, {
     unique_building_code:"elixir_storage4",
-    active_on:10
+    active_on:10,
+    name:"elixir_storage"
   }, {
     unique_building_code:"dark_elixir_drill1",
-    active_on:7
+    active_on:7,
+    name:"dark_elixir_drill"
   }, {
     unique_building_code:"dark_elixir_drill2",
-    active_on:8
+    active_on:8,
+    name:"dark_elixir_drill"
   }, {
     unique_building_code:"dark_elixir_drill3",
-    active_on:10
+    active_on:10,
+    name:"dark_elixir_drill"
   }, {
     unique_building_code:"dark_elixir_storage1",
-    active_on:7
+    active_on:7,
+    name:"dark_elixir_storage"
   }, {
     unique_building_code:"dark_barracks1",
-    active_on:7
+    active_on:7,
+    name:"dark_barracks"
   }, {
     unique_building_code:"dark_barracks2",
-    active_on:8
+    active_on:8,
+    name:"dark_barracks"
   }, {
     unique_building_code:"barracks1",
-    active_on:1
+    active_on:1,
+    name:"barracks"
   }, {
     unique_building_code:"barracks2",
-    active_on:2
+    active_on:2,
+    name:"barracks"
   }, {
     unique_building_code:"barracks3",
-    active_on:4
+    active_on:4,
+    name:"barracks"
   }, {
     unique_building_code:"barracks4",
-    active_on:7
+    active_on:7,
+    name:"barracks"
   }, {
-    unique_building_code:"army_camps1",
-    active_on:1
+    unique_building_code:"army_camp1",
+    active_on:1,
+    name:"army_camp"
   }, {
-    unique_building_code:"army_camps2",
-    active_on:3
+    unique_building_code:"army_camp2",
+    active_on:3,
+    name:"army_camp"
   }, {
-    unique_building_code:"army_camps3",
-    active_on:5
+    unique_building_code:"army_camp3",
+    active_on:5,
+    name:"army_camp"
   }, {
-    unique_building_code:"army_camps4",
-    active_on:7
+    unique_building_code:"army_camp4",
+    active_on:7,
+    name:"army_camp"
   }, {
     unique_building_code:"lab1",
-    active_on:3
+    active_on:3,
+    name:"lab"
   }, {
     unique_building_code:"spell_factory1",
-    active_on:5
+    active_on:5,
+    name:"spell_factory"
   }, {
     unique_building_code:"dark_spell_factory1",
-    active_on:8
+    active_on:8,
+    name:"dark_spell_factory"
   }, {
     unique_building_code:"barbarian_king1",
-    active_on:7
+    active_on:7,
+    name:"barbarian_king"
   }, {
     unique_building_code:"archer_queen1",
-    active_on:9
+    active_on:9,
+    name:"archer_queen"
   }, { # what about... units? barbarian, archer, etc... do they need to be in here??
     unique_building_code:"clan_castle1",
-    active_on:3
+    active_on:3,
+    name:"clan_castle"
   }, {
     unique_building_code:"barbarian1",
-    active_on:1
+    active_on:1,
+    name:"barbarian"
   }, {
     unique_building_code:"archer1",
-    active_on:1
+    active_on:1,
+    name:"archer"
   }, {
     unique_building_code:"goblin1",
-    active_on:2
+    active_on:2,
+    name:"goblin"
   }, {
     unique_building_code:"giant1",
-    active_on:1
+    active_on:1,
+    name:"giant"
   }, {
     unique_building_code:"wall_breaker1",
-    active_on:3
+    active_on:3,
+    name:"wall_breaker"
   }, {
     unique_building_code:"balloon1",
-    active_on:4
+    active_on:4,
+    name:"balloon"
   }, {
     unique_building_code:"wizard1",
-    active_on:5
+    active_on:5,
+    name:"wizard"
   }, {
     unique_building_code:"healer1",
-    active_on:6
+    active_on:6,
+    name:"healer"
   }, {
     unique_building_code:"dragon1",
-    active_on:7
+    active_on:7,
+    name:"dragon"
   }, {
     unique_building_code:"pekka1",
-    active_on:8
+    active_on:8,
+    name:"pekka"
   }, {
     unique_building_code:"minion1",
-    active_on:7
+    active_on:7,
+    name:"minion"
   }, {
     unique_building_code:"hog_rider1",
-    active_on:7
+    active_on:7,
+    name:"hog_rider"
   }, {
     unique_building_code:"valkyrie1",
-    active_on:8
+    active_on:8,
+    name:"valkyrie"
   }, {
     unique_building_code:"golem1",
-    active_on:8
+    active_on:8,
+    name:"golem"
   }, {
     unique_building_code:"witch1",
-    active_on:9
+    active_on:9,
+    name:"witch"
   }, {
     unique_building_code:"lava_hound1",
-    active_on:9
+    active_on:9,
+    name:"lava_hound"
   }, {
     unique_building_code:"lightning_spell1",
-    active_on:5
+    active_on:5,
+    name:"lightning_spell"
   }, {
     unique_building_code:"healing_spell1",
-    active_on:6
+    active_on:6,
+    name:"healing_spell"
   }, {
     unique_building_code:"rage_spell1",
-    active_on:7
+    active_on:7,
+    name:"rage_spell"
   }, {
     unique_building_code:"jump_spell1",
-    active_on:9
+    active_on:9,
+    name:"jump_spell"
   }, {
     unique_building_code:"freeze_spell1",
-    active_on:10
+    active_on:10,
+    name:"freeze_spell"
   }, {
     unique_building_code:"poison_spell1",
-    active_on:8
+    active_on:8,
+    name:"poison_spell"
   }, {
     unique_building_code:"earthquake_spell1",
-    active_on:8
+    active_on:8,
+    name:"earthquake_spell"
   }, {
     unique_building_code:"haste_spell1",
-    active_on:9
+    active_on:9,
+    name:"haste_spell"
   }
   # , {
   #   unique_building_code:"",
@@ -868,398 +1052,2857 @@ building_availability =
 
 building_cost_info =
   {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-    cumulative_cost:"",
-    cumulative_time:""
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
-  }, {
-    name:"",
-    level:,
-    upgrade_resource:"",
-    cost:"",
-    time:"",
+    name:"cannon",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0,
+  },  {
+    name:"cannon",
+    level:1,
+    upgrade_resource:"gold",
+    cost:250,
+    time:0
+  }, {
+    name:"cannon",
+    level:2,
+    upgrade_resource:"gold",
+    cost:1000,
+    time:15
+  }, {
+    name:"cannon",
+    level:3,
+    upgrade_resource:"gold",
+    cost:4000,
+    time:45
+  }, {
+    name:"cannon",
+    level:4,
+    upgrade_resource:"gold",
+    cost:16000,
+    time:120
+  }, {
+    name:"cannon",
+    level:5,
+    upgrade_resource:"gold",
+    cost:50000,
+    time:360
+  }, {
+    name:"cannon",
+    level:6,
+    upgrade_resource:"gold",
+    cost:100000,
+    time:720
+  }, {
+    name:"cannon",
+    level:7,
+    upgrade_resource:"gold",
+    cost:200000,
+    time:1440
+  }, {
+    name:"cannon",
+    level:8,
+    upgrade_resource:"gold",
+    cost:400000,
+    time:2880
+  }, {
+    name:"cannon",
+    level:9,
+    upgrade_resource:"gold",
+    cost:800000,
+    time:4320
+  }, {
+    name:"cannon",
+    level:10,
+    upgrade_resource:"gold",
+    cost:1600000,
+    time:5760
+  }, {
+    name:"cannon",
+    level:11,
+    upgrade_resource:"gold",
+    cost:3200000,
+    time:7200
+  }, {
+    name:"cannon",
+    level:12,
+    upgrade_resource:"gold",
+    cost:6400000,
+    time:8640
+  }, {
+    name:"cannon",
+    level:13,
+    upgrade_resource:"gold",
+    cost:7500000,
+    time:10080
+  }, {
+    name:"archer_tower",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"archer_tower",
+    level:1,
+    upgrade_resource:"gold",
+    cost:1000,
+    time:1
+  }, {
+    name:"archer_tower",
+    level:2,
+    upgrade_resource:"gold",
+    cost:2000,
+    time:30
+  }, {
+    name:"archer_tower",
+    level:3,
+    upgrade_resource:"gold",
+    cost:5000,
+    time:45
+  }, {
+    name:"archer_tower",
+    level:4,
+    upgrade_resource:"gold",
+    cost:20000,
+    time:240
+  }, {
+    name:"archer_tower",
+    level:5,
+    upgrade_resource:"gold",
+    cost:80000,
+    time:720
+  }, {
+    name:"archer_tower",
+    level:6,
+    upgrade_resource:"gold",
+    cost:180000,
+    time:1440
+  }, {
+    name:"archer_tower",
+    level:7,
+    upgrade_resource:"gold",
+    cost:360000,
+    time:2880
+  }, {
+    name:"archer_tower",
+    level:8,
+    upgrade_resource:"gold",
+    cost:720000,
+    time:4320
+  }, {
+    name:"archer_tower",
+    level:9,
+    upgrade_resource:"gold",
+    cost:1500000,
+    time:5760
+  }, {
+    name:"archer_tower",
+    level:10,
+    upgrade_resource:"gold",
+    cost:2500000,
+    time:7200
+  }, {
+    name:"archer_tower",
+    level:11,
+    upgrade_resource:"gold",
+    cost:4500000,
+    time:8640
+  }, {
+    name:"archer_tower",
+    level:12,
+    upgrade_resource:"gold",
+    cost:6500000,
+    time:10080
+  }, {
+    name:"archer_tower",
+    level:13,
+    upgrade_resource:"gold",
+    cost:7500000,
+    time:11520
+  }, {
+    name:"mortar",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"mortar",
+    level:1,
+    upgrade_resource:"gold",
+    cost:8000,
+    time:480
+  }, {
+    name:"mortar",
+    level:2,
+    upgrade_resource:"gold",
+    cost:32000,
+    time:720
+  }, {
+    name:"mortar",
+    level:3,
+    upgrade_resource:"gold",
+    cost:120000,
+    time:1440
+  }, {
+    name:"mortar",
+    level:4,
+    upgrade_resource:"gold",
+    cost:400000,
+    time:2880
+  }, {
+    name:"mortar",
+    level:5,
+    upgrade_resource:"gold",
+    cost:800000,
+    time:5760
+  }, {
+    name:"mortar",
+    level:6,
+    upgrade_resource:"gold",
+    cost:1600000,
+    time:7200
+  }, {
+    name:"mortar",
+    level:7,
+    upgrade_resource:"gold",
+    cost:3200000,
+    time:10080
+  }, {
+    name:"mortar",
+    level:8,
+    upgrade_resource:"gold",
+    cost:6400000,
+    time:11520
+  }, {
+    name:"air_defense",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"air_defense",
+    level:1,
+    upgrade_resource:"gold",
+    cost:22500,
+    time:300
+  }, {
+    name:"air_defense",
+    level:2,
+    upgrade_resource:"gold",
+    cost:90000,
+    time:1440
+  }, {
+    name:"air_defense",
+    level:3,
+    upgrade_resource:"gold",
+    cost:270000,
+    time:4320
+  }, {
+    name:"air_defense",
+    level:4,
+    upgrade_resource:"gold",
+    cost:540000,
+    time:7200
+  }, {
+    name:"air_defense",
+    level:5,
+    upgrade_resource:"gold",
+    cost:1080000,
+    time:8640
+  }, {
+    name:"air_defense",
+    level:6,
+    upgrade_resource:"gold",
+    cost:2160000,
+    time:11520
+  }, {
+    name:"air_defense",
+    level:7,
+    upgrade_resource:"gold",
+    cost:4320000,
+    time:14400
+  }, {
+    name:"air_defense",
+    level:8,
+    upgrade_resource:"gold",
+    cost:7560000,
+    time:17280
+  }, {
+    name:"wizard_tower",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"wizard_tower",
+    level:1,
+    upgrade_resource:"gold",
+    cost:180000,
+    time:720
+  }, {
+    name:"wizard_tower",
+    level:2,
+    upgrade_resource:"gold",
+    cost:360000,
+    time:1440
+  }, {
+    name:"wizard_tower",
+    level:3,
+    upgrade_resource:"gold",
+    cost:720000,
+    time:2880
+  }, {
+    name:"wizard_tower",
+    level:4,
+    upgrade_resource:"gold",
+    cost:1280000,
+    time:4320
+  }, {
+    name:"wizard_tower",
+    level:5,
+    upgrade_resource:"gold",
+    cost:1960000,
+    time:5760
+  }, {
+    name:"wizard_tower",
+    level:6,
+    upgrade_resource:"gold",
+    cost:2680000,
+    time:7200
+  }, {
+    name:"wizard_tower",
+    level:7,
+    upgrade_resource:"gold",
+    cost:5360000,
+    time:10080
+  }, {
+    name:"wizard_tower",
+    level:8,
+    upgrade_resource:"gold",
+    cost:6480000,
+    time:14400
+  }, {
+    name:"air_sweeper",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"air_sweeper",
+    level:1,
+    upgrade_resource:"gold",
+    cost:500000,
+    time:1440
+  }, {
+    name:"air_sweeper",
+    level:2,
+    upgrade_resource:"gold",
+    cost:750000,
+    time:4320
+  }, {
+    name:"air_sweeper",
+    level:3,
+    upgrade_resource:"gold",
+    cost:1250000,
+    time:7200
+  }, {
+    name:"air_sweeper",
+    level:4,
+    upgrade_resource:"gold",
+    cost:2400000,
+    time:10080
+  }, {
+    name:"air_sweeper",
+    level:5,
+    upgrade_resource:"gold",
+    cost:4800000,
+    time:11520
+  }, {
+    name:"air_sweeper",
+    level:6,
+    upgrade_resource:"gold",
+    cost:7200000,
+    time:12960
+  }, {
+    name:"hidden_tesla",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"hidden_tesla",
+    level:1,
+    upgrade_resource:"gold",
+    cost:1000000,
+    time:1440
+  }, {
+    name:"hidden_tesla",
+    level:2,
+    upgrade_resource:"gold",
+    cost:1250000,
+    time:4320
+  }, {
+    name:"hidden_tesla",
+    level:3,
+    upgrade_resource:"gold",
+    cost:1500000,
+    time:7200
+  }, {
+    name:"hidden_tesla",
+    level:4,
+    upgrade_resource:"gold",
+    cost:2000000,
+    time:8640
+  }, {
+    name:"hidden_tesla",
+    level:5,
+    upgrade_resource:"gold",
+    cost:2500000,
+    time:11520
+  }, {
+    name:"hidden_tesla",
+    level:6,
+    upgrade_resource:"gold",
+    cost:3000000,
+    time:14400
+  }, {
+    name:"hidden_tesla",
+    level:7,
+    upgrade_resource:"gold",
+    cost:3500000,
+    time:17280
+  }, {
+    name:"hidden_tesla",
+    level:8,
+    upgrade_resource:"gold",
+    cost:5000000,
+    time:20160
+  }, {
+    name:"xbow",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"xbow",
+    level:1,
+    upgrade_resource:"gold",
+    cost:3000000,
+    time:10080
+  }, {
+    name:"xbow",
+    level:2,
+    upgrade_resource:"gold",
+    cost:5000000,
+    time:14400
+  }, {
+    name:"xbow",
+    level:3,
+    upgrade_resource:"gold",
+    cost:7000000,
+    time:20160
+  }, {
+    name:"xbow",
+    level:4,
+    upgrade_resource:"gold",
+    cost:8000000,
+    time:20160
+  }, {
+    name:"inferno_tower",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"inferno_tower",
+    level:1,
+    upgrade_resource:"gold",
+    cost:5000000,
+    time:10080
+  }, {
+    name:"inferno_tower",
+    level:2,
+    upgrade_resource:"gold",
+    cost:6500000,
+    time:14400
+  }, {
+    name:"inferno_tower",
+    level:3,
+    upgrade_resource:"gold",
+    cost:8000000,
+    time:20160
+  }, {
+    name:"bomb",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"bomb",
+    level:1,
+    upgrade_resource:"gold",
+    cost:400,
+    time:0
+  }, {
+    name:"bomb",
+    level:2,
+    upgrade_resource:"gold",
+    cost:1000,
+    time:15
+  }, {
+    name:"bomb",
+    level:3,
+    upgrade_resource:"gold",
+    cost:10000,
+    time:120
+  }, {
+    name:"bomb",
+    level:4,
+    upgrade_resource:"gold",
+    cost:100000,
+    time:480
+  }, {
+    name:"bomb",
+    level:5,
+    upgrade_resource:"gold",
+    cost:1000000,
+    time:1440
+  }, {
+    name:"bomb",
+    level:6,
+    upgrade_resource:"gold",
+    cost:1500000,
+    time:2880
+  }, {
+    name:"spring_trap",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"spring_trap",
+    level:1,
+    upgrade_resource:"gold",
+    cost:2000,
+    time:0
+  }, {
+    name:"giant_bomb",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"giant_bomb",
+    level:1,
+    upgrade_resource:"gold",
+    cost:12500,
+    time:0
+  }, {
+    name:"giant_bomb",
+    level:2,
+    upgrade_resource:"gold",
+    cost:75000,
+    time:360
+  }, {
+    name:"giant_bomb",
+    level:3,
+    upgrade_resource:"gold",
+    cost:750000,
+    time:1440
+  }, {
+    name:"giant_bomb",
+    level:4,
+    upgrade_resource:"gold",
+    cost:2500000,
+    time:4320
+  }, {
+    name:"air_bomb",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"air_bomb",
+    level:1,
+    upgrade_resource:"gold",
+    cost:4000,
+    time:0
+  }, {
+    name:"air_bomb",
+    level:2,
+    upgrade_resource:"gold",
+    cost:20000,
+    time:240
+  }, {
+    name:"air_bomb",
+    level:3,
+    upgrade_resource:"gold",
+    cost:200000,
+    time:720
+  }, {
+    name:"air_bomb",
+    level:4,
+    upgrade_resource:"gold",
+    cost:1500000,
+    time:1440
+  }, {
+    name:"seeking_air_mine",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"seeking_air_mine",
+    level:1,
+    upgrade_resource:"gold",
+    cost:15000,
+    time:0
+  }, {
+    name:"seeking_air_mine",
+    level:2,
+    upgrade_resource:"gold",
+    cost:2000000,
+    time:1440
+  }, {
+    name:"seeking_air_mine",
+    level:3,
+    upgrade_resource:"gold",
+    cost:4000000,
+    time:4320
+  }, {
+    name:"skeleton_trap",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"skeleton_trap",
+    level:1,
+    upgrade_resource:"gold",
+    cost:6000,
+    time:0
+  }, {
+    name:"skeleton_trap",
+    level:2,
+    upgrade_resource:"gold",
+    cost:600000,
+    time:360
+  }, {
+    name:"skeleton_trap",
+    level:3,
+    upgrade_resource:"gold",
+    cost:1300000,
+    time:1440
+  }, {
+    name:"elixir_collector",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"elixir_collector",
+    level:1,
+    upgrade_resource:"gold",
+    cost:150,
+    time:0
+  }, {
+    name:"elixir_collector",
+    level:2,
+    upgrade_resource:"gold",
+    cost:300,
+    time:1
+  }, {
+    name:"elixir_collector",
+    level:3,
+    upgrade_resource:"gold",
+    cost:700,
+    time:15
+  }, {
+    name:"elixir_collector",
+    level:4,
+    upgrade_resource:"gold",
+    cost:1400,
+    time:60
+  }, {
+    name:"elixir_collector",
+    level:5,
+    upgrade_resource:"gold",
+    cost:3500,
+    time:120
+  }, {
+    name:"elixir_collector",
+    level:6,
+    upgrade_resource:"gold",
+    cost:7000,
+    time:360
+  }, {
+    name:"elixir_collector",
+    level:7,
+    upgrade_resource:"gold",
+    cost:14000,
+    time:720
+  }, {
+    name:"elixir_collector",
+    level:8,
+    upgrade_resource:"gold",
+    cost:28000,
+    time:1440
+  }, {
+    name:"elixir_collector",
+    level:9,
+    upgrade_resource:"gold",
+    cost:56000,
+    time:2880
+  }, {
+    name:"elixir_collector",
+    level:10,
+    upgrade_resource:"gold",
+    cost:84000,
+    time:4320
+  }, {
+    name:"elixir_collector",
+    level:11,
+    upgrade_resource:"gold",
+    cost:168000,
+    time:5760
+  }, {
+    name:"elixir_collector",
+    level:12,
+    upgrade_resource:"gold",
+    cost:336000,
+    time:7200
+  }, {
+    name:"wall",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"wall",
+    level:1,
+    upgrade_resource:"gold",
+    cost:50,
+    time:0
+  }, {
+    name:"wall",
+    level:2,
+    upgrade_resource:"gold",
+    cost:1000,
+    time:0
+  }, {
+    name:"wall",
+    level:3,
+    upgrade_resource:"gold",
+    cost:5000,
+    time:0
+  }, {
+    name:"wall",
+    level:4,
+    upgrade_resource:"gold",
+    cost:10000,
+    time:0
+  }, {
+    name:"wall",
+    level:5,
+    upgrade_resource:"gold",
+    cost:30000,
+    time:0
+  }, {
+    name:"wall",
+    level:6,
+    upgrade_resource:"gold",
+    cost:75000,
+    time:0
+  }, {
+    name:"wall",
+    level:7,
+    upgrade_resource:"gold",
+    cost:200000,
+    time:0
+  }, {
+    name:"wall",
+    level:8,
+    upgrade_resource:"gold",
+    cost:500000,
+    time:0
+  }, {
+    name:"wall",
+    level:9,
+    upgrade_resource:"gold elixir",
+    cost:1000000,
+    time:0
+  }, {
+    name:"wall",
+    level:10,
+    upgrade_resource:"gold elixir",
+    cost:3000000,
+    time:0
+  }, {
+    name:"wall",
+    level:11,
+    upgrade_resource:"gold elixir",
+    cost:4000000,
+    time:0
+  }, {
+    name:"gold_mine",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"gold_mine",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:150,
+    time:0
+  }, {
+    name:"gold_mine",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:300,
+    time:1
+  }, {
+    name:"gold_mine",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:700,
+    time:15
+  }, {
+    name:"gold_mine",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:1400,
+    time:60
+  }, {
+    name:"gold_mine",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:3000,
+    time:120
+  }, {
+    name:"gold_mine",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:7000,
+    time:360
+  }, {
+    name:"gold_mine",
+    level:7,
+    upgrade_resource:"elixir",
+    cost:14000,
+    time:720
+  }, {
+    name:"gold_mine",
+    level:8,
+    upgrade_resource:"elixir",
+    cost:28000,
+    time:1440
+  }, {
+    name:"gold_mine",
+    level:9,
+    upgrade_resource:"elixir",
+    cost:56000,
+    time:2880
+  }, {
+    name:"gold_mine",
+    level:10,
+    upgrade_resource:"elixir",
+    cost:84000,
+    time:4320
+  }, {
+    name:"gold_mine",
+    level:11,
+    upgrade_resource:"elixir",
+    cost:168000,
+    time:5760
+  }, {
+    name:"gold_mine",
+    level:12,
+    upgrade_resource:"elixir",
+    cost:336000,
+    time:7200
+  }, {
+    name:"dark_elixir_drill",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"dark_elixir_drill",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:1000000,
+    time:1440
+  }, {
+    name:"dark_elixir_drill",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:1500000,
+    time:2880
+  }, {
+    name:"dark_elixir_drill",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:2000000,
+    time:4320
+  }, {
+    name:"dark_elixir_drill",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:3000000,
+    time:5760
+  }, {
+    name:"dark_elixir_drill",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:4000000,
+    time:8640
+  }, {
+    name:"dark_elixir_drill",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:5000000,
+    time:11520
+  }, {
+    name:"gold_storage",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"gold_storage",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:300,
+    time:0
+  }, {
+    name:"gold_storage",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:750,
+    time:30
+  }, {
+    name:"gold_storage",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:1500,
+    time:60
+  }, {
+    name:"gold_storage",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:3000,
+    time:120
+  }, {
+    name:"gold_storage",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:6000,
+    time:180
+  }, {
+    name:"gold_storage",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:12000,
+    time:240
+  }, {
+    name:"gold_storage",
+    level:7,
+    upgrade_resource:"elixir",
+    cost:25000,
+    time:360
+  }, {
+    name:"gold_storage",
+    level:8,
+    upgrade_resource:"elixir",
+    cost:50000,
+    time:480
+  }, {
+    name:"gold_storage",
+    level:9,
+    upgrade_resource:"elixir",
+    cost:100000,
+    time:720
+  }, {
+    name:"gold_storage",
+    level:10,
+    upgrade_resource:"elixir",
+    cost:250000,
+    time:1440
+  }, {
+    name:"gold_storage",
+    level:11,
+    upgrade_resource:"elixir",
+    cost:500000,
+    time:2880
+  }, {
+    name:"elixir_storage",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"elixir_storage",
+    level:1,
+    upgrade_resource:"gold",
+    cost:300,
+    time:0
+  }, {
+    name:"elixir_storage",
+    level:2,
+    upgrade_resource:"gold",
+    cost:750,
+    time:30
+  }, {
+    name:"elixir_storage",
+    level:3,
+    upgrade_resource:"gold",
+    cost:1500,
+    time:60
+  }, {
+    name:"elixir_storage",
+    level:4,
+    upgrade_resource:"gold",
+    cost:3000,
+    time:120
+  }, {
+    name:"elixir_storage",
+    level:5,
+    upgrade_resource:"gold",
+    cost:6000,
+    time:180
+  }, {
+    name:"elixir_storage",
+    level:6,
+    upgrade_resource:"gold",
+    cost:12000,
+    time:240
+  }, {
+    name:"elixir_storage",
+    level:7,
+    upgrade_resource:"gold",
+    cost:25000,
+    time:360
+  }, {
+    name:"elixir_storage",
+    level:8,
+    upgrade_resource:"gold",
+    cost:50000,
+    time:480
+  }, {
+    name:"elixir_storage",
+    level:9,
+    upgrade_resource:"gold",
+    cost:100000,
+    time:720
+  }, {
+    name:"elixir_storage",
+    level:10,
+    upgrade_resource:"gold",
+    cost:250000,
+    time:1440
+  }, {
+    name:"elixir_storage",
+    level:11,
+    upgrade_resource:"gold",
+    cost:500000,
+    time:2880
+  }, {
+    name:"dark_elixir_storage",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"dark_elixir_storage",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:600000,
+    time:1440
+  }, {
+    name:"dark_elixir_storage",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:1200000,
+    time:2880
+  }, {
+    name:"dark_elixir_storage",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:1800000,
+    time:4320
+  }, {
+    name:"dark_elixir_storage",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:2400000,
+    time:5760
+  }, {
+    name:"dark_elixir_storage",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:3000000,
+    time:7200
+  }, {
+    name:"dark_elixir_storage",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:3600000,
+    time:8640
+  }, {
+    name:"army_camp",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"army_camp",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:250,
+    time:5
+  }, {
+    name:"army_camp",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:2500,
+    time:60
+  }, {
+    name:"army_camp",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:10000,
+    time:180
+  }, {
+    name:"army_camp",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:100000,
+    time:480
+  }, {
+    name:"army_camp",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:250000,
+    time:1440
+  }, {
+    name:"army_camp",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:750000,
+    time:4320
+  }, {
+    name:"army_camp",
+    level:7,
+    upgrade_resource:"elixir",
+    cost:2250000,
+    time:7200
+  }, {
+    name:"army_camp",
+    level:8,
+    upgrade_resource:"elixir",
+    cost:6750000,
+    time:14400
+  }, {
+    name:"barracks",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"barracks",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:200,
+    time:0
+  }, {
+    name:"barracks",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:1000,
+    time:15
+  }, {
+    name:"barracks",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:2500,
+    time:120
+  }, {
+    name:"barracks",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:5000,
+    time:240
+  }, {
+    name:"barracks",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:10000,
+    time:600
+  }, {
+    name:"barracks",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:80000,
+    time:960
+  }, {
+    name:"barracks",
+    level:7,
+    upgrade_resource:"elixir",
+    cost:240000,
+    time:1440
+  }, {
+    name:"barracks",
+    level:8,
+    upgrade_resource:"elixir",
+    cost:700000,
+    time:2880
+  }, {
+    name:"barracks",
+    level:9,
+    upgrade_resource:"elixir",
+    cost:1500000,
+    time:4320
+  }, {
+    name:"barracks",
+    level:10,
+    upgrade_resource:"elixir",
+    cost:2000000,
+    time:8640
+  }, {
+    name:"dark_barracks",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"dark_barracks",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:750000,
+    time:4320
+  }, {
+    name:"dark_barracks",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:1250000,
+    time:7200
+  }, {
+    name:"dark_barracks",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:1750000,
+    time:8640
+  }, {
+    name:"dark_barracks",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:2250000,
+    time:10080
+  }, {
+    name:"dark_barracks",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:2750000,
+    time:11520
+  }, {
+    name:"dark_barracks",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:3500000,
+    time:12960
+  }, {
+    name:"lab",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"lab",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:25000,
+    time:30
+  }, {
+    name:"lab",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:50000,
+    time:300
+  }, {
+    name:"lab",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:90000,
+    time:720
+  }, {
+    name:"lab",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:270000,
+    time:1440
+  }, {
+    name:"lab",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:500000,
+    time:2880
+  }, {
+    name:"lab",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:1000000,
+    time:5760
+  }, {
+    name:"lab",
+    level:7,
+    upgrade_resource:"elixir",
+    cost:2500000,
+    time:7200
+  }, {
+    name:"lab",
+    level:8,
+    upgrade_resource:"elixir",
+    cost:4000000,
+    time:8640
+  }, {
+    name:"spell_factory",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"spell_factory",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:200000,
+    time:1440
+  }, {
+    name:"spell_factory",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:400000,
+    time:2880
+  }, {
+    name:"spell_factory",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:800000,
+    time:5760
+  }, {
+    name:"spell_factory",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:1600000,
+    time:7200
+  }, {
+    name:"spell_factory",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:3200000,
+    time:8640
+  }, {
+    name:"dark_spell_factory",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"dark_spell_factory",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:1500000,
+    time:5760
+  }, {
+    name:"dark_spell_factory",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:2500000,
+    time:8640
+  }, {
+    name:"dark_spell_factory",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:3500000,
+    time:11520
+  }, {
+    name:"townhall",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"townhall",
+    level:1,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"townhall",
+    level:2,
+    upgrade_resource:"gold",
+    cost:1000,
+    time:0
+  }, {
+    name:"townhall",
+    level:3,
+    upgrade_resource:"gold",
+    cost:4000,
+    time:180
+  }, {
+    name:"townhall",
+    level:4,
+    upgrade_resource:"gold",
+    cost:25000,
+    time:1440
+  }, {
+    name:"townhall",
+    level:5,
+    upgrade_resource:"gold",
+    cost:150000,
+    time:2880
+  }, {
+    name:"townhall",
+    level:6,
+    upgrade_resource:"gold",
+    cost:750000,
+    time:5760
+  }, {
+    name:"townhall",
+    level:7,
+    upgrade_resource:"gold",
+    cost:1200000,
+    time:8640
+  }, {
+    name:"townhall",
+    level:8,
+    upgrade_resource:"gold",
+    cost:2000000,
+    time:11520
+  }, {
+    name:"townhall",
+    level:9,
+    upgrade_resource:"gold",
+    cost:3000000,
+    time:14400
+  }, {
+    name:"townhall",
+    level:10,
+    upgrade_resource:"gold",
+    cost:4000000,
+    time:20160
+  }, {
+    name:"clan_castle",
+    level:0,
+    upgrade_resource:"gold",
+    cost:0,
+    time:0
+  }, {
+    name:"clan_castle",
+    level:1,
+    upgrade_resource:"gold",
+    cost:10000,
+    time:0
+  }, {
+    name:"clan_castle",
+    level:2,
+    upgrade_resource:"gold",
+    cost:100000,
+    time:360
+  }, {
+    name:"clan_castle",
+    level:3,
+    upgrade_resource:"gold",
+    cost:800000,
+    time:1440
+  }, {
+    name:"clan_castle",
+    level:4,
+    upgrade_resource:"gold",
+    cost:1800000,
+    time:2880
+  }, {
+    name:"clan_castle",
+    level:5,
+    upgrade_resource:"gold",
+    cost:5000000,
+    time:10080
+  }, {
+    name:"clan_castle",
+    level:6,
+    upgrade_resource:"gold",
+    cost:7000000,
+    time:20160
+  }, {
+    name:"barbarian",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"barbarian",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"barbarian",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:50000,
+    time:360
+  }, {
+    name:"barbarian",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:150000,
+    time:1440
+  }, {
+    name:"barbarian",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:500000,
+    time:4320
+  }, {
+    name:"barbarian",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:1500000,
+    time:7200
+  }, {
+    name:"barbarian",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:4500000,
+    time:14400
+  }, {
+    name:"barbarian",
+    level:7,
+    upgrade_resource:"elixir",
+    cost:6000000,
+    time:20160
+  }, {
+    name:"archer",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"archer",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"archer",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:50000,
+    time:720
+  }, {
+    name:"archer",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:250000,
+    time:2880
+  }, {
+    name:"archer",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:7500000,
+    time:4320
+  }, {
+    name:"archer",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:2250000,
+    time:7200
+  }, {
+    name:"archer",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:6000000,
+    time:14400
+  }, {
+    name:"archer",
+    level:7,
+    upgrade_resource:"elixir",
+    cost:7500000,
+    time:20160
+  }, {
+    name:"goblin",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"goblin",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"goblin",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:50000,
+    time:720
+  }, {
+    name:"goblin",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:250000,
+    time:2880
+  }, {
+    name:"goblin",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:750000,
+    time:4320
+  }, {
+    name:"goblin",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:2250000,
+    time:7200
+  }, {
+    name:"goblin",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:4500000,
+    time:14400
+  }, {
+    name:"giant",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"giant",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"giant",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:100000,
+    time:1440
+  }, {
+    name:"giant",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:250000,
+    time:2880
+  }, {
+    name:"giant",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:750000,
+    time:4320
+  }, {
+    name:"giant",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:2250000,
+    time:7200
+  }, {
+    name:"giant",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:6000000,
+    time:14400
+  }, {
+    name:"giant",
+    level:7,
+    upgrade_resource:"elixir",
+    cost:70000000,
+    time:20160
+  }, {
+    name:"wall_breaker",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"wall_breaker",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"wall_breaker",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:100000,
+    time:1440
+  }, {
+    name:"wall_breaker",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:250000,
+    time:2880
+  }, {
+    name:"wall_breaker",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:750000,
+    time:4320
+  }, {
+    name:"wall_breaker",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:2250000,
+    time:7200
+  }, {
+    name:"wall_breaker",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:6750000,
+    time:14400
+  }, {
+    name:"balloon",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"balloon",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"balloon",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:150000,
+    time:1440
+  }, {
+    name:"balloon",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:450000,
+    time:2880
+  }, {
+    name:"balloon",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:1350000,
+    time:4320
+  }, {
+    name:"balloon",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:2500000,
+    time:7200
+  }, {
+    name:"balloon",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:60000000,
+    time:14400
+  }, {
+    name:"wizard",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"wizard",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"wizard",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:150000,
+    time:1440
+  }, {
+    name:"wizard",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:450000,
+    time:2880
+  }, {
+    name:"wizard",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:1350000,
+    time:4320
+  }, {
+    name:"wizard",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:2500000,
+    time:7200
+  }, {
+    name:"wizard",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:7500000,
+    time:20160
+  }, {
+    name:"healer",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"healer",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"healer",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:750000,
+    time:4320
+  }, {
+    name:"healer",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:1500000,
+    time:7200
+  }, {
+    name:"healer",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:3000000,
+    time:10080
+  }, {
+    name:"dragon",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"dragon",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"dragon",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:2000000,
+    time:10080
+  }, {
+    name:"dragon",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:3000000,
+    time:14400
+  }, {
+    name:"dragon",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:7000000,
+    time:20160
+  }, {
+    name:"dragon",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:8000000,
+    time:20160
+  }, {
+    name:"pekka",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"pekka",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"pekka",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:3000000,
+    time:10080
+  }, {
+    name:"pekka",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:6000000,
+    time:17280
+  }, {
+    name:"pekka",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:7000000,
+    time:20160
+  }, {
+    name:"pekka",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:8000000,
+    time:20160
+  }, {
+    name:"lightning_spell",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"lightning_spell",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"lightning_spell",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:200000,
+    time:1440
+  }, {
+    name:"lightning_spell",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:500000,
+    time:2880
+  }, {
+    name:"lightning_spell",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:1000000,
+    time:4320
+  }, {
+    name:"lightning_spell",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:2000000,
+    time:5760
+  }, {
+    name:"lightning_spell",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:8000000,
+    time:20160
+  }, {
+    name:"healing_spell",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"healing_spell",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"healing_spell",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:300000,
+    time:1440
+  }, {
+    name:"healing_spell",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:600000,
+    time:2880
+  }, {
+    name:"healing_spell",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:1200000,
+    time:4320
+  }, {
+    name:"healing_spell",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:2400000,
+    time:7200
+  }, {
+    name:"healing_spell",
+    level:6,
+    upgrade_resource:"elixir",
+    cost:4800000,
+    time:10080
+  }, {
+    name:"rage_spell",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"rage_spell",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"rage_spell",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:450000,
+    time:2880
+  }, {
+    name:"rage_spell",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:900000,
+    time:4320
+  }, {
+    name:"rage_spell",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:1800000,
+    time:7200
+  }, {
+    name:"rage_spell",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:3000000,
+    time:10080
+  }, {
+    name:"jump_spell",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"jump_spell",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"jump_spell",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:3000000,
+    time:7200
+  }, {
+    name:"jump_spell",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:6000000,
+    time:10080
+  }, {
+    name:"freeze_spell",
+    level:0,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"freeze_spell",
+    level:1,
+    upgrade_resource:"elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"freeze_spell",
+    level:2,
+    upgrade_resource:"elixir",
+    cost:4000000,
+    time:7200
+  }, {
+    name:"freeze_spell",
+    level:3,
+    upgrade_resource:"elixir",
+    cost:5000000,
+    time:10080
+  }, {
+    name:"freeze_spell",
+    level:4,
+    upgrade_resource:"elixir",
+    cost:6500000,
+    time:14400
+  }, {
+    name:"freeze_spell",
+    level:5,
+    upgrade_resource:"elixir",
+    cost:8000000,
+    time:20160
+  }, {
+    name:"minion",
+    level:0,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"minion",
+    level:1,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"minion",
+    level:2,
+    upgrade_resource:"dark elixir",
+    cost:10000,
+    time:7200
+  }, {
+    name:"minion",
+    level:3,
+    upgrade_resource:"dark elixir",
+    cost:20000,
+    time:8640
+  }, {
+    name:"minion",
+    level:4,
+    upgrade_resource:"dark elixir",
+    cost:30000,
+    time:10080
+  }, {
+    name:"minion",
+    level:5,
+    upgrade_resource:"dark elixir",
+    cost:40000,
+    time:14400
+  }, {
+    name:"minion",
+    level:6,
+    upgrade_resource:"dark elixir",
+    cost:100000,
+    time:20160
+  }, {
+    name:"hog_rider",
+    level:0,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"hog_rider",
+    level:1,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"hog_rider",
+    level:2,
+    upgrade_resource:"dark elixir",
+    cost:20000,
+    time:11520
+  }, {
+    name:"hog_rider",
+    level:3,
+    upgrade_resource:"dark elixir",
+    cost:30000,
+    time:14400
+  }, {
+    name:"hog_rider",
+    level:4,
+    upgrade_resource:"dark elixir",
+    cost:40000,
+    time:17280
+  }, {
+    name:"hog_rider",
+    level:5,
+    upgrade_resource:"dark elixir",
+    cost:50000,
+    time:20160
+  }, {
+    name:"valkyrie",
+    level:0,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"valkyrie",
+    level:1,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"valkyrie",
+    level:2,
+    upgrade_resource:"dark elixir",
+    cost:50000,
+    time:10080
+  }, {
+    name:"valkyrie",
+    level:3,
+    upgrade_resource:"dark elixir",
+    cost:60000,
+    time:17280
+  }, {
+    name:"valkyrie",
+    level:4,
+    upgrade_resource:"dark elixir",
+    cost:70000,
+    time:20160
+  }, {
+    name:"golem",
+    level:0,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"golem",
+    level:1,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"golem",
+    level:2,
+    upgrade_resource:"dark elixir",
+    cost:60000,
+    time:10080
+  }, {
+    name:"golem",
+    level:3,
+    upgrade_resource:"dark elixir",
+    cost:70000,
+    time:17280
+  }, {
+    name:"golem",
+    level:4,
+    upgrade_resource:"dark elixir",
+    cost:80000,
+    time:20160
+  }, {
+    name:"golem",
+    level:5,
+    upgrade_resource:"dark elixir",
+    cost:90000,
+    time:20160
+  }, {
+    name:"witch",
+    level:0,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"witch",
+    level:1,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"witch",
+    level:2,
+    upgrade_resource:"dark elixir",
+    cost:75000,
+    time:10080
+  }, {
+    name:"lava_hound",
+    level:0,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"lava_hound",
+    level:1,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"lava_hound",
+    level:2,
+    upgrade_resource:"dark elixir",
+    cost:60000,
+    time:14400
+  }, {
+    name:"lava_hound",
+    level:3,
+    upgrade_resource:"dark elixir",
+    cost:70000,
+    time:17280
+  }, {
+    name:"poison_spell",
+    level:0,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"poison_spell",
+    level:1,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"poison_spell",
+    level:2,
+    upgrade_resource:"dark elixir",
+    cost:25000,
+    time:5760
+  }, {
+    name:"poison_spell",
+    level:3,
+    upgrade_resource:"dark elixir",
+    cost:50000,
+    time:8640
+  },  {
+    name:"poison_spell",
+    level:4,
+    upgrade_resource:"dark elixir",
+    cost:75000,
+    time:14400
+  }, {
+    name:"earthquake_spell",
+    level:0,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"earthquake_spell",
+    level:1,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"earthquake_spell",
+    level:2,
+    upgrade_resource:"dark elixir",
+    cost:30000,
+    time:8640
+  }, {
+    name:"earthquake_spell",
+    level:3,
+    upgrade_resource:"dark elixir",
+    cost:60000,
+    time:11520
+  }, {
+    name:"earthquake_spell",
+    level:4,
+    upgrade_resource:"dark elixir",
+    cost:90000,
+    time:17280
+  }, {
+    name:"haste_spell",
+    level:0,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"haste_spell",
+    level:1,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"haste_spell",
+    level:2,
+    upgrade_resource:"dark elixir",
+    cost:40000,
+    time:11520
+  }, {
+    name:"haste_spell",
+    level:3,
+    upgrade_resource:"dark elixir",
+    cost:80000,
+    time:14400
+  }, {
+    name:"haste_spell",
+    level:4,
+    upgrade_resource:"dark elixir",
+    cost:100000,
+    time:20160
+  }, {
+    name:"barbarian_king",
+    level:0,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"barbarian_king",
+    level:1,
+    upgrade_resource:"dark elixir",
+    cost:10000,
+    time:0
+  }, {
+    name:"barbarian_king",
+    level:2,
+    upgrade_resource:"dark elixir",
+    cost:12500,
+    time:720
+  }, {
+    name:"barbarian_king",
+    level:3,
+    upgrade_resource:"dark elixir",
+    cost:15000,
+    time:1440
+  }, {
+    name:"barbarian_king",
+    level:4,
+    upgrade_resource:"dark elixir",
+    cost:17500,
+    time:2160
+  }, {
+    name:"barbarian_king",
+    level:5,
+    upgrade_resource:"dark elixir",
+    cost:20000,
+    time:2880
+  }, {
+    name:"barbarian_king",
+    level:6,
+    upgrade_resource:"dark elixir",
+    cost:22500,
+    time:3600
+  }, {
+    name:"barbarian_king",
+    level:7,
+    upgrade_resource:"dark elixir",
+    cost:25000,
+    time:4320
+  }, {
+    name:"barbarian_king",
+    level:8,
+    upgrade_resource:"dark elixir",
+    cost:30000,
+    time:5040
+  }, {
+    name:"barbarian_king",
+    level:9,
+    upgrade_resource:"dark elixir",
+    cost:35000,
+    time:5760
+  }, {
+    name:"barbarian_king",
+    level:10,
+    upgrade_resource:"dark elixir",
+    cost:40000,
+    time:6480
+  }, {
+    name:"barbarian_king",
+    level:11,
+    upgrade_resource:"dark elixir",
+    cost:45000,
+    time:7200
+  }, {
+    name:"barbarian_king",
+    level:12,
+    upgrade_resource:"dark elixir",
+    cost:50000,
+    time:7920
+  }, {
+    name:"barbarian_king",
+    level:13,
+    upgrade_resource:"dark elixir",
+    cost:55000,
+    time:8640
+  }, {
+    name:"barbarian_king",
+    level:14,
+    upgrade_resource:"dark elixir",
+    cost:60000,
+    time:9360
+  }, {
+    name:"barbarian_king",
+    level:15,
+    upgrade_resource:"dark elixir",
+    cost:65000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:16,
+    upgrade_resource:"dark elixir",
+    cost:70000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:17,
+    upgrade_resource:"dark elixir",
+    cost:75000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:18,
+    upgrade_resource:"dark elixir",
+    cost:80000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:19,
+    upgrade_resource:"dark elixir",
+    cost:85000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:20,
+    upgrade_resource:"dark elixir",
+    cost:90000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:21,
+    upgrade_resource:"dark elixir",
+    cost:95000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:22,
+    upgrade_resource:"dark elixir",
+    cost:100000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:23,
+    upgrade_resource:"dark elixir",
+    cost:105000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:24,
+    upgrade_resource:"dark elixir",
+    cost:110000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:25,
+    upgrade_resource:"dark elixir",
+    cost:115000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:26,
+    upgrade_resource:"dark elixir",
+    cost:120000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:27,
+    upgrade_resource:"dark elixir",
+    cost:125000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:28,
+    upgrade_resource:"dark elixir",
+    cost:130000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:29,
+    upgrade_resource:"dark elixir",
+    cost:135000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:30,
+    upgrade_resource:"dark elixir",
+    cost:140000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:31,
+    upgrade_resource:"dark elixir",
+    cost:145000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:32,
+    upgrade_resource:"dark elixir",
+    cost:150000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:33,
+    upgrade_resource:"dark elixir",
+    cost:155000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:34,
+    upgrade_resource:"dark elixir",
+    cost:160000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:35,
+    upgrade_resource:"dark elixir",
+    cost:165000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:36,
+    upgrade_resource:"dark elixir",
+    cost:170000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:37,
+    upgrade_resource:"dark elixir",
+    cost:175000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:38,
+    upgrade_resource:"dark elixir",
+    cost:180000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:39,
+    upgrade_resource:"dark elixir",
+    cost:185000,
+    time:10080
+  }, {
+    name:"barbarian_king",
+    level:40,
+    upgrade_resource:"dark elixir",
+    cost:190000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:0,
+    upgrade_resource:"dark elixir",
+    cost:0,
+    time:0
+  }, {
+    name:"archer_queen",
+    level:1,
+    upgrade_resource:"dark elixir",
+    cost:40000,
+    time:0
+  }, {
+    name:"archer_queen",
+    level:2,
+    upgrade_resource:"dark elixir",
+    cost:22500,
+    time:720
+  }, {
+    name:"archer_queen",
+    level:3,
+    upgrade_resource:"dark elixir",
+    cost:25000,
+    time:1440
+  }, {
+    name:"archer_queen",
+    level:4,
+    upgrade_resource:"dark elixir",
+    cost:27500,
+    time:2160
+  }, {
+    name:"archer_queen",
+    level:5,
+    upgrade_resource:"dark elixir",
+    cost:30000,
+    time:2880
+  }, {
+    name:"archer_queen",
+    level:6,
+    upgrade_resource:"dark elixir",
+    cost:32500,
+    time:3600
+  }, {
+    name:"archer_queen",
+    level:7,
+    upgrade_resource:"dark elixir",
+    cost:35000,
+    time:4320
+  }, {
+    name:"archer_queen",
+    level:8,
+    upgrade_resource:"dark elixir",
+    cost:40000,
+    time:5040
+  }, {
+    name:"archer_queen",
+    level:9,
+    upgrade_resource:"dark elixir",
+    cost:45000,
+    time:5760
+  }, {
+    name:"archer_queen",
+    level:10,
+    upgrade_resource:"dark elixir",
+    cost:50000,
+    time:6480
+  }, {
+    name:"archer_queen",
+    level:11,
+    upgrade_resource:"dark elixir",
+    cost:55000,
+    time:7200
+  }, {
+    name:"archer_queen",
+    level:12,
+    upgrade_resource:"dark elixir",
+    cost:60000,
+    time:7920
+  }, {
+    name:"archer_queen",
+    level:13,
+    upgrade_resource:"dark elixir",
+    cost:65000,
+    time:8640
+  }, {
+    name:"archer_queen",
+    level:14,
+    upgrade_resource:"dark elixir",
+    cost:70000,
+    time:9360
+  }, {
+    name:"archer_queen",
+    level:15,
+    upgrade_resource:"dark elixir",
+    cost:75000,
+    time:10080
+  },  {
+    name:"archer_queen",
+    level:16,
+    upgrade_resource:"dark elixir",
+    cost:80000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:17,
+    upgrade_resource:"dark elixir",
+    cost:85000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:18,
+    upgrade_resource:"dark elixir",
+    cost:90000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:19,
+    upgrade_resource:"dark elixir",
+    cost:95000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:20,
+    upgrade_resource:"dark elixir",
+    cost:100000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:21,
+    upgrade_resource:"dark elixir",
+    cost:105000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:22,
+    upgrade_resource:"dark elixir",
+    cost:110000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:23,
+    upgrade_resource:"dark elixir",
+    cost:115000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:24,
+    upgrade_resource:"dark elixir",
+    cost:120000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:25,
+    upgrade_resource:"dark elixir",
+    cost:125000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:26,
+    upgrade_resource:"dark elixir",
+    cost:130000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:27,
+    upgrade_resource:"dark elixir",
+    cost:135000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:28,
+    upgrade_resource:"dark elixir",
+    cost:140000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:29,
+    upgrade_resource:"dark elixir",
+    cost:145000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:30,
+    upgrade_resource:"dark elixir",
+    cost:150000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:31,
+    upgrade_resource:"dark elixir",
+    cost:155000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:32,
+    upgrade_resource:"dark elixir",
+    cost:160000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:33,
+    upgrade_resource:"dark elixir",
+    cost:165000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:34,
+    upgrade_resource:"dark elixir",
+    cost:170000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:35,
+    upgrade_resource:"dark elixir",
+    cost:175000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:36,
+    upgrade_resource:"dark elixir",
+    cost:180000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:37,
+    upgrade_resource:"dark elixir",
+    cost:185000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:38,
+    upgrade_resource:"dark elixir",
+    cost:190000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:39,
+    upgrade_resource:"dark elixir",
+    cost:195000,
+    time:10080
+  }, {
+    name:"archer_queen",
+    level:40,
+    upgrade_resource:"dark elixir",
+    cost:200000,
+    time:10080
   }
+  # , {
+  #   name:"",
+  #   level:,
+  #   upgrade_resource:"dark elixir"
+  #   cost:,
+  #   time:
+  # }
 
 building_max_level =
   {
@@ -2507,724 +5150,844 @@ building_max_level =
     max_level:6,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"giant",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"giant",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"giant",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"giant",
+    max_level:2,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"giant",
+    max_level:2,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"giant",
+    max_level:3,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"giant",
+    max_level:4,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"giant",
+    max_level:5,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"giant",
+    max_level:6,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"giant",
+    max_level:7,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"wall_breaker",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"wall_breaker",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"wall_breaker",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"wall_breaker",
+    max_level:2,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"wall_breaker",
+    max_level:2,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"wall_breaker",
+    max_level:3,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"wall_breaker",
+    max_level:4,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"wall_breaker",
+    max_level:5,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"wall_breaker",
+    max_level:5,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"wall_breaker",
+    max_level:6,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"balloon",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"balloon",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"balloon",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"balloon",
+    max_level:2,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"balloon",
+    max_level:2,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"balloon",
+    max_level:3,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"balloon",
+    max_level:4,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"balloon",
+    max_level:5,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"balloon",
+    max_level:6,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"balloon",
+    max_level:6,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"wizard",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"wizard",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"wizard",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"wizard",
+    max_level:1,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"wizard",
+    max_level:2,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"wizard",
+    max_level:3,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"wizard",
+    max_level:4,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"wizard",
+    max_level:5,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"wizard",
+    max_level:5,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"wizard",
+    max_level:6,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"healer",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"healer",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"healer",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"healer",
+    max_level:1,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"healer",
+    max_level:1,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"healer",
+    max_level:1,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"healer",
+    max_level:2,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"healer",
+    max_level:3,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"healer",
+    max_level:4,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"healer",
+    max_level:4,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"dragon",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"dragon",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"dragon",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"dragon",
+    max_level:1,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"dragon",
+    max_level:1,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"dragon",
+    max_level:1,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"dragon",
+    max_level:2,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"dragon",
+    max_level:3,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"dragon",
+    max_level:4,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"dragon",
+    max_level:5,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"pekka",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"pekka",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"pekka",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"pekka",
+    max_level:1,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"pekka",
+    max_level:1,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"pekka",
+    max_level:1,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"pekka",
+    max_level:1,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"pekka",
+    max_level:3,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"pekka",
+    max_level:3,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"pekka",
+    max_level:5,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"lightning_spell",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"lightning_spell",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"lightning_spell",
+    max_level:2,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"lightning_spell",
+    max_level:3,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"lightning_spell",
+    max_level:4,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"lightning_spell",
+    max_level:4,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"lightning_spell",
+    max_level:4,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"lightning_spell",
+    max_level:5,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"lightning_spell",
+    max_level:5,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"lightning_spell",
+    max_level:6,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"healing_spell",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"healing_spell",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"healing_spell",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"healing_spell",
+    max_level:2,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"healing_spell",
+    max_level:2,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"healing_spell",
+    max_level:3,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"healing_spell",
+    max_level:4,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"healing_spell",
+    max_level:5,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"healing_spell",
+    max_level:6,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"healing_spell",
+    max_level:6,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"rage_spell",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"rage_spell",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"rage_spell",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"rage_spell",
+    max_level:1,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"rage_spell",
+    max_level:2,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"rage_spell",
+    max_level:3,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"rage_spell",
+    max_level:4,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"rage_spell",
+    max_level:5,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"rage_spell",
+    max_level:5,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"rage_spell",
+    max_level:5,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"jump_spell",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"jump_spell",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"jump_spell",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"jump_spell",
+    max_level:1,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"jump_spell",
+    max_level:1,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"jump_spell",
+    max_level:1,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"jump_spell",
+    max_level:1,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"jump_spell",
+    max_level:2,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"jump_spell",
+    max_level:2,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"jump_spell",
+    max_level:3,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"freeze_spell",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"freeze_spell",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"freeze_spell",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"freeze_spell",
+    max_level:1,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"freeze_spell",
+    max_level:1,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"freeze_spell",
+    max_level:1,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"freeze_spell",
+    max_level:1,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"freeze_spell",
+    max_level:1,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"freeze_spell",
+    max_level:1,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"freeze_spell",
+    max_level:5,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"minion",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"minion",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"minion",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"minion",
+    max_level:1,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"minion",
+    max_level:1,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"minion",
+    max_level:1,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"minion",
+    max_level:2,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"minion",
+    max_level:4,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"minion",
+    max_level:5,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"minion",
+    max_level:6,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"hog_rider",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"hog_rider",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"hog_rider",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"hog_rider",
+    max_level:1,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"hog_rider",
+    max_level:1,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"hog_rider",
+    max_level:1,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"hog_rider",
+    max_level:2,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"hog_rider",
+    max_level:4,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"hog_rider",
+    max_level:5,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"hog_rider",
+    max_level:5,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"valkyrie",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"valkyrie",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"valkyrie",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"valkyrie",
+    max_level:1,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"valkyrie",
+    max_level:1,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"valkyrie",
+    max_level:1,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"valkyrie",
+    max_level:1,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"valkyrie",
+    max_level:2,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"valkyrie",
+    max_level:4,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"valkyrie",
+    max_level:4,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"golem",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"golem",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"golem",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"golem",
+    max_level:1,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"golem",
+    max_level:1,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"golem",
+    max_level:1,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"golem",
+    max_level:1,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"golem",
+    max_level:2,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"golem",
+    max_level:4,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"golem",
+    max_level:5,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"witch",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"witch",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"witch",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"witch",
+    max_level:1,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"witch",
+    max_level:1,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"witch",
+    max_level:1,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"witch",
+    max_level:1,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"witch",
+    max_level:1,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"witch",
+    max_level:2,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"witch",
+    max_level:2,
     townhall_level:10
   }, {
-    name:"",
-    max_level:,
+    name:"lava_hound",
+    max_level:1,
     townhall_level:1
   }, {
-    name:"",
-    max_level:,
+    name:"lava_hound",
+    max_level:1,
     townhall_level:2
   }, {
-    name:"",
-    max_level:,
+    name:"lava_hound",
+    max_level:1,
     townhall_level:3
   }, {
-    name:"",
-    max_level:,
+    name:"lava_hound",
+    max_level:1,
     townhall_level:4
   }, {
-    name:"",
-    max_level:,
+    name:"lava_hound",
+    max_level:1,
     townhall_level:5
   }, {
-    name:"",
-    max_level:,
+    name:"lava_hound",
+    max_level:1,
     townhall_level:6
   }, {
-    name:"",
-    max_level:,
+    name:"lava_hound",
+    max_level:1,
     townhall_level:7
   }, {
-    name:"",
-    max_level:,
+    name:"lava_hound",
+    max_level:1,
     townhall_level:8,
   }, {
-    name:"",
-    max_level:,
+    name:"lava_hound",
+    max_level:2,
     townhall_level:9
   }, {
-    name:"",
-    max_level:,
+    name:"lava_hound",
+    max_level:3,
+    townhall_level:10
+  }, {
+    name:"poison_spell",
+    max_level:1,
+    townhall_level:1
+  }, {
+    name:"poison_spell",
+    max_level:1,
+    townhall_level:2
+  }, {
+    name:"poison_spell",
+    max_level:1,
+    townhall_level:3
+  }, {
+    name:"poison_spell",
+    max_level:1,
+    townhall_level:4
+  }, {
+    name:"poison_spell",
+    max_level:1,
+    townhall_level:5
+  }, {
+    name:"poison_spell",
+    max_level:1,
+    townhall_level:6
+  }, {
+    name:"poison_spell",
+    max_level:1,
+    townhall_level:7
+  }, {
+    name:"poison_spell",
+    max_level:2,
+    townhall_level:8,
+  }, {
+    name:"poison_spell",
+    max_level:3,
+    townhall_level:9
+  }, {
+    name:"poison_spell",
+    max_level:4,
+    townhall_level:10
+  }, {
+    name:"earthquake_spell",
+    max_level:1,
+    townhall_level:1
+  }, {
+    name:"earthquake_spell",
+    max_level:1,
+    townhall_level:2
+  }, {
+    name:"earthquake_spell",
+    max_level:1,
+    townhall_level:3
+  }, {
+    name:"earthquake_spell",
+    max_level:1,
+    townhall_level:4
+  }, {
+    name:"earthquake_spell",
+    max_level:1,
+    townhall_level:5
+  }, {
+    name:"earthquake_spell",
+    max_level:1,
+    townhall_level:6
+  }, {
+    name:"earthquake_spell",
+    max_level:1,
+    townhall_level:7
+  }, {
+    name:"earthquake_spell",
+    max_level:2,
+    townhall_level:8,
+  }, {
+    name:"earthquake_spell",
+    max_level:3,
+    townhall_level:9
+  }, {
+    name:"earthquake_spell",
+    max_level:4,
+    townhall_level:10
+  }, {
+    name:"haste_spell",
+    max_level:1,
+    townhall_level:1
+  }, {
+    name:"haste_spell",
+    max_level:1,
+    townhall_level:2
+  }, {
+    name:"haste_spell",
+    max_level:1,
+    townhall_level:3
+  }, {
+    name:"haste_spell",
+    max_level:1,
+    townhall_level:4
+  }, {
+    name:"haste_spell",
+    max_level:1,
+    townhall_level:5
+  }, {
+    name:"haste_spell",
+    max_level:1,
+    townhall_level:6
+  }, {
+    name:"haste_spell",
+    max_level:1,
+    townhall_level:7
+  }, {
+    name:"haste_spell",
+    max_level:1,
+    townhall_level:8,
+  }, {
+    name:"haste_spell",
+    max_level:2,
+    townhall_level:9
+  }, {
+    name:"haste_spell",
+    max_level:4,
     townhall_level:10
   }
 
@@ -3232,3 +5995,16 @@ BasicInfo.create(basic_info)
 BuildingAvailability.create(building_availability)
 BuildingCostInfo.create(building_cost_info)
 BuildingMaxLevel.create(building_max_level)
+
+BuildingCostInfo.find_each do |cost_info|
+  cumulative_building_cost_info = BuildingCostInfo.where('name = ? AND level <= ?', cost_info.name, cost_info.level)
+  cumulative_cost = cumulative_building_cost_info.sum(:cost)
+  cumulative_time = cumulative_building_cost_info.sum(:time)
+  cost_info.update(cumulative_cost:cumulative_cost, cumulative_time:cumulative_time)
+end
+
+current_user = User.first
+BuildingAvailability.all.each do |default_b|
+  Building.create(user_id:current_user.id, townhall_id: current_user.townhall.id, name:default_b.name, level: default_b.basic_info.default_level, unique_building_code:default_b.unique_building_code)
+end
+
