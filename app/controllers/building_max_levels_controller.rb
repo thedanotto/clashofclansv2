@@ -1,2 +1,0 @@
-class BuildingMaxLevelsController < ApplicationController
-end

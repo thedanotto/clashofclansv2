@@ -1,3 +1,0 @@
-class BuildingCostInfosController < ApplicationController
-
-end
