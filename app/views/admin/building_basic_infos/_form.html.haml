@@ -1,0 +1,16 @@
+require(:building_basic_info).permit(:name, :default_level, :display_name, :building_type, :category, :production_resource, :upgrader)
+= form_for(@building_basic_info, html: { class:"form-horizontal"}) do |f|
+  .portlet.light.bordered
+    .portlet-title
+      .caption
+        %i{class:"icon-equalizer font-red-sunglo"}
+          %span{class:"caption-subject font-red-sunglo bold uppercase" } 
+            Basic Info
+    .portlet-body.form
+      / BEGIN FORM
+      .form-body
+        .form-group
+          = f.label(:name, "Entry Date: ", class:"col-md-3 control-label")
+          .col-md-4
+            = f.text_field(:name, class:"form-control input-circle")
+

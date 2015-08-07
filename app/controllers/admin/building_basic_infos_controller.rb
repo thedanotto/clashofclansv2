@@ -1,4 +1,4 @@
-class Admin::BasicInfosController < ApplicationController
+class Admin::BuildingBasicInfosController < ApplicationController
   load_and_authorize_resource
   before_action :set_building_basic_info, only: [:show, :edit, :update, :destory]
 
