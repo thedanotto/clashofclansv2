@@ -7,7 +7,7 @@ user.save
 @townhall = Townhall.create(user_id: 1, name:"townhall", level:5, unique_building_code:"townhall1")
 
 
-basic_info = 
+building_basic_info = 
   {   
     name:"cannon",
     default_level:0,
@@ -5991,7 +5991,7 @@ building_max_level =
     townhall_level:10
   }
 
-BasicInfo.create(basic_info)
+BuildingBasicInfo.create(building_basic_info)
 BuildingAvailability.create(building_availability)
 BuildingCostInfo.create(building_cost_info)
 BuildingMaxLevel.create(building_max_level)
@@ -6005,6 +6005,6 @@ end
 
 current_user = User.first
 BuildingAvailability.all.each do |default_b|
-  Building.create(user_id:current_user.id, townhall_id: current_user.townhall.id, name:default_b.name, level: default_b.basic_info.default_level, unique_building_code:default_b.unique_building_code)
+  Building.create(user_id:current_user.id, townhall_id: current_user.townhall.id, name:default_b.name, level: default_b.building_basic_info.default_level, unique_building_code:default_b.unique_building_code)
 end
 

@@ -26,7 +26,7 @@ class TownhallsController < ApplicationController
 
   def set_buildings
     BuildingAvailability.all.each do |default_b|
-      Building.create(user_id:current_user.id, townhall_id: current_user.townhall.id, name:default_b.name, level: default_b.basic_info.default_level, unique_building_code:default_b.unique_building_code)
+      Building.create(user_id:current_user.id, townhall_id: current_user.townhall.id, name:default_b.name, level: default_b.building_basic_info.default_level, unique_building_code:default_b.unique_building_code)
     end
   end
 

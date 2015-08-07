@@ -1,3 +1,14 @@
+# crud out the admin interface.
+  # it can update basic_info
+  # building_availability
+  # building_cost_info
+  # building_max_level
+  # building_basic_info
+  # add a profile to each user, so that a profile can be set to update admin settings
+
+
+
+
 # look up -> active record match array with n number of possibilities
   # this is for if I want to allow people to seach upgrades by certain types
 
@@ -9,11 +20,6 @@
 # building_cost_info
 # building_max_level
 
-# crud out the admin interface.
-  # it can update basic_info
-  # building_availability
-  # building_cost_info
-  # building_max_level
 
 # for upgrade costs, contemplate the benefits of doing it by resource instead of one generic category
   # dark_elixir_upgrade_cost

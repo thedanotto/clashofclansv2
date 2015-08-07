@@ -2,15 +2,15 @@ class Building < ActiveRecord::Base
   belongs_to :user
   belongs_to :townhall
   belongs_to :building_availability, primary_key: "unique_building_code", foreign_key: "unique_building_code"
-  belongs_to :basic_info, primary_key: "name", foreign_key:"name"
+  belongs_to :building_basic_info, primary_key: "name", foreign_key:"name"
   belongs_to :building_cost_info, class_name:'BuildingCostInfo', foreign_key: [:name, :level]
 
   scope :active, -> (townhall_level) { joins(:building_availability).merge(BuildingAvailability.where('active_on <= ?', townhall_level)) }
   scope :building_name, -> (building_name) { where(name: building_name)}
   scope :building_type, -> (building_type) { joins(:basic_info).merge(BasicInfo.where(building_type: building_type))}
-  scope :category, -> (category) { joins(:basic_info).merge(BasicInfo.where(category: category ))}
-  scope :resource, -> (resource) { joins(:basic_info).merge(BasicInfo.where(upgrade_resource: resource))}
-  scope :upgrader, -> (upgrader) { joins(:basic_info).merge(BasicInfo.where(upgrader: upgrader))}
+  scope :category, -> (category) { joins(:building_basic_info).merge(BasicInfo.where(category: category ))}
+  scope :resource, -> (resource) { joins(:building_basic_info).merge(BasicInfo.where(upgrade_resource: resource))}
+  scope :upgrader, -> (upgrader) { joins(:building_basic_info).merge(BasicInfo.where(upgrader: upgrader))}
   # where do I want to store resource info, display_name
 
   # User.last.buildings.active(User.last.townhall.level).resource("dark elixir").cumulative_cost
