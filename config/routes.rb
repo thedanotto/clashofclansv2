@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :basic_infos
+  resources :building_availabilities
+  resources :building_cost_infos
   resources :building_max_levels
   devise_for :users
   resources :townhalls
