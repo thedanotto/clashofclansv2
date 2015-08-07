@@ -1,3 +1,4 @@
+Goal for 8/7/2015
 # crud out the admin interface.
   # it can update basic_info
   # building_availability
@@ -6,6 +7,8 @@
   # building_basic_info
   # add a profile to each user, so that a profile can be set to update admin settings
 
+# move all pictures from old site to new site.
+# make sure specific picture for each level of unit
 
 
 

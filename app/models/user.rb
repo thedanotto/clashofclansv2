@@ -4,6 +4,15 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  before_create :set_role
+
+  ROLES = %i[admin normal]
+
   has_many :buildings
   has_one :townhall
+
+  def set_role
+    self.role ||= "normal"
+  end
+
 end

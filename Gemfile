@@ -43,3 +43,5 @@ end
 gem 'awesome_print'
 gem 'devise'
 gem 'composite_primary_keys'
+gem 'cancancan', '~> 1.10'
+gem 'haml'
