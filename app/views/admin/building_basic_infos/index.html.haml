@@ -1,0 +1,33 @@
+%table
+  %tr
+    %th
+      id
+    %th
+      name
+    %th
+      Default Level
+    %th
+      Display Name
+    %th
+      Building Type
+    %th
+      Category
+    %th
+      Edit
+  - @building_basic_info.each do |bi|
+    %tr
+      %td
+        = bi.id
+      %td
+        = bi.name
+      %td
+        = bi.default_level
+      %td
+        = bi.display_name
+      %td
+        = bi.building_type
+      %td
+        = bi.category
+      %td
+        = link_to("Edit", edit_admin_building_basic_info_path(bi))
+

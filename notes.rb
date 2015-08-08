@@ -1,3 +1,19 @@
+
+
+# upgrade resource
+  # building basic info or building cost info
+  # how to scope down if in building cost info?
+  # if possible to scope it down there, do I need in building cost info?
+  # then add production info...
+  # its going to be important to have it in building cost info
+  # production_resource
+  # production_amount
+
+  # where should unit information go?
+  # also in building cost info
+  # training_cost
+  # training_resource
+
 Goal for 8/7/2015
 # crud out the admin interface.
   # it can update basic_info

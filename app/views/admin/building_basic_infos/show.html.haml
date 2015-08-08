@@ -1,0 +1,15 @@
+Hi
+
+Name: #{ @building_basic_info.name }
+%br
+Default Level: #{ @building_basic_info.default_level }
+%br
+Display Name: #{ @building_basic_info.display_name }
+%br
+Building Type: #{ @building_basic_info.building_type }
+%br 
+Building Category: #{ @building_basic_info.category }
+%br 
+= link_to("Edit", edit_admin_building_basic_info_path(@building_basic_info))
+= link_to("All Basic Info", admin_building_basic_infos_path)
+= link_to("Delete", admin_building_basic_info_path(@building_basic_info), method: :delete, data: { confirm: "Are you sure?" })

@@ -7,10 +7,10 @@ class Building < ActiveRecord::Base
 
   scope :active, -> (townhall_level) { joins(:building_availability).merge(BuildingAvailability.where('active_on <= ?', townhall_level)) }
   scope :building_name, -> (building_name) { where(name: building_name)}
-  scope :building_type, -> (building_type) { joins(:basic_info).merge(BasicInfo.where(building_type: building_type))}
-  scope :category, -> (category) { joins(:building_basic_info).merge(BasicInfo.where(category: category ))}
-  scope :resource, -> (resource) { joins(:building_basic_info).merge(BasicInfo.where(upgrade_resource: resource))}
-  scope :upgrader, -> (upgrader) { joins(:building_basic_info).merge(BasicInfo.where(upgrader: upgrader))}
+  scope :building_type, -> (building_type) { joins(:basic_info).merge(BuildingBasicInfo.where(building_type: building_type))}
+  scope :category, -> (category) { joins(:building_basic_info).merge(BuildingBasicInfo.where(category: category ))}
+  scope :upgrader, -> (upgrader) { joins(:building_basic_info).merge(BuildingBasicInfo.where(upgrader: upgrader))}
+  scope :upgrading_resource, -> (resource) { joins(:building_cost_info).merge(BuildingCostInfo.where(upgrade_resource: resource))}
   # where do I want to store resource info, display_name
 
   # User.last.buildings.active(User.last.townhall.level).resource("dark elixir").cumulative_cost

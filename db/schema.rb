@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150807062926) do
+ActiveRecord::Schema.define(version: 20150807185912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,10 +30,8 @@ ActiveRecord::Schema.define(version: 20150807062926) do
     t.string   "display_name"
     t.string   "building_type"
     t.string   "category"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-    t.string   "upgrade_resource"
-    t.string   "production_resource"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "upgrader"
   end
 
@@ -43,10 +41,14 @@ ActiveRecord::Schema.define(version: 20150807062926) do
     t.string   "upgrade_resource"
     t.integer  "cost"
     t.integer  "time"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.integer  "cumulative_cost"
     t.integer  "cumulative_time"
+    t.integer  "training_cost"
+    t.string   "training_resource"
+    t.integer  "production_amount"
+    t.string   "production_resource"
   end
 
   create_table "building_max_levels", force: :cascade do |t|
