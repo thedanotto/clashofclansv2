@@ -1,0 +1,11 @@
+= form_for([:admin, @building_availability], html: { class: "form-horizontal"}) do |f|
+  = f.label(:name)
+  = f.text_field(:name)
+
+  = f.label(:unique_building_code)
+  = f.text_field(:unique_building_code)
+
+  = f.label(:active_on)
+  = f.number_field(:active_on)
+
+  = f.submit

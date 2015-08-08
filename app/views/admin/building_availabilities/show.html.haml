@@ -1,0 +1,12 @@
+%br 
+id: #{ @building_availability.id }
+%br
+Name: #{ @building_availability.name }
+%br
+Unique Building Code:  #{ @building_availability.unique_building_code }
+%br
+TH Level Availabile On: #{ @building_availability.active_on }
+%br
+= link_to("Back", admin_building_availabilities_path)
+%br
+= link_to("Edit", edit_admin_building_availability_path(@building_availability))

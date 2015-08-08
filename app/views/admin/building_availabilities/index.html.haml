@@ -1,0 +1,42 @@
+%br
+Every Building that gets add to clash needs an entry
+%br
+(ie -> th 8 3 mortars to 4 mortars)
+%br
+That 4th mortar needs a building_availability_entry
+%br
+Create New Building Availability
+= link_to("New Building Availability", new_admin_building_availability_path)
+%br
+%table
+  %tr
+    %th
+      id
+    %th
+      Name
+    %th
+      Unique Building Code
+    %th
+      Active On
+    %th
+      Show
+    %th
+      Edit
+    %th
+      Destroy!
+  - @building_availability.each do |ba|
+    %tr
+      %td
+        = ba.id
+      %td
+        = ba.name
+      %td
+        = ba.unique_building_code
+      %td
+        = ba.active_on
+      %td
+        = link_to("Show", admin_building_availability_path(ba))
+      %td
+        = link_to("Edit",edit_admin_building_availability_path(ba))
+      %td
+        = link_to("Destroy", admin_building_availability_path(ba), method: :delete, data: { confirm: "You sure dawg?" })

@@ -1,4 +1,3 @@
-require(:building_basic_info).permit(:name, :default_level, :display_name, :building_type, :category, :upgrader)
 = form_for([:admin, @building_basic_info], html: { class:"form-horizontal"}) do |f|
   = f.label(:name, "Building Name: ")
   = f.text_field(:name)
