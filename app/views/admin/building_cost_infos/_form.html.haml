@@ -1,0 +1,30 @@
+= form_for([:admin, @building_cost_info], html: { class:"form-horizontal"}) do |f|
+  = f.label(:name)
+  = f.text_field(:name)
+  %br
+  = f.label(:level)
+  = f.number_field(:level)
+  %br
+  = f.label(:upgrade_resource)
+  = f.text_field(:upgrade_resource)
+  %br
+  = f.label(:cost)
+  = f.number_field(:cost)
+  %br
+  = f.label(:time)
+  = f.number_field(:time)
+  %br
+  = f.label(:training_cost)
+  = f.number_field(:training_cost)
+  %br
+  = f.label(:training_resource)
+  = f.text_field(:training_resource)
+  %br
+  = f.label(:production_amount)
+  = f.number_field(:production_amount)
+  %br
+  = f.label(:production_resource)
+  = f.text_field(:production_resource)
+  %br
+  = f.submit
+

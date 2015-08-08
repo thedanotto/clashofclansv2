@@ -1,0 +1,65 @@
+%h2 
+  = link_to("Create New Building Cost Info", new_admin_building_cost_info_path)
+
+%table
+  %thead
+    %tr
+      %th
+        Name
+      %th
+        Level
+      %th
+        Upgrade Resource
+      %th
+        Cost
+      %th
+        Cumulative Cost
+      %th
+        Time
+      %th
+        Cumulative Time
+      %th
+        Training Cost
+      %th
+        Training Resource
+      %th
+        Production Amount
+      %th
+        Production Resource
+      %th
+        Show
+      %th
+        Edit
+      %th
+        DESTROY!
+  %tbody
+    - @building_cost_info.each do |bci|
+      %tr
+        %td
+          =  bci.name
+        %td
+          =  bci.level
+        %td
+          =  bci.upgrade_resource
+        %td
+          = bci.cost
+        %td
+          = bci.cumulative_cost
+        %td
+          =  bci.time
+        %td
+          = bci.cumulative_time
+        %td
+          =  bci.training_cost
+        %td
+          =  bci.training_resource
+        %td
+          =  bci.production_amount
+        %td
+          =  bci.production_resource
+        %td
+          = link_to("Show", admin_building_cost_info_path(bci))
+        %td
+          = link_to("Edit", edit_admin_building_cost_info_path(bci))
+        %td
+          = link_to("Destroy", admin_building_cost_info_path(bci), method: "delete", data: { confirm: "You sure dawg?" })
