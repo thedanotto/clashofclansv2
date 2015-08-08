@@ -6,14 +6,13 @@ user.save
 
 @townhall = Townhall.create(user_id: 1, name:"townhall", level:5, unique_building_code:"townhall1")
 
-
 building_basic_info = 
   {   
     name:"cannon",
     default_level:0,
     display_name:"Cannon",
     building_type:"building",
-    category:"defensive",
+    category:"Defensive",
     upgrade_resource:"gold",
     production_resource: nil,
     upgrader:"builders"
@@ -22,7 +21,7 @@ building_basic_info =
     default_level:0,
     display_name:"Archer Tower",
     building_type:"building",
-    category: "defensive",
+    category: "Defensive",
     upgrade_resource:"gold",
     production_resource: nil,
     upgrader:"builders"
@@ -31,7 +30,7 @@ building_basic_info =
     default_level:0,
     display_name:"Mortar",
     building_type:"building",
-    category:"defensive",
+    category:"Defensive",
     upgrade_resource:"gold",
     production_resource: nil,
     upgrader:"builders"
@@ -40,7 +39,7 @@ building_basic_info =
     default_level:0,
     display_name:"Bomb",
     building_type:"building",
-    category:"trap",
+    category:"Trap",
     upgrade_resource:"gold",
     production_resource: nil,
     upgrader:"builders"
@@ -49,7 +48,7 @@ building_basic_info =
     default_level:0,
     display_name:"Air Defense",
     building_type:"building",
-    category:"defensive",
+    category:"Defensive",
     upgrade_resource:"gold",
     production_resource: nil,
     upgrader:"builders"
@@ -58,7 +57,7 @@ building_basic_info =
     default_level:0,
     display_name:"Air Sweeper",
     building_type:"building",
-    category:"defensive",
+    category:"Defensive",
     upgrade_resource:"gold",
     production_resource: nil,
     upgrader:"builders"
@@ -67,7 +66,7 @@ building_basic_info =
     default_level:0,
     display_name:"Spring Trap",
     building_type:"building",
-    category:"trap",
+    category:"Trap",
     upgrade_resource:"gold",
     production_resource: nil,
     upgrader:"builders"
@@ -76,7 +75,7 @@ building_basic_info =
     default_level:0,
     display_name:"Wizard Tower",
     building_type:"building",
-    category:"defensive",
+    category:"Defensive",
     upgrade_resource:"gold",
     production_resource: nil,
     upgrader:"builders"
@@ -85,7 +84,7 @@ building_basic_info =
     default_level:0,
     display_name:"Giant Bomb",
     building_type:"building",
-    category:"trap",
+    category:"Trap",
     upgrade_resource:"gold",
     production_resource: nil,
     upgrader:"builders"
@@ -94,7 +93,7 @@ building_basic_info =
     default_level:0,
     display_name:"Air Bomb",
     building_type:"building",
-    category:"trap",
+    category:"Trap",
     upgrade_resource:"gold",
     production_resource: nil,
     upgrader:"builders"
@@ -103,7 +102,7 @@ building_basic_info =
     default_level:0,
     display_name:"Seeking Air Mine",
     building_type:"building",
-    category:"trap",
+    category:"Trap",
     upgrade_resource:"gold",
     production_resource: nil,
     upgrader:"builders"
@@ -112,7 +111,7 @@ building_basic_info =
     default_level:0,
     display_name:"Skeleton Trap",
     building_type:"building",
-    category:"trap",
+    category:"Trap",
     upgrade_resource:"gold",
     production_resource: nil,
     upgrader:"builders"
@@ -121,7 +120,7 @@ building_basic_info =
     default_level:0,
     display_name:"Hidden Tesla",
     building_type:"building",
-    category:"defensive",
+    category:"Defensive",
     upgrade_resource:"gold",
     production_resource: nil,
     upgrader:"builders"
@@ -130,7 +129,7 @@ building_basic_info =
     default_level:0,
     display_name:"X-Bow",
     building_type:"building",
-    category:"defensive",
+    category:"Defensive",
     upgrade_resource:"gold",
     production_resource: nil,
     upgrader:"builders"
@@ -139,7 +138,7 @@ building_basic_info =
     default_level:0,
     display_name:"Inferno Tower",
     building_type:"building",
-    category:"defensive",
+    category:"Defensive",
     upgrade_resource:"gold",
     production_resource: nil,
     upgrader:"builders"
@@ -148,7 +147,7 @@ building_basic_info =
     default_level:0,
     display_name:"Gold Mine",
     building_type:"building",
-    category:"resource",
+    category:"Resource",
     upgrade_resource:"elixir",
     production_resource: "gold",
     upgrader:"builders"
@@ -157,7 +156,7 @@ building_basic_info =
     default_level:0,
     display_name:"Elixir Collector",
     building_type:"building",
-    category:"resource",
+    category:"Resource",
     upgrade_resource:"gold",
     production_resource: "elixir",
     upgrader:"builders"
@@ -166,7 +165,7 @@ building_basic_info =
     default_level:0,
     display_name:"Dark Elixir Drill",
     building_type:"building",
-    category:"resource",
+    category:"Resource",
     upgrade_resource:"elixir",
     production_resource: "dark_elixir",
     upgrader:"builders"
@@ -175,7 +174,7 @@ building_basic_info =
     default_level:0,
     display_name:"Gold Storage",
     building_type:"building",
-    category:"resource",
+    category:"Resource",
     upgrade_resource:"elixir",
     production_resource: nil,
     upgrader:"builders"
@@ -184,7 +183,7 @@ building_basic_info =
     default_level:0,
     display_name:"Elixir Storage",
     building_type:"building",
-    category:"resource",
+    category:"Resource",
     upgrade_resource:"gold",
     production_resource: nil,
     upgrader:"builders"
@@ -193,7 +192,7 @@ building_basic_info =
     default_level:0,
     display_name:"Dark Elixir Storage",
     building_type:"building",
-    category:"resource",
+    category:"Resource",
     upgrade_resource:"elixir",
     production_resource: nil,
     upgrader:"builders"
@@ -202,7 +201,7 @@ building_basic_info =
     default_level:0,
     display_name:"Dark Barracks",
     building_type:"building",
-    category:"army",
+    category:"Army",
     upgrade_resource:"elixir",
     production_resource: nil,
     upgrader:"builders"
@@ -211,7 +210,7 @@ building_basic_info =
     default_level:0,
     display_name:"Barracks",
     building_type:"building",
-    category:"army",
+    category:"Army",
     upgrade_resource:"elixir",
     production_resource: nil,
     upgrader:"builders"
@@ -220,7 +219,7 @@ building_basic_info =
     default_level:0,
     display_name:"Army Camps",
     building_type:"building",
-    category:"army",
+    category:"Army",
     upgrade_resource:"elixir",
     production_resource: nil,
     upgrader:"builders"
@@ -229,7 +228,7 @@ building_basic_info =
     default_level:0,
     display_name:"Lab",
     building_type:"building",
-    category:"army",
+    category:"Army",
     upgrade_resource:"elixir",
     production_resource: nil,
     upgrader:"builders"
@@ -238,7 +237,7 @@ building_basic_info =
     default_level:0,
     display_name:"Spell Factory",
     building_type:"building",
-    category:"army",
+    category:"Army",
     upgrade_resource:"elixir",
     production_resource: nil,
     upgrader:"builders"
@@ -247,7 +246,7 @@ building_basic_info =
     default_level:0,
     display_name:"Dark Spell Factory",
     building_type:"building",
-    category:"army",
+    category:"Army",
     upgrade_resource:"elixir",
     production_resource: nil,
     upgrader:"builders"
@@ -513,7 +512,6 @@ building_basic_info =
   #   upgrade_resource:"elixir"
   #   production_resource: nil
   # }
-
 
 building_availability = 
   {
@@ -1057,2688 +1055,4480 @@ building_cost_info =
     upgrade_resource:"gold",
     cost:0,
     time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   },  {
     name:"cannon",
     level:1,
     upgrade_resource:"gold",
     cost:250,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"cannon",
     level:2,
     upgrade_resource:"gold",
     cost:1000,
-    time:15
+    time:15,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"cannon",
     level:3,
     upgrade_resource:"gold",
     cost:4000,
-    time:45
+    time:45,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"cannon",
     level:4,
     upgrade_resource:"gold",
     cost:16000,
-    time:120
+    time:120,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"cannon",
     level:5,
     upgrade_resource:"gold",
     cost:50000,
-    time:360
+    time:360,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"cannon",
     level:6,
     upgrade_resource:"gold",
     cost:100000,
-    time:720
+    time:720,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"cannon",
     level:7,
     upgrade_resource:"gold",
     cost:200000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"cannon",
     level:8,
     upgrade_resource:"gold",
     cost:400000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"cannon",
     level:9,
     upgrade_resource:"gold",
     cost:800000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"cannon",
     level:10,
     upgrade_resource:"gold",
     cost:1600000,
-    time:5760
+    time:5760,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"cannon",
     level:11,
     upgrade_resource:"gold",
     cost:3200000,
-    time:7200
+    time:7200,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"cannon",
     level:12,
     upgrade_resource:"gold",
     cost:6400000,
-    time:8640
+    time:8640,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"cannon",
     level:13,
     upgrade_resource:"gold",
     cost:7500000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_tower",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_tower",
     level:1,
     upgrade_resource:"gold",
     cost:1000,
-    time:1
+    time:1,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_tower",
     level:2,
     upgrade_resource:"gold",
     cost:2000,
-    time:30
+    time:30,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_tower",
     level:3,
     upgrade_resource:"gold",
     cost:5000,
-    time:45
+    time:45,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_tower",
     level:4,
     upgrade_resource:"gold",
     cost:20000,
-    time:240
+    time:240,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_tower",
     level:5,
     upgrade_resource:"gold",
     cost:80000,
-    time:720
+    time:720,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_tower",
     level:6,
     upgrade_resource:"gold",
     cost:180000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_tower",
     level:7,
     upgrade_resource:"gold",
     cost:360000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_tower",
     level:8,
     upgrade_resource:"gold",
     cost:720000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_tower",
     level:9,
     upgrade_resource:"gold",
     cost:1500000,
-    time:5760
+    time:5760,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_tower",
     level:10,
     upgrade_resource:"gold",
     cost:2500000,
-    time:7200
+    time:7200,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_tower",
     level:11,
     upgrade_resource:"gold",
     cost:4500000,
-    time:8640
+    time:8640,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_tower",
     level:12,
     upgrade_resource:"gold",
     cost:6500000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_tower",
     level:13,
     upgrade_resource:"gold",
     cost:7500000,
-    time:11520
+    time:11520,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"mortar",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"mortar",
     level:1,
     upgrade_resource:"gold",
     cost:8000,
-    time:480
+    time:480,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"mortar",
     level:2,
     upgrade_resource:"gold",
     cost:32000,
-    time:720
+    time:720,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"mortar",
     level:3,
     upgrade_resource:"gold",
     cost:120000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"mortar",
     level:4,
     upgrade_resource:"gold",
     cost:400000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"mortar",
     level:5,
     upgrade_resource:"gold",
     cost:800000,
-    time:5760
+    time:5760,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"mortar",
     level:6,
     upgrade_resource:"gold",
     cost:1600000,
-    time:7200
+    time:7200,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"mortar",
     level:7,
     upgrade_resource:"gold",
     cost:3200000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"mortar",
     level:8,
     upgrade_resource:"gold",
     cost:6400000,
-    time:11520
+    time:11520,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_defense",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_defense",
     level:1,
     upgrade_resource:"gold",
     cost:22500,
-    time:300
+    time:300,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_defense",
     level:2,
     upgrade_resource:"gold",
     cost:90000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_defense",
     level:3,
     upgrade_resource:"gold",
     cost:270000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_defense",
     level:4,
     upgrade_resource:"gold",
     cost:540000,
-    time:7200
+    time:7200,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_defense",
     level:5,
     upgrade_resource:"gold",
     cost:1080000,
-    time:8640
+    time:8640,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_defense",
     level:6,
     upgrade_resource:"gold",
     cost:2160000,
-    time:11520
+    time:11520,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_defense",
     level:7,
     upgrade_resource:"gold",
     cost:4320000,
-    time:14400
+    time:14400,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_defense",
     level:8,
     upgrade_resource:"gold",
     cost:7560000,
-    time:17280
+    time:17280,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wizard_tower",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wizard_tower",
     level:1,
     upgrade_resource:"gold",
     cost:180000,
-    time:720
+    time:720,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wizard_tower",
     level:2,
     upgrade_resource:"gold",
     cost:360000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wizard_tower",
     level:3,
     upgrade_resource:"gold",
     cost:720000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wizard_tower",
     level:4,
     upgrade_resource:"gold",
     cost:1280000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wizard_tower",
     level:5,
     upgrade_resource:"gold",
     cost:1960000,
-    time:5760
+    time:5760,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wizard_tower",
     level:6,
     upgrade_resource:"gold",
     cost:2680000,
-    time:7200
+    time:7200,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wizard_tower",
     level:7,
     upgrade_resource:"gold",
     cost:5360000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wizard_tower",
     level:8,
     upgrade_resource:"gold",
     cost:6480000,
-    time:14400
+    time:14400,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_sweeper",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_sweeper",
     level:1,
     upgrade_resource:"gold",
     cost:500000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_sweeper",
     level:2,
     upgrade_resource:"gold",
     cost:750000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_sweeper",
     level:3,
     upgrade_resource:"gold",
     cost:1250000,
-    time:7200
+    time:7200,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_sweeper",
     level:4,
     upgrade_resource:"gold",
     cost:2400000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_sweeper",
     level:5,
     upgrade_resource:"gold",
     cost:4800000,
-    time:11520
+    time:11520,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_sweeper",
     level:6,
     upgrade_resource:"gold",
     cost:7200000,
-    time:12960
+    time:12960,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"hidden_tesla",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"hidden_tesla",
     level:1,
     upgrade_resource:"gold",
     cost:1000000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"hidden_tesla",
     level:2,
     upgrade_resource:"gold",
     cost:1250000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"hidden_tesla",
     level:3,
     upgrade_resource:"gold",
     cost:1500000,
-    time:7200
+    time:7200,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"hidden_tesla",
     level:4,
     upgrade_resource:"gold",
     cost:2000000,
-    time:8640
+    time:8640,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"hidden_tesla",
     level:5,
     upgrade_resource:"gold",
     cost:2500000,
-    time:11520
+    time:11520,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"hidden_tesla",
     level:6,
     upgrade_resource:"gold",
     cost:3000000,
-    time:14400
+    time:14400,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"hidden_tesla",
     level:7,
     upgrade_resource:"gold",
     cost:3500000,
-    time:17280
+    time:17280,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"hidden_tesla",
     level:8,
     upgrade_resource:"gold",
     cost:5000000,
-    time:20160
+    time:20160,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"xbow",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"xbow",
     level:1,
     upgrade_resource:"gold",
     cost:3000000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"xbow",
     level:2,
     upgrade_resource:"gold",
     cost:5000000,
-    time:14400
+    time:14400,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"xbow",
     level:3,
     upgrade_resource:"gold",
     cost:7000000,
-    time:20160
+    time:20160,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"xbow",
     level:4,
     upgrade_resource:"gold",
     cost:8000000,
-    time:20160
+    time:20160,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"inferno_tower",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"inferno_tower",
     level:1,
     upgrade_resource:"gold",
     cost:5000000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"inferno_tower",
     level:2,
     upgrade_resource:"gold",
     cost:6500000,
-    time:14400
+    time:14400,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"inferno_tower",
     level:3,
     upgrade_resource:"gold",
     cost:8000000,
-    time:20160
+    time:20160,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"bomb",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"bomb",
     level:1,
     upgrade_resource:"gold",
     cost:400,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"bomb",
     level:2,
     upgrade_resource:"gold",
     cost:1000,
-    time:15
+    time:15,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"bomb",
     level:3,
     upgrade_resource:"gold",
     cost:10000,
-    time:120
+    time:120,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"bomb",
     level:4,
     upgrade_resource:"gold",
     cost:100000,
-    time:480
+    time:480,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"bomb",
     level:5,
     upgrade_resource:"gold",
     cost:1000000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"bomb",
     level:6,
     upgrade_resource:"gold",
     cost:1500000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"spring_trap",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"spring_trap",
     level:1,
     upgrade_resource:"gold",
     cost:2000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"giant_bomb",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"giant_bomb",
     level:1,
     upgrade_resource:"gold",
     cost:12500,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"giant_bomb",
     level:2,
     upgrade_resource:"gold",
     cost:75000,
-    time:360
+    time:360,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"giant_bomb",
     level:3,
     upgrade_resource:"gold",
     cost:750000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"giant_bomb",
     level:4,
     upgrade_resource:"gold",
     cost:2500000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_bomb",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_bomb",
     level:1,
     upgrade_resource:"gold",
     cost:4000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_bomb",
     level:2,
     upgrade_resource:"gold",
     cost:20000,
-    time:240
+    time:240,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_bomb",
     level:3,
     upgrade_resource:"gold",
     cost:200000,
-    time:720
+    time:720,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"air_bomb",
     level:4,
     upgrade_resource:"gold",
     cost:1500000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"seeking_air_mine",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"seeking_air_mine",
     level:1,
     upgrade_resource:"gold",
     cost:15000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"seeking_air_mine",
     level:2,
     upgrade_resource:"gold",
     cost:2000000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"seeking_air_mine",
     level:3,
     upgrade_resource:"gold",
     cost:4000000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"skeleton_trap",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"skeleton_trap",
     level:1,
     upgrade_resource:"gold",
     cost:6000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"skeleton_trap",
     level:2,
     upgrade_resource:"gold",
     cost:600000,
-    time:360
+    time:360,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"skeleton_trap",
     level:3,
     upgrade_resource:"gold",
     cost:1300000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"elixir_collector",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:0,
+    production_resource:"elixir"
   }, {
     name:"elixir_collector",
     level:1,
     upgrade_resource:"gold",
     cost:150,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:200,
+    production_resource:"elixir"
   }, {
     name:"elixir_collector",
     level:2,
     upgrade_resource:"gold",
     cost:300,
-    time:1
+    time:1,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:400,
+    production_resource:"elixir"
   }, {
     name:"elixir_collector",
     level:3,
     upgrade_resource:"gold",
     cost:700,
-    time:15
+    time:15,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:600,
+    production_resource:"elixir"
   }, {
     name:"elixir_collector",
     level:4,
     upgrade_resource:"gold",
     cost:1400,
-    time:60
+    time:60,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:800,
+    production_resource:"elixir"
   }, {
     name:"elixir_collector",
     level:5,
     upgrade_resource:"gold",
     cost:3500,
-    time:120
+    time:120,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:1000,
+    production_resource:"elixir"
   }, {
     name:"elixir_collector",
     level:6,
     upgrade_resource:"gold",
     cost:7000,
-    time:360
+    time:360,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:1300,
+    production_resource:"elixir"
   }, {
     name:"elixir_collector",
     level:7,
     upgrade_resource:"gold",
     cost:14000,
-    time:720
+    time:720,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:1600,
+    production_resource:"elixir"
   }, {
     name:"elixir_collector",
     level:8,
     upgrade_resource:"gold",
     cost:28000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:1900,
+    production_resource:"elixir"
   }, {
     name:"elixir_collector",
     level:9,
     upgrade_resource:"gold",
     cost:56000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:2200,
+    production_resource:"elixir"
   }, {
     name:"elixir_collector",
     level:10,
     upgrade_resource:"gold",
     cost:84000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:2500,
+    production_resource:"elixir"
   }, {
     name:"elixir_collector",
     level:11,
     upgrade_resource:"gold",
     cost:168000,
-    time:5760
+    time:5760,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:3000,
+    production_resource:"elixir"
   }, {
     name:"elixir_collector",
     level:12,
     upgrade_resource:"gold",
     cost:336000,
-    time:7200
+    time:7200,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:3500,
+    production_resource:"elixir"
   }, {
     name:"wall",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall",
     level:1,
     upgrade_resource:"gold",
     cost:50,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall",
     level:2,
     upgrade_resource:"gold",
     cost:1000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall",
     level:3,
     upgrade_resource:"gold",
     cost:5000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall",
     level:4,
     upgrade_resource:"gold",
     cost:10000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall",
     level:5,
     upgrade_resource:"gold",
     cost:30000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall",
     level:6,
     upgrade_resource:"gold",
     cost:75000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall",
     level:7,
     upgrade_resource:"gold",
     cost:200000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall",
     level:8,
     upgrade_resource:"gold",
     cost:500000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall",
     level:9,
     upgrade_resource:"gold elixir",
     cost:1000000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall",
     level:10,
     upgrade_resource:"gold elixir",
     cost:3000000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall",
     level:11,
     upgrade_resource:"gold elixir",
     cost:4000000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"gold_mine",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:0,
+    production_resource:"gold"
   }, {
     name:"gold_mine",
     level:1,
     upgrade_resource:"elixir",
     cost:150,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:200,
+    production_resource:"gold"
   }, {
     name:"gold_mine",
     level:2,
     upgrade_resource:"elixir",
     cost:300,
-    time:1
+    time:1,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:400,
+    production_resource:"gold"
   }, {
     name:"gold_mine",
     level:3,
     upgrade_resource:"elixir",
     cost:700,
-    time:15
+    time:15,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:600,
+    production_resource:"gold"
   }, {
     name:"gold_mine",
     level:4,
     upgrade_resource:"elixir",
     cost:1400,
-    time:60
+    time:60,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:800,
+    production_resource:"gold"
   }, {
     name:"gold_mine",
     level:5,
     upgrade_resource:"elixir",
     cost:3000,
-    time:120
+    time:120,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:1000,
+    production_resource:"gold"
   }, {
     name:"gold_mine",
     level:6,
     upgrade_resource:"elixir",
     cost:7000,
-    time:360
+    time:360,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:1300,
+    production_resource:"gold"
   }, {
     name:"gold_mine",
     level:7,
     upgrade_resource:"elixir",
     cost:14000,
-    time:720
+    time:720,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:1600,
+    production_resource:"gold"
   }, {
     name:"gold_mine",
     level:8,
     upgrade_resource:"elixir",
     cost:28000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:1900,
+    production_resource:"gold"
   }, {
     name:"gold_mine",
     level:9,
     upgrade_resource:"elixir",
     cost:56000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:2200,
+    production_resource:"gold"
   }, {
     name:"gold_mine",
     level:10,
     upgrade_resource:"elixir",
     cost:84000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:2500,
+    production_resource:"gold"
   }, {
     name:"gold_mine",
     level:11,
     upgrade_resource:"elixir",
     cost:168000,
-    time:5760
+    time:5760,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:3000,
+    production_resource:"gold"
   }, {
     name:"gold_mine",
     level:12,
     upgrade_resource:"elixir",
     cost:336000,
-    time:7200
+    time:7200,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:3500,
+    production_resource:"gold"
   }, {
     name:"dark_elixir_drill",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:0,
+    production_resource:"dark elixir"
   }, {
     name:"dark_elixir_drill",
     level:1,
     upgrade_resource:"elixir",
     cost:1000000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:20,
+    production_resource:"dark elixir"
   }, {
     name:"dark_elixir_drill",
     level:2,
     upgrade_resource:"elixir",
     cost:1500000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:30,
+    production_resource:"dark elixir"
   }, {
     name:"dark_elixir_drill",
     level:3,
     upgrade_resource:"elixir",
     cost:2000000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:45,
+    production_resource:"dark elixir"
   }, {
     name:"dark_elixir_drill",
     level:4,
     upgrade_resource:"elixir",
     cost:3000000,
-    time:5760
+    time:5760,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:60,
+    production_resource:"dark elixir"
   }, {
     name:"dark_elixir_drill",
     level:5,
     upgrade_resource:"elixir",
     cost:4000000,
-    time:8640
+    time:8640,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:80,
+    production_resource:"dark elixir"
   }, {
     name:"dark_elixir_drill",
     level:6,
     upgrade_resource:"elixir",
     cost:5000000,
-    time:11520
+    time:11520,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:100,
+    production_resource:"dark elixir"
   }, {
     name:"gold_storage",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"gold_storage",
     level:1,
     upgrade_resource:"elixir",
     cost:300,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"gold_storage",
     level:2,
     upgrade_resource:"elixir",
     cost:750,
-    time:30
+    time:30,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"gold_storage",
     level:3,
     upgrade_resource:"elixir",
     cost:1500,
-    time:60
+    time:60,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"gold_storage",
     level:4,
     upgrade_resource:"elixir",
     cost:3000,
-    time:120
+    time:120,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"gold_storage",
     level:5,
     upgrade_resource:"elixir",
     cost:6000,
-    time:180
+    time:180,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"gold_storage",
     level:6,
     upgrade_resource:"elixir",
     cost:12000,
-    time:240
+    time:240,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"gold_storage",
     level:7,
     upgrade_resource:"elixir",
     cost:25000,
-    time:360
+    time:360,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"gold_storage",
     level:8,
     upgrade_resource:"elixir",
     cost:50000,
-    time:480
+    time:480,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"gold_storage",
     level:9,
     upgrade_resource:"elixir",
     cost:100000,
-    time:720
+    time:720,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"gold_storage",
     level:10,
     upgrade_resource:"elixir",
     cost:250000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"gold_storage",
     level:11,
     upgrade_resource:"elixir",
     cost:500000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"elixir_storage",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"elixir_storage",
     level:1,
     upgrade_resource:"gold",
     cost:300,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"elixir_storage",
     level:2,
     upgrade_resource:"gold",
     cost:750,
-    time:30
+    time:30,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"elixir_storage",
     level:3,
     upgrade_resource:"gold",
     cost:1500,
-    time:60
+    time:60,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"elixir_storage",
     level:4,
     upgrade_resource:"gold",
     cost:3000,
-    time:120
+    time:120,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"elixir_storage",
     level:5,
     upgrade_resource:"gold",
     cost:6000,
-    time:180
+    time:180,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"elixir_storage",
     level:6,
     upgrade_resource:"gold",
     cost:12000,
-    time:240
+    time:240,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"elixir_storage",
     level:7,
     upgrade_resource:"gold",
     cost:25000,
-    time:360
+    time:360,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"elixir_storage",
     level:8,
     upgrade_resource:"gold",
     cost:50000,
-    time:480
+    time:480,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"elixir_storage",
     level:9,
     upgrade_resource:"gold",
     cost:100000,
-    time:720
+    time:720,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"elixir_storage",
     level:10,
     upgrade_resource:"gold",
     cost:250000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"elixir_storage",
     level:11,
     upgrade_resource:"gold",
     cost:500000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_elixir_storage",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_elixir_storage",
     level:1,
     upgrade_resource:"elixir",
     cost:600000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_elixir_storage",
     level:2,
     upgrade_resource:"elixir",
     cost:1200000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_elixir_storage",
     level:3,
     upgrade_resource:"elixir",
     cost:1800000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_elixir_storage",
     level:4,
     upgrade_resource:"elixir",
     cost:2400000,
-    time:5760
+    time:5760,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_elixir_storage",
     level:5,
     upgrade_resource:"elixir",
     cost:3000000,
-    time:7200
+    time:7200,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_elixir_storage",
     level:6,
     upgrade_resource:"elixir",
     cost:3600000,
-    time:8640
+    time:8640,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"army_camp",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"army_camp",
     level:1,
     upgrade_resource:"elixir",
     cost:250,
-    time:5
+    time:5,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"army_camp",
     level:2,
     upgrade_resource:"elixir",
     cost:2500,
-    time:60
+    time:60,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"army_camp",
     level:3,
     upgrade_resource:"elixir",
     cost:10000,
-    time:180
+    time:180,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"army_camp",
     level:4,
     upgrade_resource:"elixir",
     cost:100000,
-    time:480
+    time:480,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"army_camp",
     level:5,
     upgrade_resource:"elixir",
     cost:250000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"army_camp",
     level:6,
     upgrade_resource:"elixir",
     cost:750000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"army_camp",
     level:7,
     upgrade_resource:"elixir",
     cost:2250000,
-    time:7200
+    time:7200,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"army_camp",
     level:8,
     upgrade_resource:"elixir",
     cost:6750000,
-    time:14400
+    time:14400,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barracks",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barracks",
     level:1,
     upgrade_resource:"elixir",
     cost:200,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barracks",
     level:2,
     upgrade_resource:"elixir",
     cost:1000,
-    time:15
+    time:15,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barracks",
     level:3,
     upgrade_resource:"elixir",
     cost:2500,
-    time:120
+    time:120,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barracks",
     level:4,
     upgrade_resource:"elixir",
     cost:5000,
-    time:240
+    time:240,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barracks",
     level:5,
     upgrade_resource:"elixir",
     cost:10000,
-    time:600
+    time:600,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barracks",
     level:6,
     upgrade_resource:"elixir",
     cost:80000,
-    time:960
+    time:960,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barracks",
     level:7,
     upgrade_resource:"elixir",
     cost:240000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barracks",
     level:8,
     upgrade_resource:"elixir",
     cost:700000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barracks",
     level:9,
     upgrade_resource:"elixir",
     cost:1500000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barracks",
     level:10,
     upgrade_resource:"elixir",
     cost:2000000,
-    time:8640
+    time:8640,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_barracks",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_barracks",
     level:1,
     upgrade_resource:"elixir",
     cost:750000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_barracks",
     level:2,
     upgrade_resource:"elixir",
     cost:1250000,
-    time:7200
+    time:7200,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_barracks",
     level:3,
     upgrade_resource:"elixir",
     cost:1750000,
-    time:8640
+    time:8640,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_barracks",
     level:4,
     upgrade_resource:"elixir",
     cost:2250000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_barracks",
     level:5,
     upgrade_resource:"elixir",
     cost:2750000,
-    time:11520
+    time:11520,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_barracks",
     level:6,
     upgrade_resource:"elixir",
     cost:3500000,
-    time:12960
+    time:12960,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lab",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lab",
     level:1,
     upgrade_resource:"elixir",
     cost:25000,
-    time:30
+    time:30,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lab",
     level:2,
     upgrade_resource:"elixir",
     cost:50000,
-    time:300
+    time:300,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lab",
     level:3,
     upgrade_resource:"elixir",
     cost:90000,
-    time:720
+    time:720,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lab",
     level:4,
     upgrade_resource:"elixir",
     cost:270000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lab",
     level:5,
     upgrade_resource:"elixir",
     cost:500000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lab",
     level:6,
     upgrade_resource:"elixir",
     cost:1000000,
-    time:5760
+    time:5760,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lab",
     level:7,
     upgrade_resource:"elixir",
     cost:2500000,
-    time:7200
+    time:7200,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lab",
     level:8,
     upgrade_resource:"elixir",
     cost:4000000,
-    time:8640
+    time:8640,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"spell_factory",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"spell_factory",
     level:1,
     upgrade_resource:"elixir",
     cost:200000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"spell_factory",
     level:2,
     upgrade_resource:"elixir",
     cost:400000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"spell_factory",
     level:3,
     upgrade_resource:"elixir",
     cost:800000,
-    time:5760
+    time:5760,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"spell_factory",
     level:4,
     upgrade_resource:"elixir",
     cost:1600000,
-    time:7200
+    time:7200,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"spell_factory",
     level:5,
     upgrade_resource:"elixir",
     cost:3200000,
-    time:8640
+    time:8640,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_spell_factory",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_spell_factory",
     level:1,
     upgrade_resource:"elixir",
     cost:1500000,
-    time:5760
+    time:5760,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_spell_factory",
     level:2,
     upgrade_resource:"elixir",
     cost:2500000,
-    time:8640
+    time:8640,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dark_spell_factory",
     level:3,
     upgrade_resource:"elixir",
     cost:3500000,
-    time:11520
+    time:11520,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"townhall",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"townhall",
     level:1,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"townhall",
     level:2,
     upgrade_resource:"gold",
     cost:1000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"townhall",
     level:3,
     upgrade_resource:"gold",
     cost:4000,
-    time:180
+    time:180,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"townhall",
     level:4,
     upgrade_resource:"gold",
     cost:25000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"townhall",
     level:5,
     upgrade_resource:"gold",
     cost:150000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"townhall",
     level:6,
     upgrade_resource:"gold",
     cost:750000,
-    time:5760
+    time:5760,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"townhall",
     level:7,
     upgrade_resource:"gold",
     cost:1200000,
-    time:8640
+    time:8640,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"townhall",
     level:8,
     upgrade_resource:"gold",
     cost:2000000,
-    time:11520
+    time:11520,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"townhall",
     level:9,
     upgrade_resource:"gold",
     cost:3000000,
-    time:14400
+    time:14400,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"townhall",
     level:10,
     upgrade_resource:"gold",
     cost:4000000,
-    time:20160
+    time:20160,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"clan_castle",
     level:0,
     upgrade_resource:"gold",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"clan_castle",
     level:1,
     upgrade_resource:"gold",
     cost:10000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"clan_castle",
     level:2,
     upgrade_resource:"gold",
     cost:100000,
-    time:360
+    time:360,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"clan_castle",
     level:3,
     upgrade_resource:"gold",
     cost:800000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"clan_castle",
     level:4,
     upgrade_resource:"gold",
     cost:1800000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"clan_castle",
     level:5,
     upgrade_resource:"gold",
     cost:5000000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"clan_castle",
     level:6,
     upgrade_resource:"gold",
     cost:7000000,
-    time:20160
+    time:20160,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian",
     level:1,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:25,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian",
     level:2,
     upgrade_resource:"elixir",
     cost:50000,
-    time:360
+    time:360,
+    training_cost:40,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian",
     level:3,
     upgrade_resource:"elixir",
     cost:150000,
-    time:1440
+    time:1440,
+    training_cost:60,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian",
     level:4,
     upgrade_resource:"elixir",
     cost:500000,
-    time:4320
+    time:4320,
+    training_cost:100,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian",
     level:5,
     upgrade_resource:"elixir",
     cost:1500000,
-    time:7200
+    time:7200,
+    training_cost:150,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian",
     level:6,
     upgrade_resource:"elixir",
     cost:4500000,
-    time:14400
+    time:14400,
+    training_cost:200,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian",
     level:7,
     upgrade_resource:"elixir",
     cost:6000000,
-    time:20160
+    time:20160,
+    training_cost:250,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer",
     level:1,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:50,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer",
     level:2,
     upgrade_resource:"elixir",
     cost:50000,
-    time:720
+    time:720,
+    training_cost:80,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer",
     level:3,
     upgrade_resource:"elixir",
     cost:250000,
-    time:2880
+    time:2880,
+    training_cost:120,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer",
     level:4,
     upgrade_resource:"elixir",
     cost:7500000,
-    time:4320
+    time:4320,
+    training_cost:200,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer",
     level:5,
     upgrade_resource:"elixir",
     cost:2250000,
-    time:7200
+    time:7200,
+    training_cost:300,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer",
     level:6,
     upgrade_resource:"elixir",
     cost:6000000,
-    time:14400
+    time:14400,
+    training_cost:400,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer",
     level:7,
     upgrade_resource:"elixir",
     cost:7500000,
-    time:20160
+    time:20160,
+    training_cost:500,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"goblin",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"goblin",
     level:1,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:25,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"goblin",
     level:2,
     upgrade_resource:"elixir",
     cost:50000,
-    time:720
+    time:720,
+    training_cost:40,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"goblin",
     level:3,
     upgrade_resource:"elixir",
     cost:250000,
-    time:2880
+    time:2880,
+    training_cost:60,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"goblin",
     level:4,
     upgrade_resource:"elixir",
     cost:750000,
-    time:4320
+    time:4320,
+    training_cost:80,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"goblin",
     level:5,
     upgrade_resource:"elixir",
     cost:2250000,
-    time:7200
+    time:7200,
+    training_cost:100,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"goblin",
     level:6,
     upgrade_resource:"elixir",
     cost:4500000,
-    time:14400
+    time:14400,
+    training_cost:150,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"giant",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"giant",
     level:1,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:250,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"giant",
     level:2,
     upgrade_resource:"elixir",
     cost:100000,
-    time:1440
+    time:1440,
+    training_cost:750,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"giant",
     level:3,
     upgrade_resource:"elixir",
     cost:250000,
-    time:2880
+    time:2880,
+    training_cost:1250,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"giant",
     level:4,
     upgrade_resource:"elixir",
     cost:750000,
-    time:4320
+    time:4320,
+    training_cost:1750,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"giant",
     level:5,
     upgrade_resource:"elixir",
     cost:2250000,
-    time:7200
+    time:7200,
+    training_cost:2250,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"giant",
     level:6,
     upgrade_resource:"elixir",
     cost:6000000,
-    time:14400
+    time:14400,
+    training_cost:3000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"giant",
     level:7,
     upgrade_resource:"elixir",
     cost:70000000,
-    time:20160
+    time:20160,
+    training_cost:3500,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall_breaker",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall_breaker",
     level:1,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:1000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall_breaker",
     level:2,
     upgrade_resource:"elixir",
     cost:100000,
-    time:1440
+    time:1440,
+    training_cost:1500,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall_breaker",
     level:3,
     upgrade_resource:"elixir",
     cost:250000,
-    time:2880
+    time:2880,
+    training_cost:2000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall_breaker",
     level:4,
     upgrade_resource:"elixir",
     cost:750000,
-    time:4320
+    time:4320,
+    training_cost:2500,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall_breaker",
     level:5,
     upgrade_resource:"elixir",
     cost:2250000,
-    time:7200
+    time:7200,
+    training_cost:3000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wall_breaker",
     level:6,
     upgrade_resource:"elixir",
     cost:6750000,
-    time:14400
+    time:14400,
+    training_cost:3500,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"balloon",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"balloon",
     level:1,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:2000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"balloon",
     level:2,
     upgrade_resource:"elixir",
     cost:150000,
-    time:1440
+    time:1440,
+    training_cost:2500,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"balloon",
     level:3,
     upgrade_resource:"elixir",
     cost:450000,
-    time:2880
+    time:2880,
+    training_cost:3000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"balloon",
     level:4,
     upgrade_resource:"elixir",
     cost:1350000,
-    time:4320
+    time:4320,
+    training_cost:3500,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"balloon",
     level:5,
     upgrade_resource:"elixir",
     cost:2500000,
-    time:7200
+    time:7200,
+    training_cost:4000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"balloon",
     level:6,
     upgrade_resource:"elixir",
     cost:60000000,
-    time:14400
+    time:14400,
+    training_cost:4500,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wizard",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wizard",
     level:1,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:1500,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wizard",
     level:2,
     upgrade_resource:"elixir",
     cost:150000,
-    time:1440
+    time:1440,
+    training_cost:2000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wizard",
     level:3,
     upgrade_resource:"elixir",
     cost:450000,
-    time:2880
+    time:2880,
+    training_cost:2500,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wizard",
     level:4,
     upgrade_resource:"elixir",
     cost:1350000,
-    time:4320
+    time:4320,
+    training_cost:3000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wizard",
     level:5,
     upgrade_resource:"elixir",
     cost:2500000,
-    time:7200
+    time:7200,
+    training_cost:3500,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"wizard",
     level:6,
     upgrade_resource:"elixir",
     cost:7500000,
-    time:20160
+    time:20160,
+    training_cost:4000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"healer",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"healer",
     level:1,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:5000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"healer",
     level:2,
     upgrade_resource:"elixir",
     cost:750000,
-    time:4320
+    time:4320,
+    training_cost:6000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"healer",
     level:3,
     upgrade_resource:"elixir",
     cost:1500000,
-    time:7200
+    time:7200,
+    training_cost:8000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"healer",
     level:4,
     upgrade_resource:"elixir",
     cost:3000000,
-    time:10080
+    time:10080,
+    training_cost:10000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dragon",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dragon",
     level:1,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:25000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dragon",
     level:2,
     upgrade_resource:"elixir",
     cost:2000000,
-    time:10080
+    time:10080,
+    training_cost:29000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dragon",
     level:3,
     upgrade_resource:"elixir",
     cost:3000000,
-    time:14400
+    time:14400,
+    training_cost:33000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dragon",
     level:4,
     upgrade_resource:"elixir",
     cost:7000000,
-    time:20160
+    time:20160,
+    training_cost:37000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"dragon",
     level:5,
     upgrade_resource:"elixir",
     cost:8000000,
-    time:20160
+    time:20160,
+    training_cost:42000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"pekka",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"pekka",
     level:1,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:28000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"pekka",
     level:2,
     upgrade_resource:"elixir",
     cost:3000000,
-    time:10080
+    time:10080,
+    training_cost:32000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"pekka",
     level:3,
     upgrade_resource:"elixir",
     cost:6000000,
-    time:17280
+    time:17280,
+    training_cost:36000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"pekka",
     level:4,
     upgrade_resource:"elixir",
     cost:7000000,
-    time:20160
+    time:20160,
+    training_cost:40000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"pekka",
     level:5,
     upgrade_resource:"elixir",
     cost:8000000,
-    time:20160
+    time:20160,
+    training_cost:45000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lightning_spell",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lightning_spell",
     level:1,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:15000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lightning_spell",
     level:2,
     upgrade_resource:"elixir",
     cost:200000,
-    time:1440
+    time:1440,
+    training_cost:16500,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lightning_spell",
     level:3,
     upgrade_resource:"elixir",
     cost:500000,
-    time:2880
+    time:2880,
+    training_cost:18000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lightning_spell",
     level:4,
     upgrade_resource:"elixir",
     cost:1000000,
-    time:4320
+    time:4320,
+    training_cost:20000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lightning_spell",
     level:5,
     upgrade_resource:"elixir",
     cost:2000000,
-    time:5760
+    time:5760,
+    training_cost:22000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lightning_spell",
     level:6,
     upgrade_resource:"elixir",
     cost:8000000,
-    time:20160
+    time:20160,
+    training_cost:24000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"healing_spell",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"healing_spell",
     level:1,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:15000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"healing_spell",
     level:2,
     upgrade_resource:"elixir",
     cost:300000,
-    time:1440
+    time:1440,
+    training_cost:16500,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"healing_spell",
     level:3,
     upgrade_resource:"elixir",
     cost:600000,
-    time:2880
+    time:2880,
+    training_cost:18000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"healing_spell",
     level:4,
     upgrade_resource:"elixir",
     cost:1200000,
-    time:4320
+    time:4320,
+    training_cost:20000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"healing_spell",
     level:5,
     upgrade_resource:"elixir",
     cost:2400000,
-    time:7200
+    time:7200,
+    training_cost:22000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"healing_spell",
     level:6,
     upgrade_resource:"elixir",
     cost:4800000,
-    time:10080
+    time:10080,
+    training_cost:24000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"rage_spell",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"rage_spell",
     level:1,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:23000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"rage_spell",
     level:2,
     upgrade_resource:"elixir",
     cost:450000,
-    time:2880
+    time:2880,
+    training_cost:25000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"rage_spell",
     level:3,
     upgrade_resource:"elixir",
     cost:900000,
-    time:4320
+    time:4320,
+    training_cost:27000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"rage_spell",
     level:4,
     upgrade_resource:"elixir",
     cost:1800000,
-    time:7200
+    time:7200,
+    training_cost:30000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"rage_spell",
     level:5,
     upgrade_resource:"elixir",
     cost:3000000,
-    time:10080
+    time:10080,
+    training_cost:33000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"jump_spell",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"jump_spell",
     level:1,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:23000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"jump_spell",
     level:2,
     upgrade_resource:"elixir",
     cost:3000000,
-    time:7200
+    time:7200,
+    training_cost:27000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"jump_spell",
     level:3,
     upgrade_resource:"elixir",
     cost:6000000,
-    time:10080
+    time:10080,
+    training_cost:31000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"freeze_spell",
     level:0,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"freeze_spell",
     level:1,
     upgrade_resource:"elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:26000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"freeze_spell",
     level:2,
     upgrade_resource:"elixir",
     cost:4000000,
-    time:7200
+    time:7200,
+    training_cost:29000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"freeze_spell",
     level:3,
     upgrade_resource:"elixir",
     cost:5000000,
-    time:10080
+    time:10080,
+    training_cost:31000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"freeze_spell",
     level:4,
     upgrade_resource:"elixir",
     cost:6500000,
-    time:14400
+    time:14400,
+    training_cost:33000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"freeze_spell",
     level:5,
     upgrade_resource:"elixir",
     cost:8000000,
-    time:20160
+    time:20160,
+    training_cost:35000,
+    training_resource:"elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"minion",
     level:0,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"minion",
     level:1,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:6,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"minion",
     level:2,
     upgrade_resource:"dark elixir",
     cost:10000,
-    time:7200
+    time:7200,
+    training_cost:7,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"minion",
     level:3,
     upgrade_resource:"dark elixir",
     cost:20000,
-    time:8640
+    time:8640,
+    training_cost:8,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"minion",
     level:4,
     upgrade_resource:"dark elixir",
     cost:30000,
-    time:10080
+    time:10080,
+    training_cost:9,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"minion",
     level:5,
     upgrade_resource:"dark elixir",
     cost:40000,
-    time:14400
+    time:14400,
+    training_cost:10,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"minion",
     level:6,
     upgrade_resource:"dark elixir",
     cost:100000,
-    time:20160
+    time:20160,
+    training_cost:11,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"hog_rider",
     level:0,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"hog_rider",
     level:1,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:40,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"hog_rider",
     level:2,
     upgrade_resource:"dark elixir",
     cost:20000,
-    time:11520
+    time:11520,
+    training_cost:45,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"hog_rider",
     level:3,
     upgrade_resource:"dark elixir",
     cost:30000,
-    time:14400
+    time:14400,
+    training_cost:52,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"hog_rider",
     level:4,
     upgrade_resource:"dark elixir",
     cost:40000,
-    time:17280
+    time:17280,
+    training_cost:58,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"hog_rider",
     level:5,
     upgrade_resource:"dark elixir",
     cost:50000,
-    time:20160
+    time:20160,
+    training_cost:65,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"valkyrie",
     level:0,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"valkyrie",
     level:1,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:70,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"valkyrie",
     level:2,
     upgrade_resource:"dark elixir",
     cost:50000,
-    time:10080
+    time:10080,
+    training_cost:100,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"valkyrie",
     level:3,
     upgrade_resource:"dark elixir",
     cost:60000,
-    time:17280
+    time:17280,
+    training_cost:130,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"valkyrie",
     level:4,
     upgrade_resource:"dark elixir",
     cost:70000,
-    time:20160
+    time:20160,
+    training_cost:160,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"golem",
     level:0,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"golem",
     level:1,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:450,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"golem",
     level:2,
     upgrade_resource:"dark elixir",
     cost:60000,
-    time:10080
+    time:10080,
+    training_cost:525,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"golem",
     level:3,
     upgrade_resource:"dark elixir",
     cost:70000,
-    time:17280
+    time:17280,
+    training_cost:600,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"golem",
     level:4,
     upgrade_resource:"dark elixir",
     cost:80000,
-    time:20160
+    time:20160,
+    training_cost:675,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"golem",
     level:5,
     upgrade_resource:"dark elixir",
     cost:90000,
-    time:20160
+    time:20160,
+    training_cost:750,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"witch",
     level:0,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"witch",
     level:1,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:250,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"witch",
     level:2,
     upgrade_resource:"dark elixir",
     cost:75000,
-    time:10080
+    time:10080,
+    training_cost:350,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lava_hound",
     level:0,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lava_hound",
     level:1,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:390,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lava_hound",
     level:2,
     upgrade_resource:"dark elixir",
     cost:60000,
-    time:14400
+    time:14400,
+    training_cost:450,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"lava_hound",
     level:3,
     upgrade_resource:"dark elixir",
     cost:70000,
-    time:17280
+    time:17280,
+    training_cost:510,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"poison_spell",
     level:0,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"poison_spell",
     level:1,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:95,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"poison_spell",
     level:2,
     upgrade_resource:"dark elixir",
     cost:25000,
-    time:5760
+    time:5760,
+    training_cost:110,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"poison_spell",
     level:3,
     upgrade_resource:"dark elixir",
     cost:50000,
-    time:8640
+    time:8640,
+    training_cost:125,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   },  {
     name:"poison_spell",
     level:4,
     upgrade_resource:"dark elixir",
     cost:75000,
-    time:14400
+    time:14400,
+    training_cost:140,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"earthquake_spell",
     level:0,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"earthquake_spell",
     level:1,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:125,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"earthquake_spell",
     level:2,
     upgrade_resource:"dark elixir",
     cost:30000,
-    time:8640
+    time:8640,
+    training_cost:140,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"earthquake_spell",
     level:3,
     upgrade_resource:"dark elixir",
     cost:60000,
-    time:11520
+    time:11520,
+    training_cost:160,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"earthquake_spell",
     level:4,
     upgrade_resource:"dark elixir",
     cost:90000,
-    time:17280
+    time:17280,
+    training_cost:180,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"haste_spell",
     level:0,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:0,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"haste_spell",
     level:1,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:80,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"haste_spell",
     level:2,
     upgrade_resource:"dark elixir",
     cost:40000,
-    time:11520
+    time:11520,
+    training_cost:85,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"haste_spell",
     level:3,
     upgrade_resource:"dark elixir",
     cost:80000,
-    time:14400
+    time:14400,
+    training_cost:90,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"haste_spell",
     level:4,
     upgrade_resource:"dark elixir",
     cost:100000,
-    time:20160
+    time:20160,
+    training_cost:95,
+    training_resource:"dark elixir",
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:0,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:1,
     upgrade_resource:"dark elixir",
     cost:10000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:2,
     upgrade_resource:"dark elixir",
     cost:12500,
-    time:720
+    time:720,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:3,
     upgrade_resource:"dark elixir",
     cost:15000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:4,
     upgrade_resource:"dark elixir",
     cost:17500,
-    time:2160
+    time:2160,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:5,
     upgrade_resource:"dark elixir",
     cost:20000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:6,
     upgrade_resource:"dark elixir",
     cost:22500,
-    time:3600
+    time:3600,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:7,
     upgrade_resource:"dark elixir",
     cost:25000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:8,
     upgrade_resource:"dark elixir",
     cost:30000,
-    time:5040
+    time:5040,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:9,
     upgrade_resource:"dark elixir",
     cost:35000,
-    time:5760
+    time:5760,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:10,
     upgrade_resource:"dark elixir",
     cost:40000,
-    time:6480
+    time:6480,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:11,
     upgrade_resource:"dark elixir",
     cost:45000,
-    time:7200
+    time:7200,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:12,
     upgrade_resource:"dark elixir",
     cost:50000,
-    time:7920
+    time:7920,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:13,
     upgrade_resource:"dark elixir",
     cost:55000,
-    time:8640
+    time:8640,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:14,
     upgrade_resource:"dark elixir",
     cost:60000,
-    time:9360
+    time:9360,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:15,
     upgrade_resource:"dark elixir",
     cost:65000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:16,
     upgrade_resource:"dark elixir",
     cost:70000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:17,
     upgrade_resource:"dark elixir",
     cost:75000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:18,
     upgrade_resource:"dark elixir",
     cost:80000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:19,
     upgrade_resource:"dark elixir",
     cost:85000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:20,
     upgrade_resource:"dark elixir",
     cost:90000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:21,
     upgrade_resource:"dark elixir",
     cost:95000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:22,
     upgrade_resource:"dark elixir",
     cost:100000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:23,
     upgrade_resource:"dark elixir",
     cost:105000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:24,
     upgrade_resource:"dark elixir",
     cost:110000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:25,
     upgrade_resource:"dark elixir",
     cost:115000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:26,
     upgrade_resource:"dark elixir",
     cost:120000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:27,
     upgrade_resource:"dark elixir",
     cost:125000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:28,
     upgrade_resource:"dark elixir",
     cost:130000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:29,
     upgrade_resource:"dark elixir",
     cost:135000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:30,
     upgrade_resource:"dark elixir",
     cost:140000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:31,
     upgrade_resource:"dark elixir",
     cost:145000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:32,
     upgrade_resource:"dark elixir",
     cost:150000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:33,
     upgrade_resource:"dark elixir",
     cost:155000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:34,
     upgrade_resource:"dark elixir",
     cost:160000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:35,
     upgrade_resource:"dark elixir",
     cost:165000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:36,
     upgrade_resource:"dark elixir",
     cost:170000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:37,
     upgrade_resource:"dark elixir",
     cost:175000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:38,
     upgrade_resource:"dark elixir",
     cost:180000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:39,
     upgrade_resource:"dark elixir",
     cost:185000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"barbarian_king",
     level:40,
     upgrade_resource:"dark elixir",
     cost:190000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:0,
     upgrade_resource:"dark elixir",
     cost:0,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:1,
     upgrade_resource:"dark elixir",
     cost:40000,
-    time:0
+    time:0,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:2,
     upgrade_resource:"dark elixir",
     cost:22500,
-    time:720
+    time:720,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:3,
     upgrade_resource:"dark elixir",
     cost:25000,
-    time:1440
+    time:1440,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:4,
     upgrade_resource:"dark elixir",
     cost:27500,
-    time:2160
+    time:2160,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:5,
     upgrade_resource:"dark elixir",
     cost:30000,
-    time:2880
+    time:2880,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:6,
     upgrade_resource:"dark elixir",
     cost:32500,
-    time:3600
+    time:3600,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:7,
     upgrade_resource:"dark elixir",
     cost:35000,
-    time:4320
+    time:4320,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:8,
     upgrade_resource:"dark elixir",
     cost:40000,
-    time:5040
+    time:5040,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:9,
     upgrade_resource:"dark elixir",
     cost:45000,
-    time:5760
+    time:5760,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:10,
     upgrade_resource:"dark elixir",
     cost:50000,
-    time:6480
+    time:6480,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:11,
     upgrade_resource:"dark elixir",
     cost:55000,
-    time:7200
+    time:7200,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:12,
     upgrade_resource:"dark elixir",
     cost:60000,
-    time:7920
+    time:7920,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:13,
     upgrade_resource:"dark elixir",
     cost:65000,
-    time:8640
+    time:8640,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:14,
     upgrade_resource:"dark elixir",
     cost:70000,
-    time:9360
+    time:9360,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:15,
@@ -3750,145 +5540,241 @@ building_cost_info =
     level:16,
     upgrade_resource:"dark elixir",
     cost:80000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:17,
     upgrade_resource:"dark elixir",
     cost:85000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:18,
     upgrade_resource:"dark elixir",
     cost:90000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:19,
     upgrade_resource:"dark elixir",
     cost:95000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:20,
     upgrade_resource:"dark elixir",
     cost:100000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:21,
     upgrade_resource:"dark elixir",
     cost:105000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:22,
     upgrade_resource:"dark elixir",
     cost:110000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:23,
     upgrade_resource:"dark elixir",
     cost:115000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:24,
     upgrade_resource:"dark elixir",
     cost:120000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:25,
     upgrade_resource:"dark elixir",
     cost:125000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:26,
     upgrade_resource:"dark elixir",
     cost:130000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:27,
     upgrade_resource:"dark elixir",
     cost:135000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:28,
     upgrade_resource:"dark elixir",
     cost:140000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:29,
     upgrade_resource:"dark elixir",
     cost:145000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:30,
     upgrade_resource:"dark elixir",
     cost:150000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:31,
     upgrade_resource:"dark elixir",
     cost:155000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:32,
     upgrade_resource:"dark elixir",
     cost:160000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:33,
     upgrade_resource:"dark elixir",
     cost:165000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:34,
     upgrade_resource:"dark elixir",
     cost:170000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:35,
     upgrade_resource:"dark elixir",
     cost:175000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:36,
     upgrade_resource:"dark elixir",
     cost:180000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:37,
     upgrade_resource:"dark elixir",
     cost:185000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:38,
     upgrade_resource:"dark elixir",
     cost:190000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:39,
     upgrade_resource:"dark elixir",
     cost:195000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }, {
     name:"archer_queen",
     level:40,
@@ -5990,6 +7876,7 @@ building_max_level =
     max_level:4,
     townhall_level:10
   }
+
 
 BuildingBasicInfo.create(building_basic_info)
 BuildingAvailability.create(building_availability)
