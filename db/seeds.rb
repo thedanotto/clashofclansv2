@@ -13,8 +13,6 @@ building_basic_info =
     display_name:"Cannon",
     building_type:"building",
     category:"Defensive",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"archer_tower",
@@ -22,8 +20,6 @@ building_basic_info =
     display_name:"Archer Tower",
     building_type:"building",
     category: "Defensive",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"mortar",
@@ -31,8 +27,6 @@ building_basic_info =
     display_name:"Mortar",
     building_type:"building",
     category:"Defensive",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"bomb",
@@ -40,8 +34,6 @@ building_basic_info =
     display_name:"Bomb",
     building_type:"building",
     category:"Trap",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"air_defense",
@@ -49,8 +41,6 @@ building_basic_info =
     display_name:"Air Defense",
     building_type:"building",
     category:"Defensive",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"air_sweeper",
@@ -58,8 +48,6 @@ building_basic_info =
     display_name:"Air Sweeper",
     building_type:"building",
     category:"Defensive",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"spring_trap",
@@ -67,8 +55,6 @@ building_basic_info =
     display_name:"Spring Trap",
     building_type:"building",
     category:"Trap",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"wizard_tower",
@@ -76,8 +62,6 @@ building_basic_info =
     display_name:"Wizard Tower",
     building_type:"building",
     category:"Defensive",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"giant_bomb",
@@ -85,8 +69,6 @@ building_basic_info =
     display_name:"Giant Bomb",
     building_type:"building",
     category:"Trap",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"air_bomb",
@@ -94,8 +76,6 @@ building_basic_info =
     display_name:"Air Bomb",
     building_type:"building",
     category:"Trap",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"seeking_air_mine",
@@ -103,8 +83,6 @@ building_basic_info =
     display_name:"Seeking Air Mine",
     building_type:"building",
     category:"Trap",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"skeleton_trap",
@@ -112,8 +90,6 @@ building_basic_info =
     display_name:"Skeleton Trap",
     building_type:"building",
     category:"Trap",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"hidden_tesla",
@@ -121,8 +97,6 @@ building_basic_info =
     display_name:"Hidden Tesla",
     building_type:"building",
     category:"Defensive",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"xbow",
@@ -130,8 +104,6 @@ building_basic_info =
     display_name:"X-Bow",
     building_type:"building",
     category:"Defensive",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"inferno_tower",
@@ -139,8 +111,6 @@ building_basic_info =
     display_name:"Inferno Tower",
     building_type:"building",
     category:"Defensive",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"gold_mine",
@@ -148,8 +118,6 @@ building_basic_info =
     display_name:"Gold Mine",
     building_type:"building",
     category:"Resource",
-    upgrade_resource:"elixir",
-    production_resource: "gold",
     upgrader:"builders"
   }, {
     name:"elixir_collector",
@@ -157,8 +125,6 @@ building_basic_info =
     display_name:"Elixir Collector",
     building_type:"building",
     category:"Resource",
-    upgrade_resource:"gold",
-    production_resource: "elixir",
     upgrader:"builders"
   }, {
     name:"dark_elixir_drill",
@@ -166,8 +132,6 @@ building_basic_info =
     display_name:"Dark Elixir Drill",
     building_type:"building",
     category:"Resource",
-    upgrade_resource:"elixir",
-    production_resource: "dark_elixir",
     upgrader:"builders"
   }, {
     name:"gold_storage",
@@ -175,8 +139,6 @@ building_basic_info =
     display_name:"Gold Storage",
     building_type:"building",
     category:"Resource",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"elixir_storage",
@@ -184,8 +146,6 @@ building_basic_info =
     display_name:"Elixir Storage",
     building_type:"building",
     category:"Resource",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"dark_elixir_storage",
@@ -193,8 +153,6 @@ building_basic_info =
     display_name:"Dark Elixir Storage",
     building_type:"building",
     category:"Resource",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"dark_barracks",
@@ -202,8 +160,6 @@ building_basic_info =
     display_name:"Dark Barracks",
     building_type:"building",
     category:"Army",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"barracks",
@@ -211,8 +167,6 @@ building_basic_info =
     display_name:"Barracks",
     building_type:"building",
     category:"Army",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"army_camp",
@@ -220,8 +174,6 @@ building_basic_info =
     display_name:"Army Camps",
     building_type:"building",
     category:"Army",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"lab",
@@ -229,8 +181,6 @@ building_basic_info =
     display_name:"Lab",
     building_type:"building",
     category:"Army",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"spell_factory",
@@ -238,8 +188,6 @@ building_basic_info =
     display_name:"Spell Factory",
     building_type:"building",
     category:"Army",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"dark_spell_factory",
@@ -247,8 +195,6 @@ building_basic_info =
     display_name:"Dark Spell Factory",
     building_type:"building",
     category:"Army",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"barbarian_king",
@@ -256,8 +202,6 @@ building_basic_info =
     display_name:"Barbarian King",
     building_type:"building",
     category:"Hero",
-    upgrade_resource:"dark elixir",
-    production_resource: nil,
     upgrader:"builders"
   }, {
     name:"archer_queen",
@@ -265,8 +209,6 @@ building_basic_info =
     display_name:"Archer Queen",
     building_type:"building",
     category:"Hero",
-    upgrade_resource:"dark elixir",
-    production_resource: nil,
     upgrader:"builders"
   }, { ## need to input all units
     name:"clan_castle",
@@ -274,8 +216,6 @@ building_basic_info =
     display_name:"Clan Castle",
     building_type:"building",
     category:"Other",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
   },{
     name:"townhhall",
@@ -283,8 +223,6 @@ building_basic_info =
     display_name:"Townhall",
     building_type:"building",
     category:"Other",
-    upgrade_resource:"gold",
-    production_resource: nil,
     upgrader:"builders"
     }, {
     name:"barbarian",
@@ -292,8 +230,6 @@ building_basic_info =
     display_name:"Barbarian",
     building_type:"unit",
     category:"Unit",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"archer",
@@ -301,8 +237,6 @@ building_basic_info =
     display_name:"Archer",
     building_type:"unit",
     category:"Unit",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"goblin",
@@ -310,8 +244,6 @@ building_basic_info =
     display_name:"Goblin",
     building_type:"unit",
     category:"Unit",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"giant",
@@ -319,8 +251,6 @@ building_basic_info =
     display_name:"Giant",
     building_type:"unit",
     category:"Unit",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"wall_breaker",
@@ -328,8 +258,6 @@ building_basic_info =
     display_name:"Wall Breaker",
     building_type:"unit",
     category:"Unit",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"balloon",
@@ -337,8 +265,6 @@ building_basic_info =
     display_name:"Balloon",
     building_type:"unit",
     category:"Unit",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"wizard",
@@ -346,8 +272,6 @@ building_basic_info =
     display_name:"Wizard",
     building_type:"unit",
     category:"Unit",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"healer",
@@ -355,8 +279,6 @@ building_basic_info =
     display_name:"Healer",
     building_type:"unit",
     category:"Unit",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"dragon",
@@ -364,8 +286,6 @@ building_basic_info =
     display_name:"Dragon",
     building_type:"unit",
     category:"Unit",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"pekka",
@@ -373,8 +293,6 @@ building_basic_info =
     display_name:"P.E.K.K.A",
     building_type:"unit",
     category:"Unit",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"minion",
@@ -382,8 +300,6 @@ building_basic_info =
     display_name:"Minion",
     building_type:"unit",
     category:"Dark Unit",
-    upgrade_resource:"dark elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"hog_rider",
@@ -391,8 +307,6 @@ building_basic_info =
     display_name:"Hog Rider",
     building_type:"unit",
     category:"Dark Unit",
-    upgrade_resource:"dark elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"valkyrie",
@@ -400,8 +314,6 @@ building_basic_info =
     display_name:"Valkyrie",
     building_type:"unit",
     category:"Dark Unit",
-    upgrade_resource:"dark elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"golem",
@@ -409,8 +321,6 @@ building_basic_info =
     display_name:"Golem",
     building_type:"unit",
     category:"Dark Unit",
-    upgrade_resource:"dark elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"witch",
@@ -418,8 +328,6 @@ building_basic_info =
     display_name:"Witch",
     building_type:"unit",
     category:"Dark Unit",
-    upgrade_resource:"dark elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"lava_hound",
@@ -427,8 +335,6 @@ building_basic_info =
     display_name:"Lava Hound",
     building_type:"unit",
     category:"Dark Unit",
-    upgrade_resource:"dark elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"lightning_spell",
@@ -436,8 +342,6 @@ building_basic_info =
     display_name:"Lightning Spell",
     building_type:"unit",
     category:"Spell",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"healing_spell",
@@ -445,8 +349,6 @@ building_basic_info =
     display_name:"Healing Spell",
     building_type:"unit",
     category:"Spell",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"rage_spell",
@@ -454,8 +356,6 @@ building_basic_info =
     display_name:"Rage Spell",
     building_type:"unit",
     category:"Spell",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"jump_spell",
@@ -463,8 +363,6 @@ building_basic_info =
     display_name:"Jump Spell",
     building_type:"unit",
     category:"Spell",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"freeze_spell",
@@ -472,8 +370,6 @@ building_basic_info =
     display_name:"Freeze Spell",
     building_type:"unit",
     category:"Spell",
-    upgrade_resource:"elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"poison_spell",
@@ -481,8 +377,6 @@ building_basic_info =
     display_name:"Poison Spell",
     building_type:"unit",
     category:"Dark Spell",
-    upgrade_resource:"dark elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"earthquake_spell",
@@ -490,8 +384,6 @@ building_basic_info =
     display_name:"Earthquake Spell",
     building_type:"unit",
     category:"Dark Spell",
-    upgrade_resource:"dark elixir",
-    production_resource: nil,
     upgrader:"lab"
   }, {
     name:"haste_spell",
@@ -499,8 +391,6 @@ building_basic_info =
     display_name:"Hash Spell",
     building_type:"unit",
     category:"Dark Spell",
-    upgrade_resource:"dark elixir",
-    production_resource: nil,
     upgrader:"lab"
   }
   # , {
