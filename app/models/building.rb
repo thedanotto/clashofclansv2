@@ -7,7 +7,7 @@ class Building < ActiveRecord::Base
 
   scope :active, -> (townhall_level) { joins(:building_availability).merge(BuildingAvailability.where('active_on <= ?', townhall_level)) }
   scope :building_name, -> (building_name) { where(name: building_name)}
-  scope :building_type, -> (building_type) { joins(:basic_info).merge(BuildingBasicInfo.where(building_type: building_type))}
+  scope :building_type, -> (building_type) { joins(:building_basic_info).merge(BuildingBasicInfo.where(building_type: building_type))}
   scope :category, -> (category) { joins(:building_basic_info).merge(BuildingBasicInfo.where(category: category ))}
   scope :upgrader, -> (upgrader) { joins(:building_basic_info).merge(BuildingBasicInfo.where(upgrader: upgrader))}
   scope :upgrading_resource, -> (resource) { joins(:building_cost_info).merge(BuildingCostInfo.where(upgrade_resource: resource))}

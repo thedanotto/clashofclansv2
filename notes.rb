@@ -1,3 +1,47 @@
+# user not logged in
+  -> can access home page and devise sign up
+
+  # user registration
+    -> it contains the user registration and townhall selector
+    -> accepts nested attributes for townhall
+
+# user logged in
+  -> homepage is dashboard
+
+
+
+
+
+# now its time to think about what I want this app to do.
+  # I want a user to be able to use the site without signing up... check stack overflow for that
+
+# What information do I want to present to a user?
+  # 5 tabs
+    # Overview
+      # shows total town's worth in all resources: gold, elixir, dark elixir and time
+      # shows total town's worth in all building types: defensive
+      # what's the most valuable gold building?
+      # what building have I invested the most money?
+
+# All I need to do is be able to update levels of buildings. Everything else should match
+# the schema. I should do a schema check. Does this town match the schema?
+
+
+    # Buildings
+      # cruded
+    # Units
+      # uses buildings cruded-ness, but is just a different scope
+    # Walls
+      # needs to be cruded
+    # Available Upgrades
+
+  # Town's worth
+
+# possible procedural things to think about
+  # new level added
+  # new unit added
+  # more buildings added for various townhall levels
+    # and how does that fit into updating the backend, then updating everyone's town? 
 
 
 # upgrade resource

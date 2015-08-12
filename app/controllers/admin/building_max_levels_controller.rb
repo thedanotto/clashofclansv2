@@ -1,5 +1,5 @@
 class Admin::BuildingMaxLevelsController < ApplicationController
-  layout "admin"
+  layout 'admin_sidenav'
   load_and_authorize_resource
   before_action :set_building_max_level, only: [:show, :edit, :update, :destroy]
 
@@ -15,7 +15,7 @@ class Admin::BuildingMaxLevelsController < ApplicationController
   end
 
   def index
-    @building_max_level = BuildingMaxLevel.all
+    @building_max_levels = BuildingMaxLevel.all
   end
 
   def show
@@ -32,14 +32,14 @@ class Admin::BuildingMaxLevelsController < ApplicationController
   end
 
   def destroy
-    @building_max_level.destroy
+    @building_max_levels.destroy
     redirect_to(admin_building_max_levels_path, notice: "Building Max Level DESTROYYYYD")
   end
 
 
   private
   def building_max_level_params
-    params.require(:building_max_levels).permit(:name, :townhall_level, :max_level)
+    params.require(:building_max_level).permit(:name, :townhall_level, :max_level)
   end
 
   def set_building_max_level

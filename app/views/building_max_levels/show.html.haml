@@ -1,0 +1,24 @@
+- @title = "Showing building_max_level"
+
+.container
+  .row
+    .col-xs-12.col-sm-12.col-md-12.col-lg-12
+      .form-horizontal
+        .form-group
+          %label.col-sm-2.form-label Name
+          .uneditable-input.col-md-8.form-control
+            %span= @building_max_level.name
+
+        .form-group
+          %label.col-sm-2.form-label Townhall level
+          .uneditable-input.col-md-8.form-control
+            %span= @building_max_level.townhall_level
+
+        .form-group
+          %label.col-sm-2.form-label Max level
+          .uneditable-input.col-md-8.form-control
+            %span= @building_max_level.max_level
+
+        .form-actions.col-md-offset-2
+          = link_to fa_icon_tag("pencil") + ' Edit', edit_building_max_level_path(@building_max_level), class: 'btn btn-primary'
+          = link_to 'Back', building_max_levels_path, class: 'btn'

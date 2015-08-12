@@ -1,0 +1,81 @@
+.nav-side-menu
+  .navbar-header
+    .profile
+      = random_avatar 60, "img-circle profile-image"
+      .profile-body
+        %h4=current_user.email
+        .user-links
+          / %a.btn.btn-link.btn-flat.btn-xs.btn-borderless{"data-original-title" => "Profile", "data-placement" => "bottom", "data-toggle" => "tooltip", :href => "#"}
+          /   %i.fa.fa-user
+          / %a.btn.btn-link.btn-flat.btn-xs.btn-borderless{"data-original-title" => "Messages", "data-placement" => "bottom", "data-toggle" => "tooltip", :href => "#"}
+          /   %i.fa.fa-envelope
+          / %a.btn.btn-link.btn-flat.btn-xs.btn-borderless{"data-original-title" => "Settings", "data-placement" => "bottom", "data-toggle" => "tooltip", :href => "#"}
+          /   %i.fa.fa-cog
+          / destroy_user_session
+          = link_to(destroy_user_session_path, method: :delete, class:"btn btn-link btn-flat btn-xs btn-borderless", "data-original-title" => "Logout", "data-placement" => "bottom", "data-toggle" => "tooltip") do             
+            %i.fa.fa-sign-out
+    %i.navbar-toggle.collapsed.fa.fa-bars{"data-target" => "#menu-content", "data-toggle" => "collapse"}
+  %ul#menu-content.nav.navbar-collapse
+    - if current_user.role == "admin"
+      %li
+        = link_to(admin_building_availabilities_path) do
+          %i.fa.fa-sitemap.fa-fw
+          Building Availability
+          %span.fa.arrow
+        %ul.nav.nav-second-level.collapse{"aria-expanded" => "false"}
+          %li
+            = link_to("New", new_admin_building_availability_path, class:"active")
+          %li
+            = link_to("View All", admin_building_availabilities_path, class:"active")
+      %li
+        = link_to(admin_building_basic_infos_path) do
+          %i.fa.fa-sitemap.fa-fw
+          Building Basic Info
+          %span.fa.arrow
+        %ul.nav.nav-second-level.collapse{"aria-expanded" => "false"}
+          %li
+            = link_to("New", new_admin_building_basic_info_path, class:"active")
+          %li
+            = link_to("View All", admin_building_basic_infos_path, class:"active")
+      %li
+        = link_to(admin_building_cost_infos_path) do
+          %i.fa.fa-sitemap.fa-fw
+          Building Cost Info
+          %span.fa.arrow
+        %ul.nav.nav-second-level.collapse{"aria-expanded" => "false"}
+          %li
+            = link_to("New", new_admin_building_cost_info_path, class:"active")
+          %li
+            = link_to("View All", admin_building_cost_infos_path, class:"active")
+      %li
+        = link_to(admin_building_max_levels_path) do
+          %i.fa.fa-sitemap.fa-fw
+          Building Max Level
+          %span.fa.arrow
+        %ul.nav.nav-second-level.collapse{"aria-expanded" => "false"}
+          %li
+            = link_to("New", new_admin_building_max_level_path, class:"active")
+          %li
+            = link_to("View All", admin_building_max_levels_path, class:"active")
+    %li
+      =link_to(dashboards_path) do
+        %i.fa.fa-sitemap.fa-fw
+        Dashboard
+    %li
+      =link_to(townhalls_path) do
+        %i.fa.fa-sitemap.fa-fw
+        Townhall and Builders
+    %li
+      =link_to(buildings_path) do
+        %i.fa.fa-sitemap.fa-fw
+        My Buildings
+    %li
+      =link_to(units_path) do
+        %i.fa.fa-sitemap.fa-fw
+        My Units
+    %li
+      =link_to(available_upgrades_path) do
+        %i.fa.fa-sitemap.fa-fw
+        Available Upgrades
+
+    %li.nav-side-menu-footer

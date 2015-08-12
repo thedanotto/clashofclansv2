@@ -340,56 +340,56 @@ building_basic_info =
     name:"lightning_spell",
     default_level:1,
     display_name:"Lightning Spell",
-    building_type:"unit",
+    building_type:"spell",
     category:"Spell",
     upgrader:"lab"
   }, {
     name:"healing_spell",
     default_level:1,
     display_name:"Healing Spell",
-    building_type:"unit",
+    building_type:"spell",
     category:"Spell",
     upgrader:"lab"
   }, {
     name:"rage_spell",
     default_level:1,
     display_name:"Rage Spell",
-    building_type:"unit",
+    building_type:"spell",
     category:"Spell",
     upgrader:"lab"
   }, {
     name:"jump_spell",
     default_level:1,
     display_name:"Jump Spell",
-    building_type:"unit",
+    building_type:"spell",
     category:"Spell",
     upgrader:"lab"
   }, {
     name:"freeze_spell",
     default_level:1,
     display_name:"Freeze Spell",
-    building_type:"unit",
+    building_type:"spell",
     category:"Spell",
     upgrader:"lab"
   }, {
     name:"poison_spell",
     default_level:1,
     display_name:"Poison Spell",
-    building_type:"unit",
+    building_type:"spell",
     category:"Dark Spell",
     upgrader:"lab"
   }, {
     name:"earthquake_spell",
     default_level:1,
     display_name:"Earthquake Spell",
-    building_type:"unit",
+    building_type:"spell",
     category:"Dark Spell",
     upgrader:"lab"
   }, {
     name:"haste_spell",
     default_level:1,
     display_name:"Hash Spell",
-    building_type:"unit",
+    building_type:"spell",
     category:"Dark Spell",
     upgrader:"lab"
   }

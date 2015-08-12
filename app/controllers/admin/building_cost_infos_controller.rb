@@ -1,5 +1,5 @@
 class Admin::BuildingCostInfosController < ApplicationController
-  layout "admin"
+  layout 'admin_sidenav'
   load_and_authorize_resource
   before_action :set_building_cost_info, only: [:show, :edit, :update, :destroy]
 

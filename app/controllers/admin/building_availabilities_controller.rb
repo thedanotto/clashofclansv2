@@ -1,5 +1,5 @@
 class Admin::BuildingAvailabilitiesController < ApplicationController
-  layout "admin"
+  layout 'admin_sidenav'
   load_and_authorize_resource
   before_action :set_building_availability, only: [:show, :edit, :update, :destroy]
 

@@ -1,0 +1,4 @@
+/Users/theDanOtto/.rvm/rubies/ruby-2.1.2/bin/ruby extconf.rb
+/Users/theDanOtto/.rvm/rubies/ruby-2.1.2/bin/ruby: invalid option -D  (-h will show valid options) (RuntimeError)
+
+extconf failed, exit code 1

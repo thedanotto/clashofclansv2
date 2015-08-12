@@ -1,0 +1,58 @@
+- content_for :body_class, "landing"
+- content_for :header do
+  %header
+    .bg
+    .container
+      .row
+        .col-lg-6.col-xs-12.callout-home
+          .text
+            %h1 Clash of Clans Progress and Upgrades Tracker.
+            %p.lead Find out how close your are to maxing out TH 10.
+            = link_to("Get Started →", new_user_registration_path, class:"btn btn-outline-default btn-lg")%{:href => "#"} 
+            %a.btn.btn-outline-default.btn-lg{:href => "#features"} Learn More →
+%section.features
+  %h2.h1{id:"features"} Unknown what to put here
+  %p.lead This is the best application you could ever buy. You'd be crazy not to buy it. Especially as it's been endorsed by the product teaching mafia.
+  .container
+    .row
+      .col-xs-12.col-md-4
+        %section
+          %i.fa.fa-trash
+          %h4 Plan Upgrades
+          %p See the cheapest upgrades available? Sort and Filter
+      .col-xs-12.col-md-4
+        %section
+          %i.fa.fa-camera-retro
+          %h4 Track Town's Value over Time
+          %p Is my town's value growing faster? Or the game itself?
+      .col-xs-12.col-md-4
+        %section
+          %i.fa.fa-child
+          %h4 Find out what Resource you need to Farm
+          %p Ugh, the worse, am I right? Well now you can figure it out with the push of one stupid button forever.
+    .row
+      .col-xs-12.col-md-4
+        %section
+          %i.fa.fa-car
+          %h4 Attack Profitability Calculator
+          %p Ever wondered if an attack was profitable? Our calculator will quickly tell you.
+      .col-xs-12.col-md-4
+        %section
+          %i.fa.fa-bell
+          %h4 What's your most valuable building?
+          %p See where you've invested your resources
+      .col-xs-12.col-md-4
+        %section
+          %i.fa.fa-lock
+          %h4 How long will it take to max out my town?
+          %p Ever wondered how many days your goldmines would have to run before maxing your townhall? Get that answer today.
+%section.getting-started
+  .container
+    .row
+      .col-md-10.col-md-offset-1
+        .col-md-5.text-xs-center.text-md-left
+          %h1 Ready?
+          %p It's Free! Get set up in minutes.
+        .col-md-7.text-xs-center.text-right.ctas
+          = link_to("Sign Up", new_user_registration_path, class:"btn btn-outline-default")
+          %a.btn.btn-outline-primary{:href => "#features"} or see features »

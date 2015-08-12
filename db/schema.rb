@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150807185912) do
+ActiveRecord::Schema.define(version: 20150812202511) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "available_upgrades", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "building_availabilities", force: :cascade do |t|
     t.string   "unique_building_code"
@@ -96,5 +101,13 @@ ActiveRecord::Schema.define(version: 20150807185912) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "walls", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "level"
+    t.integer  "wall_count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

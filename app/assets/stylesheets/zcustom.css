@@ -1,0 +1,60 @@
+.landing header .bg {
+    background: url(/assets/clash_of_clans_wallpaper_background.jpg) top right no-repeat;
+    background-size: cover;
+  }
+
+
+.landing header .bg::after {
+    background-color: transparent;
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    opacity: 0.9;
+}
+
+.callout-home {
+  margin: 30px 0;
+  background-color: rgba(0,0,0,0.58) !important;
+  border-radius: 25px !important;
+}
+
+.landing .features {
+  padding: 50px 0;
+}
+
+.nav > li > a.no-top-padding {
+  padding-top: 0px;
+}
+
+.form-background {
+  background: url(/assets/clash_of_clans_wallpaper_background.jpg) top right no-repeat;
+  background-size: cover;
+}
+
+.sign-up-form {
+    margin-top: 40px;
+    margin-bottom: 300px;
+    padding: 55px;
+    background-color: rgba(0,0,0,.7);
+    border-radius: 25px;
+}
+
+.container-fluid.no-margin {
+  padding: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.white {
+  color: white;
+}
+
+.nav-side-menu .nav li a {
+    color: white;
+}

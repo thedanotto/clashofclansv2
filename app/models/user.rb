@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
 
   has_many :buildings
   has_one :townhall
+  accepts_nested_attributes_for :townhall
+
 
   def set_role
     self.role ||= "normal"

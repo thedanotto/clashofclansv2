@@ -1,0 +1,23 @@
+= form_for(@building_max_level, html: { class: 'form-horizontal' }) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.form_group :name do |f|
+      = f.label :name, class: 'control-label col-md-2'
+      .col-md-8
+        = f.text_field :name, class: 'form-control'
+        = f.error_messages
+    = f.form_group :townhall_level do |f|
+      = f.label :townhall_level, class: 'control-label col-md-2'
+      .col-md-8
+        = f.number_field :townhall_level, class: 'form-control'
+        = f.error_messages
+    = f.form_group :max_level do |f|
+      = f.label :max_level, class: 'control-label col-md-2'
+      .col-md-8
+        = f.number_field :max_level, class: 'form-control'
+        = f.error_messages
+
+  .form-actions.col-md-offset-3.col-md-9
+    = f.submit class: 'btn btn-primary'
+    = link_to "Cancel", building_max_levels_path, class: 'btn'

@@ -50,3 +50,7 @@ gem 'figaro'
 gem 'exception_notification'
 gem 'rabl'
 #gem 'font-awesome-sass', '~> 4.3.0'
+
+source 'https://dresssed.com/gems/e2eded214deeb7b3a642/' do
+  gem 'dresssed-ives'
+end
