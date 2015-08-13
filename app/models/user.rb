@@ -10,8 +10,9 @@ class User < ActiveRecord::Base
 
   has_many :buildings
   has_one :townhall
+  has_one :builder
   accepts_nested_attributes_for :townhall
-
+  accepts_nested_attributes_for :builder
 
   def set_role
     self.role ||= "normal"
@@ -19,6 +20,14 @@ class User < ActiveRecord::Base
 
   def current_th_cost_value(upgrade_resource)
     self.buildings.active(self.townhall.level).upgrading_resource(upgrade_resource).cumulative_cost
+  end
+
+  def current_th_time_value
+    self.buildings.active(self.townhall.level).cumulative_time
+  end
+
+  def resource_daily_production(resource)
+    self.buildings.active(self.townhall.level).productioning_resource(resource).daily_production_amount
   end
 
   def maxed_th_cumulative_cost(upgrade_resource)

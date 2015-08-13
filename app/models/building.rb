@@ -12,6 +12,7 @@ class Building < ActiveRecord::Base
   scope :category, -> (category) { joins(:building_basic_info).merge(BuildingBasicInfo.where(category: category ))}
   scope :upgrader, -> (upgrader) { joins(:building_basic_info).merge(BuildingBasicInfo.where(upgrader: upgrader))}
   scope :upgrading_resource, -> (resource) { joins(:building_cost_info).merge(BuildingCostInfo.where(upgrade_resource: resource))}
+  scope :productioning_resource, -> (resource) { joins(:building_cost_info).merge(BuildingCostInfo.where(production_resource: resource)) }
   # where do I want to store resource info, display_name
 
   # User.last.buildings.active(User.last.townhall.level).resource("dark elixir").cumulative_cost
@@ -58,6 +59,14 @@ class Building < ActiveRecord::Base
 
     def cumulative_time
       self.joins(:building_cost_info).sum(:cumulative_time)
+    end
+
+    def hourly_production_amount
+      self.joins(:building_cost_info).sum(:production_amount)
+    end
+
+    def daily_production_amount
+      hourly_production_amount * 24
     end
   end
 

@@ -17,7 +17,7 @@
       .panel.panel-danger
         .panel-heading
           %p.lead
-            %i.fa.fa-globe
+            %i.fa.fa-dollar
             Town Worth
             %b Gold
         .panel-body.text-red-400
@@ -32,7 +32,7 @@
       .panel.panel-info
         .panel-heading
           %p.lead
-            %i.fa.fa-trophy
+            %i.fa.fa-dollar
             Town Worth
             %b Elixir
         .panel-body.text-light-blue-400
@@ -52,6 +52,65 @@
             %b Dark Elixir
         .panel-body.text-green-400
           %h2.m0= number_with_delimiter(@buildings.upgrading_resource("dark elixir").cumulative_cost, delimiter: ',')
+        .panel-footer
+          .row
+            .col-sm-12
+              %b= current_user.percent_complete("dark elixir")
+              #{"% maxed out."}
+          .clearfix
+  .row.top-summary
+    .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
+      .panel.panel-success
+        .panel-heading
+          %p.lead
+            %i.fa.fa-users
+            Number of
+            %b Builders
+        .panel-body.text-green-400
+          %h2.m0= current_user.builder.b_count
+        .panel-footer
+          .row
+            .col-sm-12
+          .clearfix
+    .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
+      .panel.panel-danger
+        .panel-heading
+          %p.lead
+            %i.fa.fa-dollar
+            Production
+            %b Gold
+        .panel-body.text-red-400
+          %h2.page-hits.m0= number_with_delimiter(current_user.resource_daily_production("gold"), delimiter: ',')
+        .panel-footer
+          .row
+            .col-sm-12
+              %b calculate how many days it would take to max out at current levels of production
+              #{"% maxed out."}
+          .clearfix
+    .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
+      .panel.panel-info
+        .panel-heading
+          %p.lead
+            %i.fa.fa-dollar
+            Production
+            %b Elixir
+        .panel-body.text-light-blue-400
+          %h2.m0= number_with_delimiter(current_user.resource_daily_production("elixir"), delimiter: ',')
+        .panel-footer
+          .row
+            .col-sm-12
+              %b= current_user.percent_complete("elixir")
+              #{"% maxed out."}
+          .clearfix
+    .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
+      .panel.panel-success
+        .panel-heading
+          %p.lead
+            %i.fa.fa-dollar
+            Production
+            %b Dark Elixir
+        .panel-body.text-green-400
+          %h2.m0= number_with_delimiter(current_user.resource_daily_production("dark elixir"), delimiter: ',')
         .panel-footer
           .row
             .col-sm-12

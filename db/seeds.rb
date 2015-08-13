@@ -20,7 +20,7 @@ building_basic_info =
   {   
     name:"townhall",
     default_level:0,
-    display_name:"Tannon",
+    display_name:"Townhall",
     building_type:"building",
     category:"Other",
     upgrader:"builders"

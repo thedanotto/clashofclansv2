@@ -1,7 +1,10 @@
 - @items.each do |building|
+  = building.building_basic_info.display_name
+  %br
   = form_for(building) do |f|
-    f.label(:unique_building_code)
+    =f.label(:level)
+    =f.number_field(:level)
     %br
-    f.text_field(:unique_building_code)
     %br
-    
+    =f.submit
+    %hr

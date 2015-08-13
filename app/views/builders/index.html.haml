@@ -1,0 +1,6 @@
+.container-fluid.mt20
+  %h1 Builders
+  = form_for(@builder) do |f|
+    = f.label(:b_count, "Builder Count: ")
+    = f.number_field(:b_count)
+    = f.submit

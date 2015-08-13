@@ -1,0 +1,9 @@
+.container-fluid.mt20
+  %h1 Townhall
+  = form_for(@townhall) do |f|
+    = f.label(:level)
+    = f.number_field(:level)
+    = f.submit("Update Townhall Level")
+
+
+

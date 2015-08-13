@@ -1,3 +1,41 @@
+Lets just lay out what I need to do...
+
+Things need to be ru''ed
+1) Townhall
+  -> Update townhall
+  -> View townhall and its level
+  -> Updating townhall should also update the townhall building
+2) Builders
+  -> Default to two builders
+  -> View and Update number of builders
+    -> builders are used for time calculations
+3) Buildings
+  -> Need to update each Building.
+  -> Lets do it on an individual basis.
+4) Units
+  -> Need to update level of each Unit
+5) Spells
+  -> Need to be able to update level of each Spell
+6) Walls
+  -> Need a max count of walls per townhall
+  -> Need a form that lists all available levels of walls. Then you can input each
+  -> count for various levels
+
+Once all this is done, the site is ready to be launched.
+
+
+
+current issue -> if a building gets added, how do I update all the buildings that belong to said person?
+
+
+
+
+number of builders
+Town production
+gold
+elixir
+dark
+
 Blarggggg....
 # I'm making a decision add a townhall to BuildingAvailability
 # And Update that building on UserCreate and TownhallUpdate

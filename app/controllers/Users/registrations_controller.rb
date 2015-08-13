@@ -6,6 +6,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def new
     @user = User.new
     @user.build_townhall
+    @user.build_builder
   end
 
   # POST /resource
@@ -71,7 +72,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
     #devise_parameter_sanitazer.for(:sign_up) { |u| u.permit(:username, :staff_attributes => [:name, :position, :etc]) }
-    params.require(:user).permit(:email, :password, :password_confirmation, townhall_attributes: [:id, :name, :level, :unique_building_code])
+    params.require(:user).permit(:email, :password, :password_confirmation, townhall_attributes: [:id, :level], builder_attributes: [:id, :b_count])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
@@ -92,9 +93,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     update_townhall_building
   end
 
-  def update_townhall_building
-    current_user.buildings.where(name:"townhall").update_all(level: current_user.townhall.level)
-  end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
