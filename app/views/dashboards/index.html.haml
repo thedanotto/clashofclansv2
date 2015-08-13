@@ -1,68 +1,62 @@
 .container-fluid.mt20
   .row.top-summary
     .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
+      .panel.panel-success
+        .panel-heading
+          %p.lead
+            %i.fa.fa-users
+            Townhall
+            %b Level
+        .panel-body.text-green-400
+          %h2.m0= current_user.townhall.level
+        .panel-footer
+          .row
+            .col-sm-12
+          .clearfix
+    .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
       .panel.panel-danger
         .panel-heading
           %p.lead
             %i.fa.fa-globe
-            TOTAL
-            %b PAGE HITS
+            Town Worth
+            %b Gold
         .panel-body.text-red-400
-          %h2.page-hits.m0 1123
+          %h2.page-hits.m0= number_with_delimiter(@buildings.upgrading_resource("gold").cumulative_cost, delimiter: ',')
         .panel-footer
           .row
             .col-sm-12
-              %i.fa.fa-caret-down
-              %b 10%
-              decrease in page hits.
+              %b= current_user.percent_complete("gold")
+              #{"% maxed out."}
           .clearfix
     .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
       .panel.panel-info
         .panel-heading
           %p.lead
             %i.fa.fa-trophy
-            TOTAL
-            %b SALES
+            Town Worth
+            %b Elixir
         .panel-body.text-light-blue-400
-          %h2.m0 $12,121
+          %h2.m0= number_with_delimiter(@buildings.upgrading_resource("elixir").cumulative_cost, delimiter: ',')
         .panel-footer
           .row
             .col-sm-12
-              %i.fa.fa-minus
-              %b No change
-              in sales
+              %b= current_user.percent_complete("elixir")
+              #{"% maxed out."}
           .clearfix
     .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
       .panel.panel-success
         .panel-heading
           %p.lead
             %i.fa.fa-dollar
-            TOTAL
-            %b REVENUE
+            Town Worth
+            %b Dark Elixir
         .panel-body.text-green-400
-          %h2.m0 $100,123
+          %h2.m0= number_with_delimiter(@buildings.upgrading_resource("dark elixir").cumulative_cost, delimiter: ',')
         .panel-footer
           .row
             .col-sm-12
-              %i.fa.fa-caret-up
-              %b 12%
-              increase in revenue.
-          .clearfix
-    .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
-      .panel.panel-success
-        .panel-heading
-          %p.lead
-            %i.fa.fa-users
-            ACTIVE
-            %b CUSTOMERS
-        .panel-body.text-green-400
-          %h2.m0 23,453
-        .panel-footer
-          .row
-            .col-sm-12
-              %i.fa.fa-caret-up
-              %b 1%
-              increase in active customers.
+              %b= current_user.percent_complete("dark elixir")
+              #{"% maxed out."}
           .clearfix
   .row
     .col-xs-12.col-sm-12.col-md-6.col-lg-6

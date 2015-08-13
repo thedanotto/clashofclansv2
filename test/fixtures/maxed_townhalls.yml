@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  townhall_level: 1
+  level: 1
+
+two:
+  townhall_level: 1
+  level: 1

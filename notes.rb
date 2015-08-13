@@ -1,3 +1,51 @@
+Blarggggg....
+# I'm making a decision add a townhall to BuildingAvailability
+# And Update that building on UserCreate and TownhallUpdate
+# ok so thats working...
+
+# Im making an executive decision to have 10 instances of buildings, all with max_out_townhalls
+# OK How about the resource
+  # MaxedTownhall => townhall_level:integer
+  # building_availability.each do |building|
+
+    name
+    townhall_level
+  #
+add column to building ...
+
+max_townhall_id
+  1, 2, 3, 4,
+max_townhall
+
+I need only these buildings to relate to MaxedTownhall townhall_level_for_max_purposes_only:integer
+MaxedTownhall
+
+
+townhall_level_for_max_purposes_only
+
+BuildingAvailability
+
+
+
+
+# lets keep the building mode, but fill in this special attribute townhall_level_for_calculations
+MaxedTownhall townhall_level:integer level:integer
+  => set this to 1 for maxed_townhall_level
+Building townhall_level_for_calculations
+
+# building.rb
+belongs_to :maxed_townhall, primary_key:"townhall_level", foreign_key:"townhall_level"
+
+# maxed_townhall.rb
+has_many :buildings, primary_key:"townhall_level", foreign_key:"townhall_level"
+belongs_to :townhall, primary_key:"level"
+
+# Dashboard
+  # Excluding Walls
+  # Including Walls
+
+
+
 # user not logged in
   -> can access home page and devise sign up
 

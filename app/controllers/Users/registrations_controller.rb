@@ -89,6 +89,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     BuildingAvailability.all.each do |default_b|
       Building.create(user_id:current_user.id, townhall_id: current_user.townhall.id, name:default_b.name, level: default_b.building_basic_info.default_level, unique_building_code:default_b.unique_building_code)
     end
+    update_townhall_building
+  end
+
+  def update_townhall_building
+    current_user.buildings.where(name:"townhall").update_all(level: current_user.townhall.level)
   end
 
   # The path used after sign up for inactive accounts.

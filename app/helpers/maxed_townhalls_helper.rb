@@ -1,0 +1,2 @@
+module MaxedTownhallsHelper
+end

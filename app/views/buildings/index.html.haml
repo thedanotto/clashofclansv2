@@ -1,0 +1,7 @@
+- @items.each do |building|
+  = form_for(building) do |f|
+    f.label(:unique_building_code)
+    %br
+    f.text_field(:unique_building_code)
+    %br
+    

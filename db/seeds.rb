@@ -1,13 +1,30 @@
+def update_max_townhall_information
+  townhall_levels = [1,2,3,4,5,6,7,8,9,10]
+  townhall_levels.each do |townhall_level|
+    MaxedTownhall.create(level:townhall_level, townhall_level:townhall_level)
+    BuildingAvailability.all.each do |default_b|
+      Building.create(name:default_b.name, level: BuildingMaxLevel.find_by(name:default_b.name, townhall_level:townhall_level).max_level, unique_building_code:default_b.unique_building_code, townhall_level:townhall_level)
+    end
+  end
+end
 user = User.new
 user.email = "test@test.com"
 user.password = "12345678"
 user.password_confirmation = "12345678"
 user.save
 
+
 @townhall = Townhall.create(user_id: 1, name:"townhall", level:5, unique_building_code:"townhall1")
 
 building_basic_info = 
   {   
+    name:"townhall",
+    default_level:0,
+    display_name:"Tannon",
+    building_type:"building",
+    category:"Other",
+    upgrader:"builders"
+  }, {   
     name:"cannon",
     default_level:0,
     display_name:"Cannon",
@@ -405,6 +422,10 @@ building_basic_info =
 
 building_availability = 
   {
+    unique_building_code:"townhall1",
+    active_on:1,
+    name:"townhall"
+  }, {
     unique_building_code:"cannon1",
     active_on:1,
     name:"cannon"
@@ -5807,10 +5828,6 @@ building_max_level =
     max_level:0
   }, {
     name:"bomb",
-    townhall_level:1,
-    max_level:0
-  }, {
-    name:"bomb",
     townhall_level:2,
     max_level:0
   }, {
@@ -5925,6 +5942,46 @@ building_max_level =
     name:"air_sweeper",
     townhall_level:10,
     max_level:6
+  }, {
+    name:"spring_trap",
+    townhall_level:1,
+    max_level:0
+  }, {
+    name:"spring_trap",
+    townhall_level:2,
+    max_level:0
+  }, {
+    name:"spring_trap",
+    townhall_level:3,
+    max_level:0
+  }, {
+    name:"spring_trap",
+    townhall_level:4,
+    max_level:1
+  }, {
+    name:"spring_trap",
+    townhall_level:5,
+    max_level:1
+  }, {
+    name:"spring_trap",
+    townhall_level:6,
+    max_level:1
+  }, {
+    name:"spring_trap",
+    townhall_level:7,
+    max_level:1
+  }, {
+    name:"spring_trap",
+    townhall_level:8,
+    max_level:1
+  }, {
+    name:"spring_trap",
+    townhall_level:9,
+    max_level:1
+  }, {
+    name:"spring_trap",
+    townhall_level:10,
+    max_level:1
   }, {
     name:"wizard_tower",
     townhall_level:1,
@@ -6725,6 +6782,86 @@ building_max_level =
     name:"dark_spell_factory",
     townhall_level:10,
     max_level:3
+  }, {
+    name:"barbarian_king",
+    townhall_level:1,
+    max_level:0
+  }, {
+    name:"barbarian_king",
+    townhall_level:2,
+    max_level:0
+  }, {
+    name:"barbarian_king",
+    townhall_level:3,
+    max_level:0
+  }, {
+    name:"barbarian_king",
+    townhall_level:4,
+    max_level:0
+  }, {
+    name:"barbarian_king",
+    townhall_level:5,
+    max_level:0
+  }, {
+    name:"barbarian_king",
+    townhall_level:6,
+    max_level:0
+  }, {
+    name:"barbarian_king",
+    townhall_level:7,
+    max_level:5
+  }, {
+    name:"barbarian_king",
+    townhall_level:8,
+    max_level:10
+  }, {
+    name:"barbarian_king",
+    townhall_level:9,
+    max_level:30
+  }, {
+    name:"barbarian_king",
+    townhall_level:10,
+    max_level:40
+  }, {
+    name:"archer_queen",
+    townhall_level:1,
+    max_level:0
+  }, {
+    name:"archer_queen",
+    townhall_level:2,
+    max_level:0
+  }, {
+    name:"archer_queen",
+    townhall_level:3,
+    max_level:0
+  }, {
+    name:"archer_queen",
+    townhall_level:4,
+    max_level:0
+  }, {
+    name:"archer_queen",
+    townhall_level:5,
+    max_level:0
+  }, {
+    name:"archer_queen",
+    townhall_level:6,
+    max_level:0
+  }, {
+    name:"archer_queen",
+    townhall_level:7,
+    max_level:0
+  }, {
+    name:"archer_queen",
+    townhall_level:8,
+    max_level:0
+  }, {
+    name:"archer_queen",
+    townhall_level:9,
+    max_level:30
+  }, {
+    name:"archer_queen",
+    townhall_level:10,
+    max_level:40
   }, {
     name:"clan_castle",
     townhall_level:1,
@@ -6886,43 +7023,43 @@ building_max_level =
     max_level:7,
     townhall_level:10
   }, {
-    name:"globlin",
+    name:"goblin",
     max_level:1,
     townhall_level:1
   }, {
-    name:"globlin",
+    name:"goblin",
     max_level:1,
     townhall_level:2
   }, {
-    name:"globlin",
+    name:"goblin",
     max_level:2,
     townhall_level:3
   }, {
-    name:"globlin",
+    name:"goblin",
     max_level:2,
     townhall_level:4
   }, {
-    name:"globlin",
+    name:"goblin",
     max_level:3,
     townhall_level:5
   }, {
-    name:"globlin",
+    name:"goblin",
     max_level:3,
     townhall_level:6
   }, {
-    name:"globlin",
+    name:"goblin",
     max_level:4,
     townhall_level:7
   }, {
-    name:"globlin",
+    name:"goblin",
     max_level:5,
     townhall_level:8,
   }, {
-    name:"globlin",
+    name:"goblin",
     max_level:5,
     townhall_level:9
   }, {
-    name:"globlin",
+    name:"goblin",
     max_level:6,
     townhall_level:10
   }, {
@@ -7785,3 +7922,4 @@ BuildingAvailability.all.each do |default_b|
   Building.create(user_id:current_user.id, townhall_id: current_user.townhall.id, name:default_b.name, level: default_b.building_basic_info.default_level, unique_building_code:default_b.unique_building_code)
 end
 
+update_max_townhall_information

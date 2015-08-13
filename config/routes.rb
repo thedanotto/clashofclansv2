@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :maxed_townhalls
   root "home#index"
   resources :available_upgrades
   resources :buildings

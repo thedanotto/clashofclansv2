@@ -17,4 +17,19 @@ class User < ActiveRecord::Base
     self.role ||= "normal"
   end
 
+  def current_th_cost_value(upgrade_resource)
+    self.buildings.active(self.townhall.level).upgrading_resource(upgrade_resource).cumulative_cost
+  end
+
+  def maxed_th_cumulative_cost(upgrade_resource)
+    self.townhall.maxed_townhall.buildings.upgrading_resource(upgrade_resource).cumulative_cost
+  end
+
+  def maxed_th_cumulative_time
+    self.townhall.maxed_townhall.buildings.cumulative_time
+  end
+
+  def percent_complete(upgrade_resource)
+    ((current_th_cost_value(upgrade_resource) / maxed_th_cumulative_cost(upgrade_resource).to_f) * 100).round(2)
+  end
 end

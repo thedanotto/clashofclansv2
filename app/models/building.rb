@@ -4,6 +4,7 @@ class Building < ActiveRecord::Base
   belongs_to :building_availability, primary_key: "unique_building_code", foreign_key: "unique_building_code"
   belongs_to :building_basic_info, primary_key: "name", foreign_key:"name"
   belongs_to :building_cost_info, class_name:'BuildingCostInfo', foreign_key: [:name, :level]
+  belongs_to :maxed_townhall, primary_key:"townhall_level", foreign_key:"townhall_level"
 
   scope :active, -> (townhall_level) { joins(:building_availability).merge(BuildingAvailability.where('active_on <= ?', townhall_level)) }
   scope :building_name, -> (building_name) { where(name: building_name)}

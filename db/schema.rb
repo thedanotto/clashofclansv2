@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150812202511) do
+ActiveRecord::Schema.define(version: 20150812230432) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,14 @@ ActiveRecord::Schema.define(version: 20150812202511) do
     t.string   "unique_building_code"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.integer  "townhall_level"
+  end
+
+  create_table "maxed_townhalls", force: :cascade do |t|
+    t.integer  "townhall_level"
+    t.integer  "level"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "townhalls", force: :cascade do |t|
