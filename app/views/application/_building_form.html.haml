@@ -1,0 +1,12 @@
+- @items.each do |building|
+  = building.building_basic_info.display_name
+  %br
+  = form_for(building, url: @update_path) do |f|
+    =f.label(:level)
+    =f.number_field(:level)
+    %br
+    Max Level:
+    = building.max_level
+    %br
+    =f.submit
+    %hr

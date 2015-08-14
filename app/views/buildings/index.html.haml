@@ -1,10 +1,1 @@
-- @items.each do |building|
-  = building.building_basic_info.display_name
-  %br
-  = form_for(building) do |f|
-    =f.label(:level)
-    =f.number_field(:level)
-    %br
-    %br
-    =f.submit
-    %hr
+= render "building_form"

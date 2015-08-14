@@ -14,7 +14,8 @@ class Building < ActiveRecord::Base
   scope :upgrading_resource, -> (resource) { joins(:building_cost_info).merge(BuildingCostInfo.where(upgrade_resource: resource))}
   scope :productioning_resource, -> (resource) { joins(:building_cost_info).merge(BuildingCostInfo.where(production_resource: resource)) }
   scope :buildings_form_order, -> { joins(:building_basic_info).merge(BuildingBasicInfo.order(category: :asc, name: :asc))}
-  scope :id_ascending_order, -> { order(id: :asc)}
+  scope :id_asc_order, -> { order(id: :asc)}
+  scope :level_asc_order, -> { order(level: :asc)}
 
   # where do I want to store resource info, display_name
 

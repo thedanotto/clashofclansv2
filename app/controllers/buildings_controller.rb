@@ -2,7 +2,7 @@ class BuildingsController < ApplicationController
   layout "admin_sidenav"
 
   def index
-    @items = current_user.buildings.active(current_user.townhall.level).building_type("building").where.not(name:"townhall")
+    @items = current_user.buildings.active(current_user.townhall.level).building_type("building").where.not(name:"townhall").form_order
   end
 
 

@@ -1,3 +1,8 @@
+1) Maybe I need to rethink how Spells, Units, and Buildings are done.
+2) If I can sparse out spells, units, and buildings by url. Then I can pretty easily jam everything into one controller.
+3) Lol, Jam Everything Into One Controller
+
+
 Lets just lay out what I need to do...
 
 Things need to be ru''ed
