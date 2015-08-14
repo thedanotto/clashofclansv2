@@ -13,6 +13,9 @@ class Building < ActiveRecord::Base
   scope :upgrader, -> (upgrader) { joins(:building_basic_info).merge(BuildingBasicInfo.where(upgrader: upgrader))}
   scope :upgrading_resource, -> (resource) { joins(:building_cost_info).merge(BuildingCostInfo.where(upgrade_resource: resource))}
   scope :productioning_resource, -> (resource) { joins(:building_cost_info).merge(BuildingCostInfo.where(production_resource: resource)) }
+  scope :buildings_form_order, -> { joins(:building_basic_info).merge(BuildingBasicInfo.order(category: :asc, name: :asc))}
+  scope :id_ascending_order, -> { order(id: :asc)}
+
   # where do I want to store resource info, display_name
 
   # User.last.buildings.active(User.last.townhall.level).resource("dark elixir").cumulative_cost
