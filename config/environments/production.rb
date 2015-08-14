@@ -54,7 +54,7 @@ Rails.application.configure do
   # NOTE:   with 0 you're going to get all DB calls, etc.
 
   Rails.logger = Rails.application.config.logger = logger
-
+  config.log_level = :info
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
