@@ -14,7 +14,7 @@ user.password_confirmation = "12345678"
 user.save
 
 
-@townhall = Townhall.create(user_id: 1, name:"townhall", level:5, unique_building_code:"townhall1")
+@townhall = Townhall.create(user_id: 1, level:5)
 
 building_basic_info = 
   {   
