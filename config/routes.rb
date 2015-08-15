@@ -1,17 +1,16 @@
 Rails.application.routes.draw do
+  root "home#index"
   get "/buildings", to:"buildings#index", defaults: { building_type:'building'} 
   get "/units", to:"buildings#index", defaults: { building_type:'unit'}
   get "/spells", to: "buildings#index", defaults: { building_type:'spell'}
-  resources :builders
-  resources :maxed_townhalls
-  root "home#index"
+
   resources :available_upgrades
+  resources :builders
   resources :buildings
   resources :dashboards
   resources :home 
-#  resources :spells
+  resources :maxed_townhalls
   resources :townhalls
-  resources :units
   resources :walls
 
   # this is where we update the game information when it is updated
