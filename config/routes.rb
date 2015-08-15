@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
+  get "/buildings", to:"buildings#index", defaults: { building_type:'building'} 
+  get "/units", to:"buildings#index", defaults: { building_type:'unit'}
+  get "/spells", to: "buildings#index", defaults: { building_type:'spell'}
   resources :builders
   resources :maxed_townhalls
   root "home#index"
   resources :available_upgrades
   resources :buildings
   resources :dashboards
-  resources :home  
-  resources :spells
+  resources :home 
+#  resources :spells
   resources :townhalls
   resources :units
   resources :walls
