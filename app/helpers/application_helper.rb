@@ -1,5 +1,5 @@
 module ApplicationHelper
   def app_name
-    "My App"
+    "Clash Progress"
   end
 end
