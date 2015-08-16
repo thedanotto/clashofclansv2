@@ -16,6 +16,18 @@ user.save
 
 @townhall = Townhall.create(user_id: 1, level:5)
 
+# WallAvailability.new # => name, level, unique_wall_code, active_on, initial_count
+# levels: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+# unique_wall_code => wall1, wall2, wall3
+# initial_count: 0 for all
+# name: "wall"
+
+# add wall information to building_cost_info
+# create relationship between wall and building_cost_info
+
+# add wall information to building_max_level
+
+
 building_basic_info = 
   {   
     name:"townhall",
@@ -958,6 +970,75 @@ building_availability =
   #   unique_building_code:"",
   #   active_on:
   # }
+
+wall_availability = 
+  {
+    name: "wall",
+    level: 1,
+    unique_wall_code: "wall1",
+    active_on: 2,
+    initial_count: 0
+  }, {
+    name: "wall",
+    level: 2,
+    unique_wall_code: "wall2",
+    active_on: 2,
+    initial_count: 0
+  }, {
+    name: "wall",
+    level: 3,
+    unique_wall_code: "wall3",
+    active_on: 3,
+    initial_count: 0
+  }, {
+    name: "wall",
+    level: 4,
+    unique_wall_code: "wall4",
+    active_on: 4,
+    initial_count: 0
+  }, {
+    name: "wall",
+    level: 5,
+    unique_wall_code: "wall5",
+    active_on: 5,
+    initial_count: 0
+  }, {
+    name: "wall",
+    level: 6,
+    unique_wall_code: "wall6",
+    active_on: 6,
+    initial_count: 0
+  }, {
+    name: "wall",
+    level: 7,
+    unique_wall_code: "wall7",
+    active_on: 7,
+    initial_count: 0
+  }, {
+    name: "wall",
+    level: 8,
+    unique_wall_code: "wall8",
+    active_on: 8,
+    initial_count: 0
+  }, {
+    name: "wall",
+    level: 9,
+    unique_wall_code: "wall9",
+    active_on: 9,
+    initial_count: 0
+  }, {
+    name: "wall",
+    level: 10,
+    unique_wall_code: "wall10",
+    active_on: 9,
+    initial_count: 0
+  }, {
+    name: "wall",
+    level: 11,
+    unique_wall_code: "wall11",
+    active_on: 10,
+    initial_count: 0
+  }
 
 building_cost_info =
   {
@@ -5691,14 +5772,22 @@ building_cost_info =
     level:40,
     upgrade_resource:"dark elixir",
     cost:200000,
-    time:10080
+    time:10080,
+    training_cost:nil,
+    training_resource:nil,
+    production_amount:nil,
+    production_resource:nil
   }
   # , {
   #   name:"",
   #   level:,
   #   upgrade_resource:"dark elixir"
   #   cost:,
-  #   time:
+  #   time:,
+  #   training_cost:nil,
+  #   training_resource:nil,
+  #   production_amount:nil,
+  #   production_resource:nil
   # }
 
 building_max_level =
@@ -7902,11 +7991,62 @@ building_max_level =
     name:"haste_spell",
     max_level:4,
     townhall_level:10
+  }, {
+    name:"wall",
+    max_level:0,
+    max_count:0,
+    townhall_level:1
+  }, {
+    name:"wall",
+    max_level:2,
+    max_count:25,
+    townhall_level:2
+  }, {
+    name:"wall",
+    max_level:3,
+    max_count:50,
+    townhall_level:3
+  }, {
+    name:"wall",
+    max_level:4,
+    max_count:75,
+    townhall_level:4
+  }, {
+    name:"wall",
+    max_level:5,
+    max_count:100,
+    townhall_level:5
+  }, {
+    name:"wall",
+    max_level:6,
+    max_count:125,
+    townhall_level:6
+  }, {
+    name:"wall",
+    max_level:7,
+    max_count:175,
+    townhall_level:7
+  }, {
+    name:"wall",
+    max_level:8,
+    max_count:225,
+    townhall_level:8,
+  }, {
+    name:"wall",
+    max_level:10,
+    max_count:250,
+    townhall_level:9
+  }, {
+    name:"wall",
+    max_level:11,
+    max_count:250,
+    townhall_level:10
   }
 
 
 BuildingBasicInfo.create(building_basic_info)
 BuildingAvailability.create(building_availability)
+WallAvailability.create(wall_availability)
 BuildingCostInfo.create(building_cost_info)
 BuildingMaxLevel.create(building_max_level)
 

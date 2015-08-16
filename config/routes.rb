@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+
   root "home#index"
-  get "/buildings", to:"buildings#index", defaults: { building_type:'building'} 
-  get "/units", to:"buildings#index", defaults: { building_type:'unit'}
-  get "/spells", to: "buildings#index", defaults: { building_type:'spell'}
+  get "/buildings", to:"buildings#index", defaults: { building_type:'building', min_max_level:'1'} 
+  get "/units", to:"buildings#index", defaults: { building_type:'unit', min_max_level:'2'}
+  get "/spells", to: "buildings#index", defaults: { building_type:'spell', min_max_level:'2'}
 
   resources :available_upgrades
   resources :builders
@@ -19,6 +20,7 @@ Rails.application.routes.draw do
     resources :building_basic_infos
     resources :building_cost_infos
     resources :building_max_levels
+    resources :wall_availabilities
   end
 
   devise_for :users, controllers: {

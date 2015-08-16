@@ -1,6 +1,7 @@
 class BuildingCostInfo < ActiveRecord::Base
   self.primary_keys = :name, :level
   has_many :buildings, foreign_key: [:name, :level]
+  has_many :walls, foreign_key: [:name, :level]
   before_save :set_cumulative_cost
 
   def image_url

@@ -1,0 +1,9 @@
+- @title = "Showing wall_availability"
+
+.container
+  .row
+    .col-xs-12.col-sm-12.col-md-12.col-lg-12
+      .form-horizontal
+        .form-actions.col-md-offset-2
+          = link_to fa_icon_tag("pencil") + ' Edit', edit_wall_availability_path(@wall_availability), class: 'btn btn-primary'
+          = link_to 'Back', wall_availabilities_path, class: 'btn'

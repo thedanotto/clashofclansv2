@@ -93,6 +93,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     update_townhall_building
   end
 
+  def set_walls
+    WallAvailability.all.each do |wall|
+      Wall.create(user_id:current_user.id, townhall_id: current_user.townhall.id, name:wall.name, level:wall.level, wall_count:wall.initial_count)
+    end
+  end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)

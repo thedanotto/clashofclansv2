@@ -1,7 +1,23 @@
+Lets think about walls
+At various townhall levels. You have access to certain number of walls, and a certain max level.
+  -> this is not in seeds
+
+# how do I calculate the maximum cost of walls for th 10 -> th, count and max_level_cost
+
+# when WIFId: Update seeds for Walls 
+  # DONE => Update WallAvailabilitys active_on method
+  # DONE => Update BuildingMaxLevel for each townhall
+  # DONE => Update max_count for walls 
+I actually did a good job with walls in the first version. I liked the form I built.
+
+
+
+WTF on grouping by category. SO the error and see what happens.
+
 1) Maybe I need to rethink how Spells, Units, and Buildings are done.
 2) If I can sparse out spells, units, and buildings by url. Then I can pretty easily jam everything into one controller.
 3) Lol, Jam Everything Into One Controller
-
+-> done!
 
 Lets just lay out what I need to do...
 

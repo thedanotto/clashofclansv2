@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  level: 1
+  unique_wall_code: 
+  active_on: 
+  intial_count: 1
+
+two:
+  name: MyString
+  level: 1
+  unique_wall_code: 
+  active_on: 
+  intial_count: 1

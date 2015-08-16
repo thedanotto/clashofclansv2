@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   ROLES = %i[admin normal]
 
   has_many :buildings
+  has_many :walls
   has_one :townhall
   has_one :builder
   accepts_nested_attributes_for :townhall

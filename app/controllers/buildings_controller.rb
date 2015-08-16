@@ -5,7 +5,6 @@ class BuildingsController < ApplicationController
     @items = current_user.buildings.active(current_user.townhall.level).building_type(params["building_type"]).buildings_form_order
   end
 
-
   def update
     @building = current_user.buildings.find(params[:id])
     @building.update(building_params)
