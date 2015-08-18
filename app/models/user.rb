@@ -46,4 +46,16 @@ class User < ActiveRecord::Base
   def percent_complete(upgrade_resource)
     ((current_th_cost_value(upgrade_resource) / maxed_th_cumulative_cost(upgrade_resource).to_f) * 100).round(2)
   end
+
+  def remaining_investment_to_max_th(upgrade_resource)
+    self.maxed_th_cumulative_cost(upgrade_resource) - current_th_cost_value(upgrade_resource)
+  end
+
+  def days_to_maxed_townhall(upgrade_resource)
+    begin
+      (remaining_investment_to_max_th("gold") / self.resource_daily_production(upgrade_resource).to_f).ceil
+    rescue
+      "Infinite"
+    end
+  end
 end
