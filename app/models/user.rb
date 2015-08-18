@@ -47,9 +47,14 @@ class User < ActiveRecord::Base
     ((current_th_cost_value(upgrade_resource) / maxed_th_cumulative_cost(upgrade_resource).to_f) * 100).round(2)
   end
 
+  def percent_complete_with_walls(upgrade_resource)
+    (((current_th_cost_value(upgrade_resource) + self.walls.cumulative_cost) / (self.walls.th_maxed_wall_cost + maxed_th_cumulative_cost(upgrade_resource)).to_f) * 100).round(2)
+  end
+
   def remaining_investment_to_max_th(upgrade_resource)
     self.maxed_th_cumulative_cost(upgrade_resource) - current_th_cost_value(upgrade_resource)
   end
+
 
   def days_to_maxed_townhall(upgrade_resource)
     begin
