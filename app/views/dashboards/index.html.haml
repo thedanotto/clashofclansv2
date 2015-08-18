@@ -1,6 +1,6 @@
 .container-fluid.mt20
   .row.top-summary
-    .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
+    .col-lg-6.col-md-6.col-sm-6.animate-drop-fade
       .panel.panel-success
         .panel-heading
           %p.lead
@@ -8,21 +8,32 @@
             Townhall
             %b Level
         .panel-body.text-green-400
-          %h2.m0= current_user.townhall.level
-        .panel-footer
-          .row
-            .col-sm-12
+          %h2.m0.pull-left= current_user.townhall.level
+          =link_to("Update", townhalls_path, class:"btn btn-success btn-sm pull-right")
           .clearfix
-    .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
-      .panel.panel-danger
+    .col-lg-6.col-md-6.col-sm-6.animate-drop-fade
+      .panel.panel-success
         .panel-heading
           %p.lead
+            %i.fa.fa-users
+            Number of
+            %b Builders
+        .panel-body.text-green-400
+          %h2.m0.pull-left= current_user.builder.b_count
+          =link_to("Update", builders_path, class:"btn btn-success btn-sm pull-right")
+          .clearfix
+  / town worth row
+  .row.top-summary
+    .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
+      .panel.panel-danger
+        .panel-heading.min-height-65
+          %p.lead
             %i.fa.fa-dollar
-            %b Gold
-            Town Worth
-            
+            %b Gold Worth
+            %span.small
+              excluding walls
         .panel-body.text-red-400
-          %h2.page-hits.m0= number_with_delimiter(@buildings.upgrading_resource("gold").cumulative_cost, delimiter: ',')
+          %h2.page-hits.m0= number_with_delimiter(@buildings.upgrading_resource("gold").cumulative_cost, delimiter: ',') 
         .panel-footer
           .row
             .col-sm-12
@@ -30,12 +41,27 @@
               #{"% maxed out."}
           .clearfix
     .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
-      .panel.panel-info
-        .panel-heading
+      .panel.panel-danger
+        .panel-heading.min-height-65
           %p.lead
             %i.fa.fa-dollar
-            %b Elixir
-            Town Worth
+            %b Gold Worth
+            %span.small
+              with walls
+        .panel-body.text-red-400
+          %h2.page-hits.m0= number_with_delimiter(@buildings.upgrading_resource("gold").cumulative_cost + current_user.walls.cumulative_cost, delimiter: ',') 
+        .panel-footer
+          .row
+            .col-sm-12
+              %b= current_user.percent_complete_with_walls("gold")
+              #{"% maxed out."}
+          .clearfix
+    .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
+      .panel.panel-info
+        .panel-heading.min-height-65
+          %p.lead
+            %i.fa.fa-dollar
+            %b Elixir Worth
         .panel-body.text-light-blue-400
           %h2.m0= number_with_delimiter(@buildings.upgrading_resource("elixir").cumulative_cost, delimiter: ',')
         .panel-footer
@@ -46,11 +72,10 @@
           .clearfix
     .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
       .panel.panel-success
-        .panel-heading
+        .panel-heading.min-height-65
           %p.lead
             %i.fa.fa-dollar
-            %b Dark Elixir
-            Town Worth
+            %b Dark Elixir Worth
         .panel-body.text-green-400
           %h2.m0= number_with_delimiter(@buildings.upgrading_resource("dark elixir").cumulative_cost, delimiter: ',')
         .panel-footer
@@ -60,26 +85,21 @@
               #{"% maxed out."}
           .clearfix
   .row.top-summary
-    .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
-      .panel.panel-success
-        .panel-heading
-          %p.lead
-            %i.fa.fa-users
-            Number of
-            %b Builders
-        .panel-body.text-green-400
-          %h2.m0= current_user.builder.b_count
-        .panel-footer
-          .row
-            .col-sm-12
-          .clearfix
-    .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
+
+
+
+
+
+
+    .col-lg-4.col-md-4.col-sm-6.animate-drop-fade
       .panel.panel-danger
         .panel-heading
           %p.lead
             %i.fa.fa-dollar
-            %b Daily Gold
-            Production
+            %b Gold
+            %br
+            %span.small
+              Daily Production
         .panel-body.text-red-400
           %h2.page-hits.m0= number_with_delimiter(current_user.resource_daily_production("gold"), delimiter: ',')
         .panel-footer
@@ -88,13 +108,15 @@
               %b= current_user.days_to_maxed_townhall("gold")
               #{"production days to max out gold buildings."}
           .clearfix
-    .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
+    .col-lg-4.col-md-4.col-sm-6.animate-drop-fade
       .panel.panel-info
         .panel-heading
           %p.lead
             %i.fa.fa-dollar
-            %b Daily Elixir
-            Production            
+            %b Elixir
+            %br
+            %span.small
+              Daily Production           
         .panel-body.text-light-blue-400
           %h2.m0= number_with_delimiter(current_user.resource_daily_production("elixir"), delimiter: ',')
         .panel-footer
@@ -103,13 +125,15 @@
               %b= current_user.days_to_maxed_townhall("elixir")
               #{"production days to max out elixir buildings and units."}
           .clearfix
-    .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
+    .col-lg-4.col-md-4.col-sm-6.animate-drop-fade
       .panel.panel-success
         .panel-heading
           %p.lead
             %i.fa.fa-dollar
-            %b Daily Dark Elixir
-            Production            
+            %b Dark Elixir 
+            %br
+            %span.small
+              Daily Production            
         .panel-body.text-green-400
           %h2.m0= number_with_delimiter(current_user.resource_daily_production("dark elixir"), delimiter: ',')
         .panel-footer

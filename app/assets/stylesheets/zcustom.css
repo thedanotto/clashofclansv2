@@ -58,3 +58,7 @@
 .nav-side-menu .nav li a {
     color: white;
 }
+
+.min-height-65 {
+  min-height: 65px;
+}
