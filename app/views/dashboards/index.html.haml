@@ -78,7 +78,7 @@
         .panel-heading
           %p.lead
             %i.fa.fa-dollar
-            %b Gold
+            %b Daily Gold
             Production
         .panel-body.text-red-400
           %h2.page-hits.m0= number_with_delimiter(current_user.resource_daily_production("gold"), delimiter: ',')
@@ -93,7 +93,7 @@
         .panel-heading
           %p.lead
             %i.fa.fa-dollar
-            %b Elixir
+            %b Daily Elixir
             Production            
         .panel-body.text-light-blue-400
           %h2.m0= number_with_delimiter(current_user.resource_daily_production("elixir"), delimiter: ',')
@@ -108,7 +108,7 @@
         .panel-heading
           %p.lead
             %i.fa.fa-dollar
-            %b Dark Elixir
+            %b Daily Dark Elixir
             Production            
         .panel-body.text-green-400
           %h2.m0= number_with_delimiter(current_user.resource_daily_production("dark elixir"), delimiter: ',')
