@@ -1,6 +1,31 @@
+baggage service office in seattle -> baggage claims
+hours of operation -> 8 am until 11:30 pm
+
+claim in kalispell -> open -> 
+
+baggage point of view -> claim in kalispell
+go to the office in kalispell -> courtesy claim in kalispell to get the bags shipped from southwest in seattle to kalispell.
+
+talked to central baggage in DOT
+
+406-752-2220 xt 2
+ticket counter 406 752 4673
+
+phone number for the baggage service office: 206 439 4220
+
+-> main headquarters in dallas
+-> 
+
 Lets think about walls
 At various townhall levels. You have access to certain number of walls, and a certain max level.
   -> this is not in seeds
+
+remove migration 
+
+change column name townhall_level to level in max_level
+that'll' make it easier to relate everything...
+
+rarrrrrr.
 
 # how do I calculate the maximum cost of walls for th 10 -> th, count and max_level_cost
 

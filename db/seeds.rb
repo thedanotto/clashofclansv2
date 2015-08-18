@@ -3,7 +3,7 @@ def update_max_townhall_information
   townhall_levels.each do |townhall_level|
     MaxedTownhall.create(level:townhall_level, townhall_level:townhall_level)
     BuildingAvailability.all.each do |default_b|
-      Building.create(name:default_b.name, level: BuildingMaxLevel.find_by(name:default_b.name, townhall_level:townhall_level).max_level, unique_building_code:default_b.unique_building_code, townhall_level:townhall_level)
+      Building.create(name:default_b.name, townhall_level: BuildingMaxLevel.find_by(name:default_b.name, townhall_level:townhall_level).max_level, unique_building_code:default_b.unique_building_code, townhall_level:townhall_level)
     end
   end
 end
@@ -14,10 +14,10 @@ user.password_confirmation = "12345678"
 user.save
 
 
-@townhall = Townhall.create(user_id: 1, level:5)
+@townhall = Townhall.create(user_id: 1, townhall_level:5)
 
-# WallAvailability.new # => name, level, unique_wall_code, active_on, initial_count
-# levels: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+# WallAvailability.new # => name, townhall_level, unique_wall_code, active_on, initial_count
+# townhall_levels: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
 # unique_wall_code => wall1, wall2, wall3
 # initial_count: 0 for all
 # name: "wall"
@@ -974,67 +974,67 @@ building_availability =
 wall_availability = 
   {
     name: "wall",
-    level: 1,
+    townhall_level: 1,
     unique_wall_code: "wall1",
     active_on: 2,
     initial_count: 0
   }, {
     name: "wall",
-    level: 2,
+    townhall_level: 2,
     unique_wall_code: "wall2",
     active_on: 2,
     initial_count: 0
   }, {
     name: "wall",
-    level: 3,
+    townhall_level: 3,
     unique_wall_code: "wall3",
     active_on: 3,
     initial_count: 0
   }, {
     name: "wall",
-    level: 4,
+    townhall_level: 4,
     unique_wall_code: "wall4",
     active_on: 4,
     initial_count: 0
   }, {
     name: "wall",
-    level: 5,
+    townhall_level: 5,
     unique_wall_code: "wall5",
     active_on: 5,
     initial_count: 0
   }, {
     name: "wall",
-    level: 6,
+    townhall_level: 6,
     unique_wall_code: "wall6",
     active_on: 6,
     initial_count: 0
   }, {
     name: "wall",
-    level: 7,
+    townhall_level: 7,
     unique_wall_code: "wall7",
     active_on: 7,
     initial_count: 0
   }, {
     name: "wall",
-    level: 8,
+    townhall_level: 8,
     unique_wall_code: "wall8",
     active_on: 8,
     initial_count: 0
   }, {
     name: "wall",
-    level: 9,
+    townhall_level: 9,
     unique_wall_code: "wall9",
     active_on: 9,
     initial_count: 0
   }, {
     name: "wall",
-    level: 10,
+    townhall_level: 10,
     unique_wall_code: "wall10",
     active_on: 9,
     initial_count: 0
   }, {
     name: "wall",
-    level: 11,
+    townhall_level: 11,
     unique_wall_code: "wall11",
     active_on: 10,
     initial_count: 0
@@ -1043,7 +1043,7 @@ wall_availability =
 building_cost_info =
   {
     name:"cannon",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -1053,7 +1053,7 @@ building_cost_info =
     production_resource:nil
   },  {
     name:"cannon",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:250,
     time:0,
@@ -1063,7 +1063,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"cannon",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:1000,
     time:15,
@@ -1073,7 +1073,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"cannon",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:4000,
     time:45,
@@ -1083,7 +1083,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"cannon",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"gold",
     cost:16000,
     time:120,
@@ -1093,7 +1093,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"cannon",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"gold",
     cost:50000,
     time:360,
@@ -1103,7 +1103,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"cannon",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"gold",
     cost:100000,
     time:720,
@@ -1113,7 +1113,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"cannon",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"gold",
     cost:200000,
     time:1440,
@@ -1123,7 +1123,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"cannon",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"gold",
     cost:400000,
     time:2880,
@@ -1133,7 +1133,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"cannon",
-    level:9,
+    townhall_level:9,
     upgrade_resource:"gold",
     cost:800000,
     time:4320,
@@ -1143,7 +1143,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"cannon",
-    level:10,
+    townhall_level:10,
     upgrade_resource:"gold",
     cost:1600000,
     time:5760,
@@ -1153,7 +1153,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"cannon",
-    level:11,
+    townhall_level:11,
     upgrade_resource:"gold",
     cost:3200000,
     time:7200,
@@ -1163,7 +1163,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"cannon",
-    level:12,
+    townhall_level:12,
     upgrade_resource:"gold",
     cost:6400000,
     time:8640,
@@ -1173,7 +1173,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"cannon",
-    level:13,
+    townhall_level:13,
     upgrade_resource:"gold",
     cost:7500000,
     time:10080,
@@ -1183,7 +1183,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_tower",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -1193,7 +1193,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_tower",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:1000,
     time:1,
@@ -1203,7 +1203,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_tower",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:2000,
     time:30,
@@ -1213,7 +1213,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_tower",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:5000,
     time:45,
@@ -1223,7 +1223,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_tower",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"gold",
     cost:20000,
     time:240,
@@ -1233,7 +1233,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_tower",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"gold",
     cost:80000,
     time:720,
@@ -1243,7 +1243,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_tower",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"gold",
     cost:180000,
     time:1440,
@@ -1253,7 +1253,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_tower",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"gold",
     cost:360000,
     time:2880,
@@ -1263,7 +1263,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_tower",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"gold",
     cost:720000,
     time:4320,
@@ -1273,7 +1273,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_tower",
-    level:9,
+    townhall_level:9,
     upgrade_resource:"gold",
     cost:1500000,
     time:5760,
@@ -1283,7 +1283,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_tower",
-    level:10,
+    townhall_level:10,
     upgrade_resource:"gold",
     cost:2500000,
     time:7200,
@@ -1293,7 +1293,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_tower",
-    level:11,
+    townhall_level:11,
     upgrade_resource:"gold",
     cost:4500000,
     time:8640,
@@ -1303,7 +1303,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_tower",
-    level:12,
+    townhall_level:12,
     upgrade_resource:"gold",
     cost:6500000,
     time:10080,
@@ -1313,7 +1313,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_tower",
-    level:13,
+    townhall_level:13,
     upgrade_resource:"gold",
     cost:7500000,
     time:11520,
@@ -1323,7 +1323,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"mortar",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -1333,7 +1333,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"mortar",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:8000,
     time:480,
@@ -1343,7 +1343,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"mortar",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:32000,
     time:720,
@@ -1353,7 +1353,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"mortar",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:120000,
     time:1440,
@@ -1363,7 +1363,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"mortar",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"gold",
     cost:400000,
     time:2880,
@@ -1373,7 +1373,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"mortar",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"gold",
     cost:800000,
     time:5760,
@@ -1383,7 +1383,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"mortar",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"gold",
     cost:1600000,
     time:7200,
@@ -1393,7 +1393,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"mortar",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"gold",
     cost:3200000,
     time:10080,
@@ -1403,7 +1403,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"mortar",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"gold",
     cost:6400000,
     time:11520,
@@ -1413,7 +1413,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_defense",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -1423,7 +1423,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_defense",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:22500,
     time:300,
@@ -1433,7 +1433,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_defense",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:90000,
     time:1440,
@@ -1443,7 +1443,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_defense",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:270000,
     time:4320,
@@ -1453,7 +1453,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_defense",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"gold",
     cost:540000,
     time:7200,
@@ -1463,7 +1463,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_defense",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"gold",
     cost:1080000,
     time:8640,
@@ -1473,7 +1473,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_defense",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"gold",
     cost:2160000,
     time:11520,
@@ -1483,7 +1483,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_defense",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"gold",
     cost:4320000,
     time:14400,
@@ -1493,7 +1493,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_defense",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"gold",
     cost:7560000,
     time:17280,
@@ -1503,7 +1503,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wizard_tower",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -1513,7 +1513,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wizard_tower",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:180000,
     time:720,
@@ -1523,7 +1523,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wizard_tower",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:360000,
     time:1440,
@@ -1533,7 +1533,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wizard_tower",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:720000,
     time:2880,
@@ -1543,7 +1543,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wizard_tower",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"gold",
     cost:1280000,
     time:4320,
@@ -1553,7 +1553,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wizard_tower",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"gold",
     cost:1960000,
     time:5760,
@@ -1563,7 +1563,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wizard_tower",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"gold",
     cost:2680000,
     time:7200,
@@ -1573,7 +1573,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wizard_tower",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"gold",
     cost:5360000,
     time:10080,
@@ -1583,7 +1583,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wizard_tower",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"gold",
     cost:6480000,
     time:14400,
@@ -1593,7 +1593,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_sweeper",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -1603,7 +1603,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_sweeper",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:500000,
     time:1440,
@@ -1613,7 +1613,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_sweeper",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:750000,
     time:4320,
@@ -1623,7 +1623,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_sweeper",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:1250000,
     time:7200,
@@ -1633,7 +1633,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_sweeper",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"gold",
     cost:2400000,
     time:10080,
@@ -1643,7 +1643,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_sweeper",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"gold",
     cost:4800000,
     time:11520,
@@ -1653,7 +1653,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_sweeper",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"gold",
     cost:7200000,
     time:12960,
@@ -1663,7 +1663,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"hidden_tesla",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -1673,7 +1673,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"hidden_tesla",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:1000000,
     time:1440,
@@ -1683,7 +1683,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"hidden_tesla",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:1250000,
     time:4320,
@@ -1693,7 +1693,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"hidden_tesla",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:1500000,
     time:7200,
@@ -1703,7 +1703,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"hidden_tesla",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"gold",
     cost:2000000,
     time:8640,
@@ -1713,7 +1713,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"hidden_tesla",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"gold",
     cost:2500000,
     time:11520,
@@ -1723,7 +1723,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"hidden_tesla",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"gold",
     cost:3000000,
     time:14400,
@@ -1733,7 +1733,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"hidden_tesla",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"gold",
     cost:3500000,
     time:17280,
@@ -1743,7 +1743,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"hidden_tesla",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"gold",
     cost:5000000,
     time:20160,
@@ -1753,7 +1753,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"xbow",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -1763,7 +1763,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"xbow",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:3000000,
     time:10080,
@@ -1773,7 +1773,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"xbow",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:5000000,
     time:14400,
@@ -1783,7 +1783,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"xbow",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:7000000,
     time:20160,
@@ -1793,7 +1793,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"xbow",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"gold",
     cost:8000000,
     time:20160,
@@ -1803,7 +1803,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"inferno_tower",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -1813,7 +1813,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"inferno_tower",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:5000000,
     time:10080,
@@ -1823,7 +1823,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"inferno_tower",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:6500000,
     time:14400,
@@ -1833,7 +1833,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"inferno_tower",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:8000000,
     time:20160,
@@ -1843,7 +1843,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"bomb",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -1853,7 +1853,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"bomb",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:400,
     time:0,
@@ -1863,7 +1863,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"bomb",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:1000,
     time:15,
@@ -1873,7 +1873,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"bomb",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:10000,
     time:120,
@@ -1883,7 +1883,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"bomb",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"gold",
     cost:100000,
     time:480,
@@ -1893,7 +1893,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"bomb",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"gold",
     cost:1000000,
     time:1440,
@@ -1903,7 +1903,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"bomb",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"gold",
     cost:1500000,
     time:2880,
@@ -1913,7 +1913,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"spring_trap",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -1923,7 +1923,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"spring_trap",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:2000,
     time:0,
@@ -1933,7 +1933,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"giant_bomb",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -1943,7 +1943,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"giant_bomb",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:12500,
     time:0,
@@ -1953,7 +1953,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"giant_bomb",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:75000,
     time:360,
@@ -1963,7 +1963,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"giant_bomb",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:750000,
     time:1440,
@@ -1973,7 +1973,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"giant_bomb",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"gold",
     cost:2500000,
     time:4320,
@@ -1983,7 +1983,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_bomb",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -1993,7 +1993,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_bomb",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:4000,
     time:0,
@@ -2003,7 +2003,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_bomb",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:20000,
     time:240,
@@ -2013,7 +2013,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_bomb",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:200000,
     time:720,
@@ -2023,7 +2023,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"air_bomb",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"gold",
     cost:1500000,
     time:1440,
@@ -2033,7 +2033,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"seeking_air_mine",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -2043,7 +2043,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"seeking_air_mine",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:15000,
     time:0,
@@ -2053,7 +2053,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"seeking_air_mine",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:2000000,
     time:1440,
@@ -2063,7 +2063,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"seeking_air_mine",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:4000000,
     time:4320,
@@ -2073,7 +2073,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"skeleton_trap",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -2083,7 +2083,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"skeleton_trap",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:6000,
     time:0,
@@ -2093,7 +2093,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"skeleton_trap",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:600000,
     time:360,
@@ -2103,7 +2103,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"skeleton_trap",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:1300000,
     time:1440,
@@ -2113,7 +2113,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"elixir_collector",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -2123,7 +2123,7 @@ building_cost_info =
     production_resource:"elixir"
   }, {
     name:"elixir_collector",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:150,
     time:0,
@@ -2133,7 +2133,7 @@ building_cost_info =
     production_resource:"elixir"
   }, {
     name:"elixir_collector",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:300,
     time:1,
@@ -2143,7 +2143,7 @@ building_cost_info =
     production_resource:"elixir"
   }, {
     name:"elixir_collector",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:700,
     time:15,
@@ -2153,7 +2153,7 @@ building_cost_info =
     production_resource:"elixir"
   }, {
     name:"elixir_collector",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"gold",
     cost:1400,
     time:60,
@@ -2163,7 +2163,7 @@ building_cost_info =
     production_resource:"elixir"
   }, {
     name:"elixir_collector",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"gold",
     cost:3500,
     time:120,
@@ -2173,7 +2173,7 @@ building_cost_info =
     production_resource:"elixir"
   }, {
     name:"elixir_collector",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"gold",
     cost:7000,
     time:360,
@@ -2183,7 +2183,7 @@ building_cost_info =
     production_resource:"elixir"
   }, {
     name:"elixir_collector",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"gold",
     cost:14000,
     time:720,
@@ -2193,7 +2193,7 @@ building_cost_info =
     production_resource:"elixir"
   }, {
     name:"elixir_collector",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"gold",
     cost:28000,
     time:1440,
@@ -2203,7 +2203,7 @@ building_cost_info =
     production_resource:"elixir"
   }, {
     name:"elixir_collector",
-    level:9,
+    townhall_level:9,
     upgrade_resource:"gold",
     cost:56000,
     time:2880,
@@ -2213,7 +2213,7 @@ building_cost_info =
     production_resource:"elixir"
   }, {
     name:"elixir_collector",
-    level:10,
+    townhall_level:10,
     upgrade_resource:"gold",
     cost:84000,
     time:4320,
@@ -2223,7 +2223,7 @@ building_cost_info =
     production_resource:"elixir"
   }, {
     name:"elixir_collector",
-    level:11,
+    townhall_level:11,
     upgrade_resource:"gold",
     cost:168000,
     time:5760,
@@ -2233,7 +2233,7 @@ building_cost_info =
     production_resource:"elixir"
   }, {
     name:"elixir_collector",
-    level:12,
+    townhall_level:12,
     upgrade_resource:"gold",
     cost:336000,
     time:7200,
@@ -2243,7 +2243,7 @@ building_cost_info =
     production_resource:"elixir"
   }, {
     name:"wall",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -2253,7 +2253,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:50,
     time:0,
@@ -2263,7 +2263,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:1000,
     time:0,
@@ -2273,7 +2273,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:5000,
     time:0,
@@ -2283,7 +2283,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"gold",
     cost:10000,
     time:0,
@@ -2293,7 +2293,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"gold",
     cost:30000,
     time:0,
@@ -2303,7 +2303,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"gold",
     cost:75000,
     time:0,
@@ -2313,7 +2313,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"gold",
     cost:200000,
     time:0,
@@ -2323,7 +2323,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"gold",
     cost:500000,
     time:0,
@@ -2333,7 +2333,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall",
-    level:9,
+    townhall_level:9,
     upgrade_resource:"gold elixir",
     cost:1000000,
     time:0,
@@ -2343,7 +2343,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall",
-    level:10,
+    townhall_level:10,
     upgrade_resource:"gold elixir",
     cost:3000000,
     time:0,
@@ -2353,7 +2353,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall",
-    level:11,
+    townhall_level:11,
     upgrade_resource:"gold elixir",
     cost:4000000,
     time:0,
@@ -2363,7 +2363,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"gold_mine",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -2373,7 +2373,7 @@ building_cost_info =
     production_resource:"gold"
   }, {
     name:"gold_mine",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:150,
     time:0,
@@ -2383,7 +2383,7 @@ building_cost_info =
     production_resource:"gold"
   }, {
     name:"gold_mine",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:300,
     time:1,
@@ -2393,7 +2393,7 @@ building_cost_info =
     production_resource:"gold"
   }, {
     name:"gold_mine",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:700,
     time:15,
@@ -2403,7 +2403,7 @@ building_cost_info =
     production_resource:"gold"
   }, {
     name:"gold_mine",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:1400,
     time:60,
@@ -2413,7 +2413,7 @@ building_cost_info =
     production_resource:"gold"
   }, {
     name:"gold_mine",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:3000,
     time:120,
@@ -2423,7 +2423,7 @@ building_cost_info =
     production_resource:"gold"
   }, {
     name:"gold_mine",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:7000,
     time:360,
@@ -2433,7 +2433,7 @@ building_cost_info =
     production_resource:"gold"
   }, {
     name:"gold_mine",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"elixir",
     cost:14000,
     time:720,
@@ -2443,7 +2443,7 @@ building_cost_info =
     production_resource:"gold"
   }, {
     name:"gold_mine",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"elixir",
     cost:28000,
     time:1440,
@@ -2453,7 +2453,7 @@ building_cost_info =
     production_resource:"gold"
   }, {
     name:"gold_mine",
-    level:9,
+    townhall_level:9,
     upgrade_resource:"elixir",
     cost:56000,
     time:2880,
@@ -2463,7 +2463,7 @@ building_cost_info =
     production_resource:"gold"
   }, {
     name:"gold_mine",
-    level:10,
+    townhall_level:10,
     upgrade_resource:"elixir",
     cost:84000,
     time:4320,
@@ -2473,7 +2473,7 @@ building_cost_info =
     production_resource:"gold"
   }, {
     name:"gold_mine",
-    level:11,
+    townhall_level:11,
     upgrade_resource:"elixir",
     cost:168000,
     time:5760,
@@ -2483,7 +2483,7 @@ building_cost_info =
     production_resource:"gold"
   }, {
     name:"gold_mine",
-    level:12,
+    townhall_level:12,
     upgrade_resource:"elixir",
     cost:336000,
     time:7200,
@@ -2493,7 +2493,7 @@ building_cost_info =
     production_resource:"gold"
   }, {
     name:"dark_elixir_drill",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -2503,7 +2503,7 @@ building_cost_info =
     production_resource:"dark elixir"
   }, {
     name:"dark_elixir_drill",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:1000000,
     time:1440,
@@ -2513,7 +2513,7 @@ building_cost_info =
     production_resource:"dark elixir"
   }, {
     name:"dark_elixir_drill",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:1500000,
     time:2880,
@@ -2523,7 +2523,7 @@ building_cost_info =
     production_resource:"dark elixir"
   }, {
     name:"dark_elixir_drill",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:2000000,
     time:4320,
@@ -2533,7 +2533,7 @@ building_cost_info =
     production_resource:"dark elixir"
   }, {
     name:"dark_elixir_drill",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:3000000,
     time:5760,
@@ -2543,7 +2543,7 @@ building_cost_info =
     production_resource:"dark elixir"
   }, {
     name:"dark_elixir_drill",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:4000000,
     time:8640,
@@ -2553,7 +2553,7 @@ building_cost_info =
     production_resource:"dark elixir"
   }, {
     name:"dark_elixir_drill",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:5000000,
     time:11520,
@@ -2563,7 +2563,7 @@ building_cost_info =
     production_resource:"dark elixir"
   }, {
     name:"gold_storage",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -2573,7 +2573,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"gold_storage",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:300,
     time:0,
@@ -2583,7 +2583,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"gold_storage",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:750,
     time:30,
@@ -2593,7 +2593,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"gold_storage",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:1500,
     time:60,
@@ -2603,7 +2603,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"gold_storage",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:3000,
     time:120,
@@ -2613,7 +2613,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"gold_storage",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:6000,
     time:180,
@@ -2623,7 +2623,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"gold_storage",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:12000,
     time:240,
@@ -2633,7 +2633,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"gold_storage",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"elixir",
     cost:25000,
     time:360,
@@ -2643,7 +2643,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"gold_storage",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"elixir",
     cost:50000,
     time:480,
@@ -2653,7 +2653,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"gold_storage",
-    level:9,
+    townhall_level:9,
     upgrade_resource:"elixir",
     cost:100000,
     time:720,
@@ -2663,7 +2663,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"gold_storage",
-    level:10,
+    townhall_level:10,
     upgrade_resource:"elixir",
     cost:250000,
     time:1440,
@@ -2673,7 +2673,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"gold_storage",
-    level:11,
+    townhall_level:11,
     upgrade_resource:"elixir",
     cost:500000,
     time:2880,
@@ -2683,7 +2683,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"elixir_storage",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -2693,7 +2693,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"elixir_storage",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:300,
     time:0,
@@ -2703,7 +2703,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"elixir_storage",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:750,
     time:30,
@@ -2713,7 +2713,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"elixir_storage",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:1500,
     time:60,
@@ -2723,7 +2723,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"elixir_storage",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"gold",
     cost:3000,
     time:120,
@@ -2733,7 +2733,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"elixir_storage",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"gold",
     cost:6000,
     time:180,
@@ -2743,7 +2743,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"elixir_storage",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"gold",
     cost:12000,
     time:240,
@@ -2753,7 +2753,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"elixir_storage",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"gold",
     cost:25000,
     time:360,
@@ -2763,7 +2763,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"elixir_storage",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"gold",
     cost:50000,
     time:480,
@@ -2773,7 +2773,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"elixir_storage",
-    level:9,
+    townhall_level:9,
     upgrade_resource:"gold",
     cost:100000,
     time:720,
@@ -2783,7 +2783,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"elixir_storage",
-    level:10,
+    townhall_level:10,
     upgrade_resource:"gold",
     cost:250000,
     time:1440,
@@ -2793,7 +2793,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"elixir_storage",
-    level:11,
+    townhall_level:11,
     upgrade_resource:"gold",
     cost:500000,
     time:2880,
@@ -2803,7 +2803,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_elixir_storage",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -2813,7 +2813,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_elixir_storage",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:600000,
     time:1440,
@@ -2823,7 +2823,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_elixir_storage",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:1200000,
     time:2880,
@@ -2833,7 +2833,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_elixir_storage",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:1800000,
     time:4320,
@@ -2843,7 +2843,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_elixir_storage",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:2400000,
     time:5760,
@@ -2853,7 +2853,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_elixir_storage",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:3000000,
     time:7200,
@@ -2863,7 +2863,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_elixir_storage",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:3600000,
     time:8640,
@@ -2873,7 +2873,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"army_camp",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -2883,7 +2883,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"army_camp",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:250,
     time:5,
@@ -2893,7 +2893,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"army_camp",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:2500,
     time:60,
@@ -2903,7 +2903,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"army_camp",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:10000,
     time:180,
@@ -2913,7 +2913,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"army_camp",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:100000,
     time:480,
@@ -2923,7 +2923,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"army_camp",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:250000,
     time:1440,
@@ -2933,7 +2933,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"army_camp",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:750000,
     time:4320,
@@ -2943,7 +2943,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"army_camp",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"elixir",
     cost:2250000,
     time:7200,
@@ -2953,7 +2953,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"army_camp",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"elixir",
     cost:6750000,
     time:14400,
@@ -2963,7 +2963,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barracks",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -2973,7 +2973,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barracks",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:200,
     time:0,
@@ -2983,7 +2983,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barracks",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:1000,
     time:15,
@@ -2993,7 +2993,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barracks",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:2500,
     time:120,
@@ -3003,7 +3003,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barracks",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:5000,
     time:240,
@@ -3013,7 +3013,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barracks",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:10000,
     time:600,
@@ -3023,7 +3023,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barracks",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:80000,
     time:960,
@@ -3033,7 +3033,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barracks",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"elixir",
     cost:240000,
     time:1440,
@@ -3043,7 +3043,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barracks",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"elixir",
     cost:700000,
     time:2880,
@@ -3053,7 +3053,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barracks",
-    level:9,
+    townhall_level:9,
     upgrade_resource:"elixir",
     cost:1500000,
     time:4320,
@@ -3063,7 +3063,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barracks",
-    level:10,
+    townhall_level:10,
     upgrade_resource:"elixir",
     cost:2000000,
     time:8640,
@@ -3073,7 +3073,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_barracks",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3083,7 +3083,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_barracks",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:750000,
     time:4320,
@@ -3093,7 +3093,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_barracks",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:1250000,
     time:7200,
@@ -3103,7 +3103,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_barracks",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:1750000,
     time:8640,
@@ -3113,7 +3113,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_barracks",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:2250000,
     time:10080,
@@ -3123,7 +3123,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_barracks",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:2750000,
     time:11520,
@@ -3133,7 +3133,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_barracks",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:3500000,
     time:12960,
@@ -3143,7 +3143,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lab",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3153,7 +3153,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lab",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:25000,
     time:30,
@@ -3163,7 +3163,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lab",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:50000,
     time:300,
@@ -3173,7 +3173,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lab",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:90000,
     time:720,
@@ -3183,7 +3183,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lab",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:270000,
     time:1440,
@@ -3193,7 +3193,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lab",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:500000,
     time:2880,
@@ -3203,7 +3203,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lab",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:1000000,
     time:5760,
@@ -3213,7 +3213,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lab",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"elixir",
     cost:2500000,
     time:7200,
@@ -3223,7 +3223,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lab",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"elixir",
     cost:4000000,
     time:8640,
@@ -3233,7 +3233,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"spell_factory",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3243,7 +3243,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"spell_factory",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:200000,
     time:1440,
@@ -3253,7 +3253,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"spell_factory",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:400000,
     time:2880,
@@ -3263,7 +3263,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"spell_factory",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:800000,
     time:5760,
@@ -3273,7 +3273,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"spell_factory",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:1600000,
     time:7200,
@@ -3283,7 +3283,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"spell_factory",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:3200000,
     time:8640,
@@ -3293,7 +3293,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_spell_factory",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3303,7 +3303,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_spell_factory",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:1500000,
     time:5760,
@@ -3313,7 +3313,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_spell_factory",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:2500000,
     time:8640,
@@ -3323,7 +3323,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dark_spell_factory",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:3500000,
     time:11520,
@@ -3333,7 +3333,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"townhall",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -3343,7 +3343,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"townhall",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -3353,7 +3353,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"townhall",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:1000,
     time:0,
@@ -3363,7 +3363,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"townhall",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:4000,
     time:180,
@@ -3373,7 +3373,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"townhall",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"gold",
     cost:25000,
     time:1440,
@@ -3383,7 +3383,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"townhall",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"gold",
     cost:150000,
     time:2880,
@@ -3393,7 +3393,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"townhall",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"gold",
     cost:750000,
     time:5760,
@@ -3403,7 +3403,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"townhall",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"gold",
     cost:1200000,
     time:8640,
@@ -3413,7 +3413,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"townhall",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"gold",
     cost:2000000,
     time:11520,
@@ -3423,7 +3423,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"townhall",
-    level:9,
+    townhall_level:9,
     upgrade_resource:"gold",
     cost:3000000,
     time:14400,
@@ -3433,7 +3433,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"townhall",
-    level:10,
+    townhall_level:10,
     upgrade_resource:"gold",
     cost:4000000,
     time:20160,
@@ -3443,7 +3443,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"clan_castle",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"gold",
     cost:0,
     time:0,
@@ -3453,7 +3453,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"clan_castle",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"gold",
     cost:10000,
     time:0,
@@ -3463,7 +3463,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"clan_castle",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"gold",
     cost:100000,
     time:360,
@@ -3473,7 +3473,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"clan_castle",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"gold",
     cost:800000,
     time:1440,
@@ -3483,7 +3483,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"clan_castle",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"gold",
     cost:1800000,
     time:2880,
@@ -3493,7 +3493,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"clan_castle",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"gold",
     cost:5000000,
     time:10080,
@@ -3503,7 +3503,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"clan_castle",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"gold",
     cost:7000000,
     time:20160,
@@ -3513,7 +3513,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3523,7 +3523,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3533,7 +3533,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:50000,
     time:360,
@@ -3543,7 +3543,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:150000,
     time:1440,
@@ -3553,7 +3553,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:500000,
     time:4320,
@@ -3563,7 +3563,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:1500000,
     time:7200,
@@ -3573,7 +3573,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:4500000,
     time:14400,
@@ -3583,7 +3583,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"elixir",
     cost:6000000,
     time:20160,
@@ -3593,7 +3593,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3603,7 +3603,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3613,7 +3613,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:50000,
     time:720,
@@ -3623,7 +3623,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:250000,
     time:2880,
@@ -3633,7 +3633,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:7500000,
     time:4320,
@@ -3643,7 +3643,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:2250000,
     time:7200,
@@ -3653,7 +3653,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:6000000,
     time:14400,
@@ -3663,7 +3663,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"elixir",
     cost:7500000,
     time:20160,
@@ -3673,7 +3673,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"goblin",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3683,7 +3683,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"goblin",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3693,7 +3693,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"goblin",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:50000,
     time:720,
@@ -3703,7 +3703,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"goblin",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:250000,
     time:2880,
@@ -3713,7 +3713,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"goblin",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:750000,
     time:4320,
@@ -3723,7 +3723,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"goblin",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:2250000,
     time:7200,
@@ -3733,7 +3733,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"goblin",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:4500000,
     time:14400,
@@ -3743,7 +3743,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"giant",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3753,7 +3753,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"giant",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3763,7 +3763,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"giant",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:100000,
     time:1440,
@@ -3773,7 +3773,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"giant",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:250000,
     time:2880,
@@ -3783,7 +3783,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"giant",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:750000,
     time:4320,
@@ -3793,7 +3793,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"giant",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:2250000,
     time:7200,
@@ -3803,7 +3803,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"giant",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:6000000,
     time:14400,
@@ -3813,7 +3813,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"giant",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"elixir",
     cost:70000000,
     time:20160,
@@ -3823,7 +3823,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall_breaker",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3833,7 +3833,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall_breaker",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3843,7 +3843,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall_breaker",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:100000,
     time:1440,
@@ -3853,7 +3853,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall_breaker",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:250000,
     time:2880,
@@ -3863,7 +3863,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall_breaker",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:750000,
     time:4320,
@@ -3873,7 +3873,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall_breaker",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:2250000,
     time:7200,
@@ -3883,7 +3883,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wall_breaker",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:6750000,
     time:14400,
@@ -3893,7 +3893,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"balloon",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3903,7 +3903,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"balloon",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3913,7 +3913,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"balloon",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:150000,
     time:1440,
@@ -3923,7 +3923,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"balloon",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:450000,
     time:2880,
@@ -3933,7 +3933,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"balloon",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:1350000,
     time:4320,
@@ -3943,7 +3943,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"balloon",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:2500000,
     time:7200,
@@ -3953,7 +3953,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"balloon",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:60000000,
     time:14400,
@@ -3963,7 +3963,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wizard",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3973,7 +3973,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wizard",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -3983,7 +3983,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wizard",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:150000,
     time:1440,
@@ -3993,7 +3993,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wizard",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:450000,
     time:2880,
@@ -4003,7 +4003,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wizard",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:1350000,
     time:4320,
@@ -4013,7 +4013,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wizard",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:2500000,
     time:7200,
@@ -4023,7 +4023,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"wizard",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:7500000,
     time:20160,
@@ -4033,7 +4033,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"healer",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -4043,7 +4043,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"healer",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -4053,7 +4053,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"healer",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:750000,
     time:4320,
@@ -4063,7 +4063,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"healer",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:1500000,
     time:7200,
@@ -4073,7 +4073,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"healer",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:3000000,
     time:10080,
@@ -4083,7 +4083,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dragon",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -4093,7 +4093,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dragon",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -4103,7 +4103,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dragon",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:2000000,
     time:10080,
@@ -4113,7 +4113,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dragon",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:3000000,
     time:14400,
@@ -4123,7 +4123,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dragon",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:7000000,
     time:20160,
@@ -4133,7 +4133,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"dragon",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:8000000,
     time:20160,
@@ -4143,7 +4143,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"pekka",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -4153,7 +4153,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"pekka",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -4163,7 +4163,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"pekka",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:3000000,
     time:10080,
@@ -4173,7 +4173,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"pekka",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:6000000,
     time:17280,
@@ -4183,7 +4183,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"pekka",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:7000000,
     time:20160,
@@ -4193,7 +4193,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"pekka",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:8000000,
     time:20160,
@@ -4203,7 +4203,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lightning_spell",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -4213,7 +4213,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lightning_spell",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -4223,7 +4223,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lightning_spell",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:200000,
     time:1440,
@@ -4233,7 +4233,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lightning_spell",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:500000,
     time:2880,
@@ -4243,7 +4243,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lightning_spell",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:1000000,
     time:4320,
@@ -4253,7 +4253,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lightning_spell",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:2000000,
     time:5760,
@@ -4263,7 +4263,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lightning_spell",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:8000000,
     time:20160,
@@ -4273,7 +4273,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"healing_spell",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -4283,7 +4283,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"healing_spell",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -4293,7 +4293,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"healing_spell",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:300000,
     time:1440,
@@ -4303,7 +4303,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"healing_spell",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:600000,
     time:2880,
@@ -4313,7 +4313,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"healing_spell",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:1200000,
     time:4320,
@@ -4323,7 +4323,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"healing_spell",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:2400000,
     time:7200,
@@ -4333,7 +4333,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"healing_spell",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"elixir",
     cost:4800000,
     time:10080,
@@ -4343,7 +4343,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"rage_spell",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -4353,7 +4353,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"rage_spell",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -4363,7 +4363,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"rage_spell",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:450000,
     time:2880,
@@ -4373,7 +4373,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"rage_spell",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:900000,
     time:4320,
@@ -4383,7 +4383,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"rage_spell",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:1800000,
     time:7200,
@@ -4393,7 +4393,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"rage_spell",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:3000000,
     time:10080,
@@ -4403,7 +4403,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"jump_spell",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -4413,7 +4413,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"jump_spell",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -4423,7 +4423,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"jump_spell",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:3000000,
     time:7200,
@@ -4433,7 +4433,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"jump_spell",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:6000000,
     time:10080,
@@ -4443,7 +4443,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"freeze_spell",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -4453,7 +4453,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"freeze_spell",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"elixir",
     cost:0,
     time:0,
@@ -4463,7 +4463,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"freeze_spell",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"elixir",
     cost:4000000,
     time:7200,
@@ -4473,7 +4473,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"freeze_spell",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"elixir",
     cost:5000000,
     time:10080,
@@ -4483,7 +4483,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"freeze_spell",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"elixir",
     cost:6500000,
     time:14400,
@@ -4493,7 +4493,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"freeze_spell",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"elixir",
     cost:8000000,
     time:20160,
@@ -4503,7 +4503,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"minion",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4513,7 +4513,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"minion",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4523,7 +4523,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"minion",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"dark elixir",
     cost:10000,
     time:7200,
@@ -4533,7 +4533,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"minion",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"dark elixir",
     cost:20000,
     time:8640,
@@ -4543,7 +4543,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"minion",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"dark elixir",
     cost:30000,
     time:10080,
@@ -4553,7 +4553,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"minion",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"dark elixir",
     cost:40000,
     time:14400,
@@ -4563,7 +4563,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"minion",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"dark elixir",
     cost:100000,
     time:20160,
@@ -4573,7 +4573,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"hog_rider",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4583,7 +4583,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"hog_rider",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4593,7 +4593,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"hog_rider",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"dark elixir",
     cost:20000,
     time:11520,
@@ -4603,7 +4603,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"hog_rider",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"dark elixir",
     cost:30000,
     time:14400,
@@ -4613,7 +4613,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"hog_rider",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"dark elixir",
     cost:40000,
     time:17280,
@@ -4623,7 +4623,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"hog_rider",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"dark elixir",
     cost:50000,
     time:20160,
@@ -4633,7 +4633,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"valkyrie",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4643,7 +4643,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"valkyrie",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4653,7 +4653,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"valkyrie",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"dark elixir",
     cost:50000,
     time:10080,
@@ -4663,7 +4663,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"valkyrie",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"dark elixir",
     cost:60000,
     time:17280,
@@ -4673,7 +4673,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"valkyrie",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"dark elixir",
     cost:70000,
     time:20160,
@@ -4683,7 +4683,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"golem",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4693,7 +4693,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"golem",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4703,7 +4703,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"golem",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"dark elixir",
     cost:60000,
     time:10080,
@@ -4713,7 +4713,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"golem",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"dark elixir",
     cost:70000,
     time:17280,
@@ -4723,7 +4723,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"golem",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"dark elixir",
     cost:80000,
     time:20160,
@@ -4733,7 +4733,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"golem",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"dark elixir",
     cost:90000,
     time:20160,
@@ -4743,7 +4743,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"witch",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4753,7 +4753,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"witch",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4763,7 +4763,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"witch",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"dark elixir",
     cost:75000,
     time:10080,
@@ -4773,7 +4773,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lava_hound",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4783,7 +4783,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lava_hound",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4793,7 +4793,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lava_hound",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"dark elixir",
     cost:60000,
     time:14400,
@@ -4803,7 +4803,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"lava_hound",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"dark elixir",
     cost:70000,
     time:17280,
@@ -4813,7 +4813,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"poison_spell",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4823,7 +4823,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"poison_spell",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4833,7 +4833,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"poison_spell",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"dark elixir",
     cost:25000,
     time:5760,
@@ -4843,7 +4843,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"poison_spell",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"dark elixir",
     cost:50000,
     time:8640,
@@ -4853,7 +4853,7 @@ building_cost_info =
     production_resource:nil
   },  {
     name:"poison_spell",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"dark elixir",
     cost:75000,
     time:14400,
@@ -4863,7 +4863,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"earthquake_spell",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4873,7 +4873,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"earthquake_spell",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4883,7 +4883,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"earthquake_spell",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"dark elixir",
     cost:30000,
     time:8640,
@@ -4893,7 +4893,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"earthquake_spell",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"dark elixir",
     cost:60000,
     time:11520,
@@ -4903,7 +4903,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"earthquake_spell",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"dark elixir",
     cost:90000,
     time:17280,
@@ -4913,7 +4913,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"haste_spell",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4923,7 +4923,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"haste_spell",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4933,7 +4933,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"haste_spell",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"dark elixir",
     cost:40000,
     time:11520,
@@ -4943,7 +4943,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"haste_spell",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"dark elixir",
     cost:80000,
     time:14400,
@@ -4953,7 +4953,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"haste_spell",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"dark elixir",
     cost:100000,
     time:20160,
@@ -4963,7 +4963,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -4973,7 +4973,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"dark elixir",
     cost:10000,
     time:0,
@@ -4983,7 +4983,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"dark elixir",
     cost:12500,
     time:720,
@@ -4993,7 +4993,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"dark elixir",
     cost:15000,
     time:1440,
@@ -5003,7 +5003,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"dark elixir",
     cost:17500,
     time:2160,
@@ -5013,7 +5013,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"dark elixir",
     cost:20000,
     time:2880,
@@ -5023,7 +5023,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"dark elixir",
     cost:22500,
     time:3600,
@@ -5033,7 +5033,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"dark elixir",
     cost:25000,
     time:4320,
@@ -5043,7 +5043,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"dark elixir",
     cost:30000,
     time:5040,
@@ -5053,7 +5053,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:9,
+    townhall_level:9,
     upgrade_resource:"dark elixir",
     cost:35000,
     time:5760,
@@ -5063,7 +5063,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:10,
+    townhall_level:10,
     upgrade_resource:"dark elixir",
     cost:40000,
     time:6480,
@@ -5073,7 +5073,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:11,
+    townhall_level:11,
     upgrade_resource:"dark elixir",
     cost:45000,
     time:7200,
@@ -5083,7 +5083,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:12,
+    townhall_level:12,
     upgrade_resource:"dark elixir",
     cost:50000,
     time:7920,
@@ -5093,7 +5093,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:13,
+    townhall_level:13,
     upgrade_resource:"dark elixir",
     cost:55000,
     time:8640,
@@ -5103,7 +5103,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:14,
+    townhall_level:14,
     upgrade_resource:"dark elixir",
     cost:60000,
     time:9360,
@@ -5113,7 +5113,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:15,
+    townhall_level:15,
     upgrade_resource:"dark elixir",
     cost:65000,
     time:10080,
@@ -5123,7 +5123,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:16,
+    townhall_level:16,
     upgrade_resource:"dark elixir",
     cost:70000,
     time:10080,
@@ -5133,7 +5133,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:17,
+    townhall_level:17,
     upgrade_resource:"dark elixir",
     cost:75000,
     time:10080,
@@ -5143,7 +5143,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:18,
+    townhall_level:18,
     upgrade_resource:"dark elixir",
     cost:80000,
     time:10080,
@@ -5153,7 +5153,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:19,
+    townhall_level:19,
     upgrade_resource:"dark elixir",
     cost:85000,
     time:10080,
@@ -5163,7 +5163,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:20,
+    townhall_level:20,
     upgrade_resource:"dark elixir",
     cost:90000,
     time:10080,
@@ -5173,7 +5173,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:21,
+    townhall_level:21,
     upgrade_resource:"dark elixir",
     cost:95000,
     time:10080,
@@ -5183,7 +5183,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:22,
+    townhall_level:22,
     upgrade_resource:"dark elixir",
     cost:100000,
     time:10080,
@@ -5193,7 +5193,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:23,
+    townhall_level:23,
     upgrade_resource:"dark elixir",
     cost:105000,
     time:10080,
@@ -5203,7 +5203,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:24,
+    townhall_level:24,
     upgrade_resource:"dark elixir",
     cost:110000,
     time:10080,
@@ -5213,7 +5213,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:25,
+    townhall_level:25,
     upgrade_resource:"dark elixir",
     cost:115000,
     time:10080,
@@ -5223,7 +5223,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:26,
+    townhall_level:26,
     upgrade_resource:"dark elixir",
     cost:120000,
     time:10080,
@@ -5233,7 +5233,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:27,
+    townhall_level:27,
     upgrade_resource:"dark elixir",
     cost:125000,
     time:10080,
@@ -5243,7 +5243,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:28,
+    townhall_level:28,
     upgrade_resource:"dark elixir",
     cost:130000,
     time:10080,
@@ -5253,7 +5253,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:29,
+    townhall_level:29,
     upgrade_resource:"dark elixir",
     cost:135000,
     time:10080,
@@ -5263,7 +5263,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:30,
+    townhall_level:30,
     upgrade_resource:"dark elixir",
     cost:140000,
     time:10080,
@@ -5273,7 +5273,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:31,
+    townhall_level:31,
     upgrade_resource:"dark elixir",
     cost:145000,
     time:10080,
@@ -5283,7 +5283,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:32,
+    townhall_level:32,
     upgrade_resource:"dark elixir",
     cost:150000,
     time:10080,
@@ -5293,7 +5293,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:33,
+    townhall_level:33,
     upgrade_resource:"dark elixir",
     cost:155000,
     time:10080,
@@ -5303,7 +5303,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:34,
+    townhall_level:34,
     upgrade_resource:"dark elixir",
     cost:160000,
     time:10080,
@@ -5313,7 +5313,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:35,
+    townhall_level:35,
     upgrade_resource:"dark elixir",
     cost:165000,
     time:10080,
@@ -5323,7 +5323,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:36,
+    townhall_level:36,
     upgrade_resource:"dark elixir",
     cost:170000,
     time:10080,
@@ -5333,7 +5333,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:37,
+    townhall_level:37,
     upgrade_resource:"dark elixir",
     cost:175000,
     time:10080,
@@ -5343,7 +5343,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:38,
+    townhall_level:38,
     upgrade_resource:"dark elixir",
     cost:180000,
     time:10080,
@@ -5353,7 +5353,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:39,
+    townhall_level:39,
     upgrade_resource:"dark elixir",
     cost:185000,
     time:10080,
@@ -5363,7 +5363,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"barbarian_king",
-    level:40,
+    townhall_level:40,
     upgrade_resource:"dark elixir",
     cost:190000,
     time:10080,
@@ -5373,7 +5373,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:0,
+    townhall_level:0,
     upgrade_resource:"dark elixir",
     cost:0,
     time:0,
@@ -5383,7 +5383,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:1,
+    townhall_level:1,
     upgrade_resource:"dark elixir",
     cost:40000,
     time:0,
@@ -5393,7 +5393,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:2,
+    townhall_level:2,
     upgrade_resource:"dark elixir",
     cost:22500,
     time:720,
@@ -5403,7 +5403,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:3,
+    townhall_level:3,
     upgrade_resource:"dark elixir",
     cost:25000,
     time:1440,
@@ -5413,7 +5413,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:4,
+    townhall_level:4,
     upgrade_resource:"dark elixir",
     cost:27500,
     time:2160,
@@ -5423,7 +5423,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:5,
+    townhall_level:5,
     upgrade_resource:"dark elixir",
     cost:30000,
     time:2880,
@@ -5433,7 +5433,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:6,
+    townhall_level:6,
     upgrade_resource:"dark elixir",
     cost:32500,
     time:3600,
@@ -5443,7 +5443,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:7,
+    townhall_level:7,
     upgrade_resource:"dark elixir",
     cost:35000,
     time:4320,
@@ -5453,7 +5453,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:8,
+    townhall_level:8,
     upgrade_resource:"dark elixir",
     cost:40000,
     time:5040,
@@ -5463,7 +5463,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:9,
+    townhall_level:9,
     upgrade_resource:"dark elixir",
     cost:45000,
     time:5760,
@@ -5473,7 +5473,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:10,
+    townhall_level:10,
     upgrade_resource:"dark elixir",
     cost:50000,
     time:6480,
@@ -5483,7 +5483,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:11,
+    townhall_level:11,
     upgrade_resource:"dark elixir",
     cost:55000,
     time:7200,
@@ -5493,7 +5493,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:12,
+    townhall_level:12,
     upgrade_resource:"dark elixir",
     cost:60000,
     time:7920,
@@ -5503,7 +5503,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:13,
+    townhall_level:13,
     upgrade_resource:"dark elixir",
     cost:65000,
     time:8640,
@@ -5513,7 +5513,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:14,
+    townhall_level:14,
     upgrade_resource:"dark elixir",
     cost:70000,
     time:9360,
@@ -5523,13 +5523,13 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:15,
+    townhall_level:15,
     upgrade_resource:"dark elixir",
     cost:75000,
     time:10080
   },  {
     name:"archer_queen",
-    level:16,
+    townhall_level:16,
     upgrade_resource:"dark elixir",
     cost:80000,
     time:10080,
@@ -5539,7 +5539,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:17,
+    townhall_level:17,
     upgrade_resource:"dark elixir",
     cost:85000,
     time:10080,
@@ -5549,7 +5549,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:18,
+    townhall_level:18,
     upgrade_resource:"dark elixir",
     cost:90000,
     time:10080,
@@ -5559,7 +5559,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:19,
+    townhall_level:19,
     upgrade_resource:"dark elixir",
     cost:95000,
     time:10080,
@@ -5569,7 +5569,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:20,
+    townhall_level:20,
     upgrade_resource:"dark elixir",
     cost:100000,
     time:10080,
@@ -5579,7 +5579,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:21,
+    townhall_level:21,
     upgrade_resource:"dark elixir",
     cost:105000,
     time:10080,
@@ -5589,7 +5589,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:22,
+    townhall_level:22,
     upgrade_resource:"dark elixir",
     cost:110000,
     time:10080,
@@ -5599,7 +5599,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:23,
+    townhall_level:23,
     upgrade_resource:"dark elixir",
     cost:115000,
     time:10080,
@@ -5609,7 +5609,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:24,
+    townhall_level:24,
     upgrade_resource:"dark elixir",
     cost:120000,
     time:10080,
@@ -5619,7 +5619,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:25,
+    townhall_level:25,
     upgrade_resource:"dark elixir",
     cost:125000,
     time:10080,
@@ -5629,7 +5629,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:26,
+    townhall_level:26,
     upgrade_resource:"dark elixir",
     cost:130000,
     time:10080,
@@ -5639,7 +5639,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:27,
+    townhall_level:27,
     upgrade_resource:"dark elixir",
     cost:135000,
     time:10080,
@@ -5649,7 +5649,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:28,
+    townhall_level:28,
     upgrade_resource:"dark elixir",
     cost:140000,
     time:10080,
@@ -5659,7 +5659,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:29,
+    townhall_level:29,
     upgrade_resource:"dark elixir",
     cost:145000,
     time:10080,
@@ -5669,7 +5669,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:30,
+    townhall_level:30,
     upgrade_resource:"dark elixir",
     cost:150000,
     time:10080,
@@ -5679,7 +5679,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:31,
+    townhall_level:31,
     upgrade_resource:"dark elixir",
     cost:155000,
     time:10080,
@@ -5689,7 +5689,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:32,
+    townhall_level:32,
     upgrade_resource:"dark elixir",
     cost:160000,
     time:10080,
@@ -5699,7 +5699,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:33,
+    townhall_level:33,
     upgrade_resource:"dark elixir",
     cost:165000,
     time:10080,
@@ -5709,7 +5709,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:34,
+    townhall_level:34,
     upgrade_resource:"dark elixir",
     cost:170000,
     time:10080,
@@ -5719,7 +5719,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:35,
+    townhall_level:35,
     upgrade_resource:"dark elixir",
     cost:175000,
     time:10080,
@@ -5729,7 +5729,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:36,
+    townhall_level:36,
     upgrade_resource:"dark elixir",
     cost:180000,
     time:10080,
@@ -5739,7 +5739,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:37,
+    townhall_level:37,
     upgrade_resource:"dark elixir",
     cost:185000,
     time:10080,
@@ -5749,7 +5749,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:38,
+    townhall_level:38,
     upgrade_resource:"dark elixir",
     cost:190000,
     time:10080,
@@ -5759,7 +5759,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:39,
+    townhall_level:39,
     upgrade_resource:"dark elixir",
     cost:195000,
     time:10080,
@@ -5769,7 +5769,7 @@ building_cost_info =
     production_resource:nil
   }, {
     name:"archer_queen",
-    level:40,
+    townhall_level:40,
     upgrade_resource:"dark elixir",
     cost:200000,
     time:10080,
@@ -5780,7 +5780,7 @@ building_cost_info =
   }
   # , {
   #   name:"",
-  #   level:,
+  #   townhall_level:,
   #   upgrade_resource:"dark elixir"
   #   cost:,
   #   time:,
@@ -8051,7 +8051,7 @@ BuildingCostInfo.create(building_cost_info)
 BuildingMaxLevel.create(building_max_level)
 
 BuildingCostInfo.find_each do |cost_info|
-  cumulative_building_cost_info = BuildingCostInfo.where('name = ? AND level <= ?', cost_info.name, cost_info.level)
+  cumulative_building_cost_info = BuildingCostInfo.where('name = ? AND townhall_level <= ?', cost_info.name, cost_info.level)
   cumulative_cost = cumulative_building_cost_info.sum(:cost)
   cumulative_time = cumulative_building_cost_info.sum(:time)
   cost_info.update(cumulative_cost:cumulative_cost, cumulative_time:cumulative_time)
@@ -8059,7 +8059,11 @@ end
 
 current_user = User.first
 BuildingAvailability.all.each do |default_b|
-  Building.create(user_id:current_user.id, townhall_id: current_user.townhall.id, name:default_b.name, level: default_b.building_basic_info.default_level, unique_building_code:default_b.unique_building_code)
+  Building.create(user_id:current_user.id, townhall_id: current_user.townhall.id, name:default_b.name, townhall_level: default_b.building_basic_info.default_level, unique_building_code:default_b.unique_building_code)
+end
+
+WallAvailability.all.each do |wall|
+  Wall.create(user_id:current_user.id, townhall_id: current_user.townhall.id, name:wall.name, townhall_level:wall.level, wall_count:wall.initial_count)
 end
 
 update_max_townhall_information

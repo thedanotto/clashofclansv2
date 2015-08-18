@@ -39,7 +39,7 @@ class Admin::BuildingMaxLevelsController < ApplicationController
 
   private
   def building_max_level_params
-    params.require(:building_max_level).permit(:name, :townhall_level, :max_level)
+    params.require(:building_max_level).permit(:name, :level, :max_level)
   end
 
   def set_building_max_level
