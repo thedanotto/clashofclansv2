@@ -98,7 +98,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def set_walls
     WallAvailability.all.each do |wall|
-      Wall.create(user_id:current_user.id, townhall_id: current_user.townhall.id, name:wall.name, level:wall.level, wall_count:wall.initial_count)
+      Wall.create(user_id:current_user.id, townhall_id: current_user.townhall.id, name:wall.name, level:wall.level, wall_count:wall.initial_count, unique_wall_code: wall.unique_wall_code)
     end
   end
 
