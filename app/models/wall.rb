@@ -2,7 +2,8 @@ class Wall < ActiveRecord::Base
   belongs_to :user
   belongs_to :townhall
   belongs_to :building_cost_info, class_name:'BuildingCostInfo', foreign_key: [:name, :level]
-  scope :active, -> { }
+  belongs_to :wall_availability, primary_key:"unique_wall_code", foreign_key:"unique_wall_code"
+  scope :active, -> (townhall_level) { joins(:wall_availability).where('active_on <= ?', townhall_level) }
   scope :order_by_level, -> { order(:level) }
 
   def max_wall_level
