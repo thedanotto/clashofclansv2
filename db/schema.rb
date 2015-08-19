@@ -55,8 +55,8 @@ ActiveRecord::Schema.define(version: 20150819145927) do
     t.integer  "time"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-    t.integer  "cumulative_cost"
-    t.integer  "cumulative_time"
+    t.integer  "cumulative_cost", :limit => 8
+    t.integer  "cumulative_time", :limit => 8
     t.integer  "training_cost"
     t.string   "training_resource"
     t.integer  "production_amount"
