@@ -1,2 +1,14 @@
 .container-fluid.mt20
   %h1 Walls
+  %p
+    Remaining Walls to Distribute
+    =current_user.walls.remaining_walls_to_dispurse
+  =form_tag(wall_path(@walls.first), method:"patch") do
+    -@walls.each do |wall|
+      Wall Level
+      =wall.level
+      Wall Count
+      =number_field_tag("wall[#{wall.level}]",wall.wall_count)
+      %br
+
+    =submit_tag("Update Walls")
