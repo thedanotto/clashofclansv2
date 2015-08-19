@@ -2,6 +2,8 @@ class Wall < ActiveRecord::Base
   belongs_to :user
   belongs_to :townhall
   belongs_to :building_cost_info, class_name:'BuildingCostInfo', foreign_key: [:name, :level]
+  scope :active, -> { }
+  scope :order_by_level, -> { order(:level) }
 
   def max_wall_level
     BuildingMaxLevel.find_by(townhall_level: self.townhall.level, name: name).max_level
