@@ -62,3 +62,7 @@
 .min-height-65 {
   min-height: 65px;
 }
+
+h2.page-hits {
+  font-size: 1.65em;
+}
