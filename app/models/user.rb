@@ -43,6 +43,12 @@ class User < ActiveRecord::Base
     self
   end
 
+  def max_townhall_level
+    BuildingMaxLevel.where(name:"townhall").maximum(:max_level)
+  end
+
+
+
   def percent_complete(upgrade_resource)
     ((current_th_cost_value(upgrade_resource) / maxed_th_cumulative_cost(upgrade_resource).to_f) * 100).round(2)
   end

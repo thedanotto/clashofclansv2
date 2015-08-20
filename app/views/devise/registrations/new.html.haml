@@ -13,12 +13,12 @@
               = f.fields_for :townhall do |th|
                 = th.form_group :level do |th|
                   = th.label(:level, "Townhall Level:", class: "form-label")
-                  = th.number_field(:level, autofocus: true, class: "")
+                  = th.number_field(:level, autofocus: true, class: "", in: 1..@user.max_townhall_level)
                   = th.error_messages
               = f.fields_for :builder do |th|
                 = th.form_group :b_count do |th|
                   = th.label(:b_count, "Number of Builders:", class: "form-label")
-                  = th.number_field(:b_count, class: "")
+                  = th.number_field(:b_count, class: "", in: 1..@user.builder.max_builders)
                   = th.error_messages
               = f.form_group :email do |f|
                 = f.label :email, class: "form-label"
