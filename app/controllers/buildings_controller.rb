@@ -15,7 +15,7 @@ class BuildingsController < ApplicationController
 
     # @building = current_user.buildings.find(params[:id])
     # @building.update(building_params)
-    redirect_to(dashboards_path, notice: "Building Updated Successfully")
+    redirect_to(dashboards_path, notice: "#{params["building_type"].capitalize.pluralize} Updated Successfully")
   end
 
 

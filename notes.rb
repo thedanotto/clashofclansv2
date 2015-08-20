@@ -1,3 +1,8 @@
+all forms are redirecting to buildings_path, not necessarily /spells or /units/
+
+
+
+
 I need to be able to update mass. I need to be able to update two buildings at once.
 I need to be able to update all the walls at once. Accept all attributes. And be able to update.
 Hit the update button.

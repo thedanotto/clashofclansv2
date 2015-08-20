@@ -118,4 +118,6 @@
       .row
         .col-xs-12.col-sm-12.col-md-10.col-md-offset-1
           %section
+            - flash.each do |key, value|
+              %div{:class => "alert alert-#{key}"}= value
             = yield
