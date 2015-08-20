@@ -3,11 +3,18 @@ class BuildingsController < ApplicationController
 
   def index
     @items = current_user.buildings.active(current_user.townhall.level).building_type(params["building_type"]).where.not(name:"townhall").buildings_form_order
+    @building_type = params["building_type"]
   end
 
   def update
-    @building = current_user.buildings.find(params[:id])
-    @building.update(building_params)
+    @items = current_user.buildings.active(current_user.townhall.level).building_type(params["building_type"]).where.not(name:"townhall")
+    @items.each do |item|
+      item.update_attributes(level: params["building"][item.unique_building_code.to_s])
+    end
+
+
+    # @building = current_user.buildings.find(params[:id])
+    # @building.update(building_params)
     redirect_to(buildings_path, notice: "Building Updated Successfully")
   end
 
