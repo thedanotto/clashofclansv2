@@ -43,9 +43,7 @@ class User < ActiveRecord::Base
     self
   end
 
-  def max_townhall_level
-    BuildingMaxLevel.where(name:"townhall").maximum(:max_level)
-  end
+
 
 
 
