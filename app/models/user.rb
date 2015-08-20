@@ -62,7 +62,7 @@ class User < ActiveRecord::Base
 
   def days_to_maxed_townhall(upgrade_resource)
     begin
-      (remaining_investment_to_max_th("gold") / self.resource_daily_production(upgrade_resource).to_f).ceil
+      (remaining_investment_to_max_th(upgrade_resource) / self.resource_daily_production(upgrade_resource).to_f).ceil
     rescue
       "Infinite"
     end
