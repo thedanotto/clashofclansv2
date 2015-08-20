@@ -3,4 +3,5 @@ class Townhall < ActiveRecord::Base
   has_many :buildings
   has_many :walls
   has_one :maxed_townhall, primary_key:"level", foreign_key:"level"
+  validates :level, presence: true
 end
