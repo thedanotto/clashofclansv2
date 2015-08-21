@@ -1,4 +1,13 @@
-all forms are redirecting to buildings_path, not necessarily /spells or /units/
+dashboard adds
+
+#add maxed out townhall amount.
+#add production days to max out walls
+#add production days to max out walls and buildings
+
+add pictures and things to forms
+group by stuff...
+
+#all forms are redirecting to buildings_path, not necessarily /spells or /units/
 
 
 

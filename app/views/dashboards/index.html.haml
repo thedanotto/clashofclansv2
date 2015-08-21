@@ -39,6 +39,9 @@
             .col-sm-12
               %b= current_user.percent_complete("gold")
               #{"% maxed out."}
+              %br
+              %b= number_with_delimiter(current_user.maxed_th_cumulative_cost("gold").to_i, delimiter: ',')
+              #{"maxed"}
           .clearfix
     .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
       .panel.panel-danger
@@ -55,6 +58,9 @@
             .col-sm-12
               %b= current_user.percent_complete_with_walls("gold")
               #{"% maxed out."}
+              %br
+              %b= number_with_delimiter(current_user.maxed_th_cumulative_gold_cost_with_walls("gold").to_i, delimiter: ',')
+              #{"maxed"}
           .clearfix
     .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
       .panel.panel-info
@@ -69,6 +75,9 @@
             .col-sm-12
               %b= current_user.percent_complete("elixir")
               #{"% maxed out."}
+              %br
+              %b= number_with_delimiter(current_user.maxed_th_cumulative_cost("elixir").to_i, delimiter: ',')
+              #{"maxed"}
           .clearfix
     .col-lg-3.col-md-6.col-sm-12.animate-drop-fade
       .panel.panel-success
@@ -83,6 +92,9 @@
             .col-sm-12
               %b= current_user.percent_complete("dark elixir")
               #{"% maxed out."}
+              %br
+              %b= number_with_delimiter(current_user.maxed_th_cumulative_cost("dark elixir").to_i, delimiter: ',')
+              #{"maxed"}
           .clearfix
   .row.top-summary
 
@@ -107,6 +119,12 @@
             .col-sm-12
               %b= current_user.days_to_maxed_townhall("gold")
               #{"production days to max out gold buildings."}
+              %br
+              %b= current_user.days_to_maxed_townhall_walls_only
+              #{"production days to max out walls"}
+              %br
+              %b= current_user.days_to_maxed_townhall_with_walls
+              #{"production days to max out walls and gold buildings"}
           .clearfix
     .col-lg-4.col-md-4.col-sm-6.animate-drop-fade
       .panel.panel-info
