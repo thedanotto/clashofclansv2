@@ -7,6 +7,10 @@ dashboard adds
 add pictures and things to forms
 group by stuff...
 
+add random avatar to theme
+
+add a live demo to the site.
+
 #all forms are redirecting to buildings_path, not necessarily /spells or /units/
 
 
