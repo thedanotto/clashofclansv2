@@ -95,11 +95,12 @@
             / / dropdown
             %li.dropdown.user-nav
               %button.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"}
-                = random_avatar 34, "avatar img-rounded"
+                / = image_tag(current_user.gravatar_url(default:"identicon", size:34), class:"avatar img-rounded")
                 %span.caret.caret-light
               %ul.dropdown-menu{:role => "menu"}
                 %li.profile-header
-                  = random_avatar 120, "avatar img-rounded"
+                  / = image_tag(current_user.gravatar_url(default:"identicon", size:120), class:"avatar img-rounded")
+                  / = random_avatar 120, "avatar img-rounded"
                   %p.m0.p0
                     =current_user.email
                   %p.small.m0.p0

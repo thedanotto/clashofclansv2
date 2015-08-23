@@ -1,7 +1,7 @@
 .nav-side-menu
   .navbar-header
     .profile
-      = random_avatar 60, "img-circle profile-image"
+      / = image_tag(current_user.gravatar_url(size:60), class:"img-circle profile-image")
       .profile-body
         %h4=current_user.email
         .user-links

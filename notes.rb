@@ -1,3 +1,7 @@
+# to look for all the gravatar images... search for gravatar_url
+
+
+
 dashboard adds
 
 #add maxed out townhall amount.
