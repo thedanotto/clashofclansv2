@@ -1,6 +1,7 @@
 class TownhallsController < ApplicationController
   layout "admin_sidenav"
-
+  before_action :require_login
+  
   def index
     @townhall = current_user.townhall
   end

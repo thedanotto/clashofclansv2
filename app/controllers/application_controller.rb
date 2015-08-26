@@ -8,4 +8,10 @@ class ApplicationController < ActionController::Base
   def update_townhall_building
     current_user.buildings.where(name:"townhall").update_all(level: current_user.townhall.level)
   end
+
+  def require_login
+    if !current_user
+      redirect_to root_path
+    end
+  end
 end

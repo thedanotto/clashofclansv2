@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   layout 'home'
   before_action :check_user
+  
   def index
 
   end

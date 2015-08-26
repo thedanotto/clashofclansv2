@@ -1,6 +1,6 @@
 class WallsController < ApplicationController
   layout "admin_sidenav"
-
+  before_action :require_login
   def index
     @walls = current_user.walls.active(current_user.townhall.level).order_by_level
   end

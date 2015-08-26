@@ -1,5 +1,7 @@
 class BuildersController < ApplicationController
   layout "admin_sidenav"
+  before_action :require_login
+
   def index
     @builder = current_user.builder
   end

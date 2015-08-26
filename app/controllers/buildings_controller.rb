@@ -1,5 +1,7 @@
 class BuildingsController < ApplicationController
   layout "admin_sidenav"
+  before_action :require_login
+
 
   def index
     @items = current_user.buildings.active(current_user.townhall.level).building_type(params["building_type"]).where.not(name:"townhall").buildings_form_order
