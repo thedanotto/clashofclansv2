@@ -4,7 +4,7 @@
     %meta{:charset => "utf-8"}
     %title= [@title, app_name].compact.join(" - ")
     = csrf_meta_tags
-
+    = render "google_analytics"
     / Ensure devices display responsive pages properly
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
 
